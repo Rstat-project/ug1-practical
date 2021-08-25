@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>15 Simulation | Level 1 Data Skills</title>
   <meta name="description" content="ug1-practical-materials" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
   <meta property="og:title" content="15 Simulation | Level 1 Data Skills" />
   <meta property="og:type" content="book" />
@@ -31,8 +31,8 @@
   
 <link rel="prev" href="probability-continued.html"/>
 <link rel="next" href="project-analysis.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,6 +49,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -116,6 +118,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="include/psyteachr.css" type="text/css" />
 <link rel="stylesheet" href="include/style.css" type="text/css" />
 </head>
@@ -150,8 +153,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.0.2" data-path="programming-basics.html"><a href="programming-basics.html#getting-to-know-r-studio"><i class="fa fa-check"></i><b>2.0.2</b> Getting to know R Studio</a></li>
 <li class="chapter" data-level="2.0.3" data-path="programming-basics.html"><a href="programming-basics.html#console-vs.-scripts"><i class="fa fa-check"></i><b>2.0.3</b> Console vs. scripts</a></li>
 <li class="chapter" data-level="2.0.4" data-path="programming-basics.html"><a href="programming-basics.html#functions-and-arguments"><i class="fa fa-check"></i><b>2.0.4</b> Functions and arguments</a></li>
-<li class="chapter" data-level="2.0.5" data-path="getting-to-know-the-data.html"><a href="getting-to-know-the-data.html#activity-1"><i class="fa fa-check"></i><b>2.0.5</b> Activity 1</a></li>
-<li class="chapter" data-level="2.0.6" data-path="getting-to-know-the-data.html"><a href="getting-to-know-the-data.html#activity-2"><i class="fa fa-check"></i><b>2.0.6</b> Activity 2</a></li>
+<li class="chapter" data-level="2.0.5" data-path="programming-basics.html"><a href="programming-basics.html#activity-1-first-action-in-r"><i class="fa fa-check"></i><b>2.0.5</b> Activity 1: First action in R</a></li>
+<li class="chapter" data-level="2.0.6" data-path="programming-basics.html"><a href="programming-basics.html#activity-2-try-and-change"><i class="fa fa-check"></i><b>2.0.6</b> Activity 2: Try and change</a></li>
 <li class="chapter" data-level="2.0.7" data-path="programming-basics.html"><a href="programming-basics.html#argument-names"><i class="fa fa-check"></i><b>2.0.7</b> Argument names</a></li>
 <li class="chapter" data-level="2.0.8" data-path="programming-basics.html"><a href="programming-basics.html#tab-auto-complete"><i class="fa fa-check"></i><b>2.0.8</b> Tab auto-complete</a></li>
 <li class="chapter" data-level="2.0.9" data-path="programming-basics.html"><a href="programming-basics.html#packages"><i class="fa fa-check"></i><b>2.0.9</b> Base R and packages</a></li>
@@ -164,7 +167,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.0.16" data-path="programming-basics.html"><a href="programming-basics.html#looking-after-the-environment"><i class="fa fa-check"></i><b>2.0.16</b> Looking after the environment</a></li>
 <li class="chapter" data-level="2.0.17" data-path="programming-basics.html"><a href="programming-basics.html#global-options"><i class="fa fa-check"></i><b>2.0.17</b> Global options</a></li>
 <li class="chapter" data-level="2.0.18" data-path="programming-basics.html"><a href="programming-basics.html#r-sessions"><i class="fa fa-check"></i><b>2.0.18</b> R sessions</a></li>
-<li class="chapter" data-level="2.0.19" data-path="programming-basics.html"><a href="programming-basics.html#activity-6"><i class="fa fa-check"></i><b>2.0.19</b> Activity 6</a></li>
+<li class="chapter" data-level="2.0.19" data-path="programming-basics.html"><a href="programming-basics.html#activity-6-clean-up-when-your-job-is-done"><i class="fa fa-check"></i><b>2.0.19</b> Activity 6: Clean up when your job is done</a></li>
 <li class="chapter" data-level="2.0.20" data-path="programming-basics.html"><a href="programming-basics.html#how-to-cite-r-and-rstudio"><i class="fa fa-check"></i><b>2.0.20</b> How to cite R and RStudio</a></li>
 <li class="chapter" data-level="2.0.21" data-path="programming-basics.html"><a href="programming-basics.html#help-and-additional-resources"><i class="fa fa-check"></i><b>2.0.21</b> Help and additional resources</a></li>
 <li class="chapter" data-level="2.0.22" data-path="programming-basics.html"><a href="programming-basics.html#debugging-tips"><i class="fa fa-check"></i><b>2.0.22</b> Debugging tips</a></li>
@@ -201,9 +204,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.7" data-path="loading-data.html"><a href="loading-data.html#activity-6-pull-out-variables-of-interest"><i class="fa fa-check"></i><b>4.7</b> Activity 6: Pull out variables of interest</a></li>
 <li class="chapter" data-level="4.8" data-path="loading-data.html"><a href="loading-data.html#activity-7-visualise-the-data"><i class="fa fa-check"></i><b>4.8</b> Activity 7: Visualise the data</a>
 <ul>
-<li class="chapter" data-level="4.8.1" data-path="ref1.html"><a href="ref1.html#finished"><i class="fa fa-check"></i><b>4.8.1</b> Finished!</a></li>
+<li class="chapter" data-level="4.8.1" data-path="loading-data.html"><a href="loading-data.html#finished-1"><i class="fa fa-check"></i><b>4.8.1</b> Finished!</a></li>
 </ul></li>
-<li class="chapter" data-level="4.9" data-path="programming-basics.html"><a href="programming-basics.html#debugging-tips"><i class="fa fa-check"></i><b>4.9</b> Debugging tips</a></li>
+<li class="chapter" data-level="4.9" data-path="loading-data.html"><a href="loading-data.html#debugging-tips-1"><i class="fa fa-check"></i><b>4.9</b> Debugging tips</a></li>
 <li class="chapter" data-level="4.10" data-path="loading-data.html"><a href="loading-data.html#debugging-exercises"><i class="fa fa-check"></i><b>4.10</b> Debugging exercises</a></li>
 <li class="chapter" data-level="4.11" data-path="loading-data.html"><a href="loading-data.html#test-yourself"><i class="fa fa-check"></i><b>4.11</b> Test yourself</a></li>
 </ul></li>
@@ -211,8 +214,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#tidyverse"><i class="fa fa-check"></i><b>5.1</b> Tidyverse</a></li>
 <li class="chapter" data-level="5.2" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#the-babynames-database"><i class="fa fa-check"></i><b>5.2</b> The <code>babynames</code> database</a></li>
-<li class="chapter" data-level="5.3" data-path="loading-data.html"><a href="loading-data.html#walkthrough-video"><i class="fa fa-check"></i><b>5.3</b> Walkthrough video</a></li>
-<li class="chapter" data-level="5.4" data-path="loading-data.html"><a href="loading-data.html#activity-1-set-up"><i class="fa fa-check"></i><b>5.4</b> Activity 1: Set-up</a></li>
+<li class="chapter" data-level="5.3" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#walkthrough-video-1"><i class="fa fa-check"></i><b>5.3</b> Walkthrough video</a></li>
+<li class="chapter" data-level="5.4" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-1-set-up-1"><i class="fa fa-check"></i><b>5.4</b> Activity 1: Set-up</a></li>
 <li class="chapter" data-level="5.5" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-2-look-at-the-data"><i class="fa fa-check"></i><b>5.5</b> Activity 2: Look at the data</a></li>
 <li class="chapter" data-level="5.6" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-3-data-visualisation"><i class="fa fa-check"></i><b>5.6</b> Activity 3: Data visualisation</a></li>
 <li class="chapter" data-level="5.7" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-4-selecting-variables-of-interest"><i class="fa fa-check"></i><b>5.7</b> Activity 4: Selecting variables of interest</a></li>
@@ -221,12 +224,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.10" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-7-creating-new-variables"><i class="fa fa-check"></i><b>5.10</b> Activity 7: Creating new variables</a></li>
 <li class="chapter" data-level="5.11" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-8-grouping-and-summarising"><i class="fa fa-check"></i><b>5.11</b> Activity 8: Grouping and summarising</a></li>
 <li class="chapter" data-level="5.12" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-9-pipes"><i class="fa fa-check"></i><b>5.12</b> Activity 9: Pipes</a></li>
-<li class="chapter" data-level="5.13" data-path="ref1.html"><a href="ref1.html#finished"><i class="fa fa-check"></i><b>5.13</b> Finished!</a></li>
+<li class="chapter" data-level="5.13" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#finished-2"><i class="fa fa-check"></i><b>5.13</b> Finished!</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html"><i class="fa fa-check"></i><b>6</b> Data wrangling 2</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="loading-data.html"><a href="loading-data.html#walkthrough-video"><i class="fa fa-check"></i><b>6.1</b> Walkthrough video</a></li>
-<li class="chapter" data-level="6.2" data-path="loading-data.html"><a href="loading-data.html#activity-1-set-up"><i class="fa fa-check"></i><b>6.2</b> Activity 1: Set-up</a></li>
+<li class="chapter" data-level="6.1" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#walkthrough-video-2"><i class="fa fa-check"></i><b>6.1</b> Walkthrough video</a></li>
+<li class="chapter" data-level="6.2" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-1-set-up-2"><i class="fa fa-check"></i><b>6.2</b> Activity 1: Set-up</a></li>
 <li class="chapter" data-level="6.3" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-2-select"><i class="fa fa-check"></i><b>6.3</b> Activity 2: Select</a></li>
 <li class="chapter" data-level="6.4" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-3-arrange"><i class="fa fa-check"></i><b>6.4</b> Activity 3: Arrange</a></li>
 <li class="chapter" data-level="6.5" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-4-filter"><i class="fa fa-check"></i><b>6.5</b> Activity 4: Filter</a></li>
@@ -234,11 +237,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.7" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-6-group_by"><i class="fa fa-check"></i><b>6.7</b> Activity 6: Group_by</a></li>
 <li class="chapter" data-level="6.8" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-7-data-visualisation"><i class="fa fa-check"></i><b>6.8</b> Activity 7: Data visualisation</a></li>
 <li class="chapter" data-level="6.9" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-8-make-r-your-own"><i class="fa fa-check"></i><b>6.9</b> Activity 8: Make R your own</a></li>
-<li class="chapter" data-level="6.10" data-path="ref1.html"><a href="ref1.html#finished"><i class="fa fa-check"></i><b>6.10</b> Finished!</a></li>
+<li class="chapter" data-level="6.10" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#finished-3"><i class="fa fa-check"></i><b>6.10</b> Finished!</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html"><i class="fa fa-check"></i><b>7</b> Intro to Data Viz</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="loading-data.html"><a href="loading-data.html#walkthrough-video"><i class="fa fa-check"></i><b>7.1</b> Walkthrough video</a></li>
+<li class="chapter" data-level="7.1" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html#walkthrough-video-3"><i class="fa fa-check"></i><b>7.1</b> Walkthrough video</a></li>
 <li class="chapter" data-level="7.2" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html#activity-1-dplyr-recap"><i class="fa fa-check"></i><b>7.2</b> Activity 1: dplyr recap</a></li>
 <li class="chapter" data-level="7.3" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html#data-visualisation"><i class="fa fa-check"></i><b>7.3</b> Data visualisation</a></li>
 <li class="chapter" data-level="7.4" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html#activity-2-set-up"><i class="fa fa-check"></i><b>7.4</b> Activity 2: Set-up</a></li>
@@ -249,8 +252,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="scatterplots.html"><a href="scatterplots.html"><i class="fa fa-check"></i><b>8</b> Scatterplots</a>
 <ul>
-<li class="chapter" data-level="8.0.1" data-path="loading-data.html"><a href="loading-data.html#activity-1-set-up"><i class="fa fa-check"></i><b>8.0.1</b> Activity 1: Set-up</a></li>
-<li class="chapter" data-level="8.0.2" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-2-select"><i class="fa fa-check"></i><b>8.0.2</b> Activity 2: Select</a></li>
+<li class="chapter" data-level="8.0.1" data-path="scatterplots.html"><a href="scatterplots.html#activity-1-set-up-3"><i class="fa fa-check"></i><b>8.0.1</b> Activity 1: Set-up</a></li>
+<li class="chapter" data-level="8.0.2" data-path="scatterplots.html"><a href="scatterplots.html#activity-2-select-1"><i class="fa fa-check"></i><b>8.0.2</b> Activity 2: Select</a></li>
 <li class="chapter" data-level="8.0.3" data-path="scatterplots.html"><a href="scatterplots.html#activity-3-simple-scatterplots"><i class="fa fa-check"></i><b>8.0.3</b> Activity 3: Simple scatterplots</a></li>
 <li class="chapter" data-level="8.0.4" data-path="scatterplots.html"><a href="scatterplots.html#activity-4-adding-a-line-of-best-fit"><i class="fa fa-check"></i><b>8.0.4</b> Activity 4: Adding a line of best fit</a></li>
 <li class="chapter" data-level="8.0.5" data-path="scatterplots.html"><a href="scatterplots.html#activity-5-setting-the-factors"><i class="fa fa-check"></i><b>8.0.5</b> Activity 5: Setting the factors</a></li>
@@ -285,7 +288,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11" data-path="pipes.html"><a href="pipes.html"><i class="fa fa-check"></i><b>11</b> Pipes</a>
 <ul>
 <li class="chapter" data-level="11.0.1" data-path="pipes.html"><a href="pipes.html#activity-1-recap"><i class="fa fa-check"></i><b>11.0.1</b> Activity 1: Recap</a></li>
-<li class="chapter" data-level="11.0.2" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html#activity-2-set-up"><i class="fa fa-check"></i><b>11.0.2</b> Activity 2: Set-up</a></li>
+<li class="chapter" data-level="11.0.2" data-path="pipes.html"><a href="pipes.html#activity-2-set-up-1"><i class="fa fa-check"></i><b>11.0.2</b> Activity 2: Set-up</a></li>
 <li class="chapter" data-level="11.0.3" data-path="pipes.html"><a href="pipes.html#activity-3-example-pipe-1"><i class="fa fa-check"></i><b>11.0.3</b> Activity 3: Example pipe 1</a></li>
 <li class="chapter" data-level="11.0.4" data-path="pipes.html"><a href="pipes.html#activity-4-example-pipe-2"><i class="fa fa-check"></i><b>11.0.4</b> Activity 4: Example pipe 2</a></li>
 <li class="chapter" data-level="11.0.5" data-path="pipes.html"><a href="pipes.html#activity-5-example-pipe-3"><i class="fa fa-check"></i><b>11.0.5</b> Activity 5: Example pipe 3</a></li>
@@ -293,7 +296,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="12" data-path="mega-pipe.html"><a href="mega-pipe.html"><i class="fa fa-check"></i><b>12</b> Mega pipe</a>
 <ul>
-<li class="chapter" data-level="12.0.1" data-path="loading-data.html"><a href="loading-data.html#activity-1-set-up"><i class="fa fa-check"></i><b>12.0.1</b> Activity 1: Set-up</a></li>
+<li class="chapter" data-level="12.0.1" data-path="mega-pipe.html"><a href="mega-pipe.html#activity-1-set-up-4"><i class="fa fa-check"></i><b>12.0.1</b> Activity 1: Set-up</a></li>
 <li class="chapter" data-level="12.0.2" data-path="mega-pipe.html"><a href="mega-pipe.html#activity-2-mega-pipe"><i class="fa fa-check"></i><b>12.0.2</b> Activity 2: Mega pipe</a></li>
 <li class="chapter" data-level="12.0.3" data-path="mega-pipe.html"><a href="mega-pipe.html#activity-3-pipe-plot"><i class="fa fa-check"></i><b>12.0.3</b> Activity 3: Pipe plot</a></li>
 <li class="chapter" data-level="12.0.4" data-path="mega-pipe.html"><a href="mega-pipe.html#activity-4-aq-score-by-gender"><i class="fa fa-check"></i><b>12.0.4</b> Activity 4: AQ score by gender</a></li>
@@ -342,7 +345,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="15.0.9" data-path="simulation.html"><a href="simulation.html#activity-7-big-data"><i class="fa fa-check"></i><b>15.0.9</b> Activity 7: big data</a></li>
 <li class="chapter" data-level="15.0.10" data-path="simulation.html"><a href="simulation.html#activity-8-rnorm"><i class="fa fa-check"></i><b>15.0.10</b> Activity 8: <code>rnorm()</code></a></li>
 <li class="chapter" data-level="15.0.11" data-path="simulation.html"><a href="simulation.html#activity-9-simulate-a-dataset"><i class="fa fa-check"></i><b>15.0.11</b> Activity 9: Simulate a dataset</a></li>
-<li class="chapter" data-level="15.0.12" data-path="ref1.html"><a href="ref1.html#finished"><i class="fa fa-check"></i><b>15.0.12</b> Finished!</a></li>
+<li class="chapter" data-level="15.0.12" data-path="simulation.html"><a href="simulation.html#finished-6"><i class="fa fa-check"></i><b>15.0.12</b> Finished!</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="project-analysis.html"><a href="project-analysis.html"><i class="fa fa-check"></i><b>16</b> Project analysis</a>
 <ul>
@@ -421,7 +424,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb182-2"><a href="simulation.html#cb182-2" aria-hidden="true" tabindex="-1"></a><span class="co"># we need to enter them into the function in &quot;quotes&quot; </span></span>
 <span id="cb182-3"><a href="simulation.html#cb182-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb182-4"><a href="simulation.html#cb182-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">&quot;HEADS&quot;</span>, <span class="st">&quot;TAILS&quot;</span>), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>) </span></code></pre></div>
-<pre><code>## [1] &quot;HEADS&quot; &quot;HEADS&quot; &quot;TAILS&quot; &quot;HEADS&quot;</code></pre>
+<pre><code>## [1] &quot;HEADS&quot; &quot;TAILS&quot; &quot;TAILS&quot; &quot;TAILS&quot;</code></pre>
 <p>How many heads did you get? Don’t worry if it’s different to our example. Run the code again. How many heads did you get this time? How many do you get on each turn if you run the code five more times?</p>
 <p>When you perform data simulation, you’re unlikely to get the same outcome each time you take a sample, just like if you flipped a coin 4 times on 5 separate occasions you would be unlikely to get the same number of heads each time. What’s so useful about data simulation is that we can use the outcomes from lots of different sampling attempts to calculate the probability of a particular outcome, e.g., getting 4 heads from 4 flips of a coin.</p>
 <p>So that we can add up the number of heads and tails more easily, let’s simulate those coin flips again, but using numerical codes, 1 = HEADS, 0 = TAILS.</p>
@@ -431,7 +434,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>0:1 means all numbers from 0 to 1 in steps of 1. So basically, 0 and 1. If you wanted to simulate rolling a die, you would write <code>1:6</code> which would give you all the whole numbers from 1 to 6.</li>
 </ul>
 <div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="simulation.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<pre><code>## [1] 1 1 1 0</code></pre>
+<pre><code>## [1] 0 1 0 1</code></pre>
 </div>
 <div id="activity-2-sum" class="section level3" number="15.0.3">
 <h3><span class="header-section-number">15.0.3</span> Activity 2: <code>sum()</code></h3>
@@ -455,7 +458,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Copy, paste and run the below code into a new code chunk to run the sample function and sum up the outcomes 20 times.</p>
 <div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="simulation.html#cb188-1" aria-hidden="true" tabindex="-1"></a><span class="fu">replicate</span>(<span class="at">n =</span> <span class="dv">20</span>, <span class="at">expr =</span> <span class="fu">sample</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">sum</span>())</span></code></pre></div>
-<pre><code>##  [1] 2 3 1 1 2 1 1 1 0 2 3 4 2 1 2 3 3 2 3 3</code></pre>
+<pre><code>##  [1] 3 2 2 0 3 2 3 1 3 3 2 4 3 2 4 1 1 2 3 2</code></pre>
 </div>
 <div id="monte-carlo-simulation" class="section level3" number="15.0.5">
 <h3><span class="header-section-number">15.0.5</span> Monte Carlo simulation</h3>
@@ -469,8 +472,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="simulation.html#cb190-1" aria-hidden="true" tabindex="-1"></a>heads50 <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">50</span>, <span class="fu">sample</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">sum</span>())   </span>
 <span id="cb190-2"><a href="simulation.html#cb190-2" aria-hidden="true" tabindex="-1"></a>heads50</span></code></pre></div>
-<pre><code>##  [1] 3 0 2 1 3 2 0 3 1 4 2 3 2 3 4 1 1 2 2 4 2 3 2 3 1 2 2 2 2 1 4 3 1 3 3 1 2 3
-## [39] 1 2 1 3 2 2 1 2 1 3 3 2</code></pre>
+<pre><code>##  [1] 3 2 3 2 1 2 1 1 3 3 2 2 2 1 1 1 1 2 3 1 2 1 0 3 3 1 2 3 0 1 3 0 3 0 1 0 2 2
+## [39] 0 2 2 1 1 1 0 2 0 2 1 4</code></pre>
 </div>
 <div id="activity-5-probability" class="section level3" number="15.0.7">
 <h3><span class="header-section-number">15.0.7</span> Activity 5: probability</h3>
@@ -490,28 +493,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="right">0</td>
-<td align="right">2</td>
-<td align="right">0.04</td>
+<td align="right">8</td>
+<td align="right">0.16</td>
 </tr>
 <tr class="even">
 <td align="right">1</td>
-<td align="right">12</td>
-<td align="right">0.24</td>
+<td align="right">16</td>
+<td align="right">0.32</td>
 </tr>
 <tr class="odd">
 <td align="right">2</td>
-<td align="right">18</td>
-<td align="right">0.36</td>
+<td align="right">15</td>
+<td align="right">0.30</td>
 </tr>
 <tr class="even">
 <td align="right">3</td>
-<td align="right">14</td>
-<td align="right">0.28</td>
+<td align="right">10</td>
+<td align="right">0.20</td>
 </tr>
 <tr class="odd">
 <td align="right">4</td>
-<td align="right">4</td>
-<td align="right">0.08</td>
+<td align="right">1</td>
+<td align="right">0.02</td>
 </tr>
 </tbody>
 </table>
@@ -526,7 +529,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb193-4"><a href="simulation.html#cb193-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;purple&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb193-5"><a href="simulation.html#cb193-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Number of Heads&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Probability of Heads in 4 flips (p)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb193-6"><a href="simulation.html#cb193-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:data50hist"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:data50hist"></span>
 <img src="15-simulation_files/figure-html/data50hist-1.png" alt="No. of heads from 4 coin tosses probability outcomes." width="100%" />
 <p class="caption">
 Figure 15.1: No. of heads from 4 coin tosses probability outcomes.
@@ -553,7 +556,7 @@ Figure 15.1: No. of heads from 4 coin tosses probability outcomes.
 <span id="cb196-2"><a href="simulation.html#cb196-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;purple&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb196-3"><a href="simulation.html#cb196-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Number of Heads&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Probability of Heads in 4 flips (p)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb196-4"><a href="simulation.html#cb196-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:data10Khist"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:data10Khist"></span>
 <img src="15-simulation_files/figure-html/data10Khist-1.png" alt="10K coin toss probability outcomes." width="100%" />
 <p class="caption">
 Figure 15.2: 10K coin toss probability outcomes.
@@ -567,7 +570,7 @@ Figure 15.2: 10K coin toss probability outcomes.
 <pre><code>## # A tibble: 1 x 1
 ##      p2
 ##   &lt;dbl&gt;
-## 1 0.682</code></pre>
+## 1 0.696</code></pre>
 <p>You can add probabilities for various outcomes together as long as the outcomes are mutually exclusive, that is, when one outcome occurs, the others can’t occur. For this coin flipping example, this is obviously the case: you can’t simultaneously get exactly two and exactly three heads as the outcome of a single experiment. However, be aware that you can’t simply add probabilities together when the events in question are not mutually exclusive: for example, the probability of the coin landing heads up, and it landing with the image of the head being in a particular orientation are not mutually exclusive, and can’t be simply added together.</p>
 <p>This is the basis of how we can calculate the probability of an outcome using a known distribution - by simulating a large number of trials we can use this as an estimate for how our data will look in the real world.</p>
 </div>
@@ -584,14 +587,14 @@ Figure 15.2: 10K coin toss probability outcomes.
 <p>You can check that the data you have generated are as you expected by calculating the mean and SD of this new variable - you shouldn’t expect the values to be exactly 10 and 2 (remember, it’s randomly generated), but they should be reasonably close.</p>
 <div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="simulation.html#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(normal)</span>
 <span id="cb200-2"><a href="simulation.html#cb200-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(normal)</span></code></pre></div>
-<pre><code>## [1] 9.653285
-## [1] 2.185697</code></pre>
+<pre><code>## [1] 10.15485
+## [1] 2.119806</code></pre>
 <p>Finally, you can visualise your data with a density plot. Try changing the number of data points generated by <code>rnorm()</code> from 50 to 500 to 5000 and then see how the shape of the distribution changes.</p>
 <div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="simulation.html#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">normal =</span> normal) <span class="sc">%&gt;%</span> <span class="co">#turn the variable normal into a table and then</span></span>
 <span id="cb202-2"><a href="simulation.html#cb202-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(normal)) <span class="sc">+</span> <span class="co"># create a density plot</span></span>
 <span id="cb202-3"><a href="simulation.html#cb202-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">fill =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
 <span id="cb202-4"><a href="simulation.html#cb202-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
 <img src="15-simulation_files/figure-html/unnamed-chunk-3-1.png" alt="Distribution of variable created by rnorm" width="100%" />
 <p class="caption">
 Figure 7.3: Distribution of variable created by rnorm
@@ -623,14 +626,14 @@ Figure 7.3: Distribution of variable created by rnorm
 <span id="cb208-6"><a href="simulation.html#cb208-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">&quot;E&quot;</span>) <span class="sc">+</span></span>
 <span id="cb208-7"><a href="simulation.html#cb208-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb208-8"><a href="simulation.html#cb208-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Outcome of dice roll&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
 <img src="15-simulation_files/figure-html/unnamed-chunk-9-1.png" alt="Boxplot of IQ scores grouped by what each person rolled on the die" width="100%" />
 <p class="caption">
 Figure 7.7: Boxplot of IQ scores grouped by what each person rolled on the die
 </p>
 </div>
 </div>
-<div id="finished" class="section level3" number="15.0.12">
+<div id="finished-6" class="section level3" number="15.0.12">
 <h3><span class="header-section-number">15.0.12</span> Finished!</h3>
 <p>The final Data Skills activity is to analyse your group project data which means in terms of new stuff to learn, we’re done! In Psych 1A and 1B, we’ve tried to give you a solid introduction to common data skills you’ll need in order to conduct your own research. Even if you don’t intend to continue with psychology or quantitative research in the future, we hope that you’re proud of the skills you’ve learned. For some of you, R might not have been your favourite bit of the course, but you should be very proud of what you’ve achieved and with such a diverse class we hope you can see that programming isn’t an innate skill that only certain people can learn. It just take a a bit of work, some (hopefully) helpful teaching materials, and a lot of swearing at the error messages.</p>
 
@@ -750,6 +753,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"],
 "google": false
 },
@@ -771,6 +775,10 @@ gitbook.start({
 "text": null
 },
 "download": {},
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

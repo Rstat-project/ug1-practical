@@ -50,7 +50,7 @@ When you first open up R Studio you won't see a script like above, there will ju
 
 As an example, let’s look at the help documentation for the function `rnorm()` which randomly generates a set of numbers with a normal distribution. 
 
-### Activity 1
+### Activity 1: First action in R
 
 * Open up R Studio (either on the server or on your machine) and in the console, type the following code:  
 
@@ -70,7 +70,7 @@ In the arguments section, there are explanations for each of the arguments. `n` 
 
 Let's try an example and just change the required argument `n` to ask R to produce 5 random numbers. 
 
-### Activity 2
+### Activity 2: Try and change
 
 * Copy and paste the following code into the console.  
 
@@ -282,7 +282,7 @@ knitr::include_graphics("images/global_options.jpg")
 
 When you open up R and start writing code, loading packages, and creating objects, you're doing so in a new **session**. In addition to clearing the workspace, it can sometimes be useful to start a new session. This will happen automatically each time you start R on your computer, although sessions can persist on the server. If you find that your code isn't working and you can't figure out why, it might be worth starting a new session. This will clear the environment and detach all loaded packages - think of it like restarting your phone.
 
-### Activity 6
+### Activity 6: Clean up when your job is done
 
 Click 'Session - Restart R'. 
 

@@ -31,8 +31,8 @@ Table 1: The ten items on the AQ-10.
 
 Responses to each item were measured on a four-point scale: Definitely Disagree, Slightly Disagree, Slightly Agree, Definitely Agree. One of the issues with conducting research using surveys is that if we don't design them carefully, our data may be affected by response bias. One type of response bias is **acquiescence bias**, which is the finding that people have a tendancy to agree with all statements. To try and minimise the impact of this, many questionnaires will **reverse-code** some of the questions so that a positive response means agreeing with one question but disagreeing with another.
 
-* Read through the questions. Type the number of one of the items where you think **agreeing** with the item would mean the participant displayed autistic traits<input class='solveme nospaces' size='2' data-answer='["1","7","8","10"]'/> 
-* Now type the number of one of the items where you think **disagreeing** with the item would mean the participant displayed autistic traits <input class='solveme nospaces' size='1' data-answer='["2","3","4","5","6","9"]'/> 
+* Read through the questions. Type the number of one of the items where you think **agreeing** with the item would mean the participant displayed autistic traits<input class='webex-solveme nospaces' size='2' data-answer='["1","7","8","10"]'/> 
+* Now type the number of one of the items where you think **disagreeing** with the item would mean the participant displayed autistic traits <input class='webex-solveme nospaces' size='1' data-answer='["2","3","4","5","6","9"]'/> 
 
 For those items where agreeing with the item means a higher autistic quotient (AQ) score, participants recieve a score of 1 if they answer "Slightly agree" or "Agree". This is called **forward scoring**. For those items where disagreeing with the item means a higher AQ score, participants recieve a score of 1 if they answer "Slightly disagree" or "Disagree". This is know as **reverse coding**.
 
@@ -196,17 +196,17 @@ Due to the large margin for error in carrying out this task by hand, it's import
 
 Finally, let's refresh your memory of some of the important tidyverse functions before we delve into anything new.
 
-* What function would you use to keep just the columns Q1 and Q2 in `responses`? <select class='solveme' data-answer='["select"]'> <option></option> <option>filter</option> <option>select</option> <option>object</option> <option>Q1:Q2</option></select>
-* What function would you use to keep just the data from participant 16 in `reponses`? <select class='solveme' data-answer='["filter"]'> <option></option> <option>filter</option> <option>select</option> <option>summarise</option> <option>observation</option></select>
-* What function would you use to add up the total score for participant 16? <select class='solveme' data-answer='["summarise"]'> <option></option> <option>filter</option> <option>inner_join</option> <option>summarise</option> <option>score</option></select>
-* What function would you use to join together `qformats` and `scoring`? <select class='solveme' data-answer='["inner_join"]'> <option></option> <option>inner_join</option> <option>join</option> <option>join_inner</option> <option>object_join</option></select>
+* What function would you use to keep just the columns Q1 and Q2 in `responses`? <select class='webex-solveme' data-answer='["select"]'> <option></option> <option>filter</option> <option>select</option> <option>object</option> <option>Q1:Q2</option></select>
+* What function would you use to keep just the data from participant 16 in `reponses`? <select class='webex-solveme' data-answer='["filter"]'> <option></option> <option>filter</option> <option>select</option> <option>summarise</option> <option>observation</option></select>
+* What function would you use to add up the total score for participant 16? <select class='webex-solveme' data-answer='["summarise"]'> <option></option> <option>filter</option> <option>inner_join</option> <option>summarise</option> <option>score</option></select>
+* What function would you use to join together `qformats` and `scoring`? <select class='webex-solveme' data-answer='["inner_join"]'> <option></option> <option>inner_join</option> <option>join</option> <option>join_inner</option> <option>object_join</option></select>
 
 ### Activity solutions - AQ data and recap
 
 #### Activity 4
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r

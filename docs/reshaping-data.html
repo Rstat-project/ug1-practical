@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10 Reshaping data | Level 1 Data Skills</title>
   <meta name="description" content="ug1-practical-materials" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10 Reshaping data | Level 1 Data Skills" />
   <meta property="og:type" content="book" />
@@ -31,8 +31,8 @@
   
 <link rel="prev" href="aq-data-and-recap.html"/>
 <link rel="next" href="pipes.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,6 +49,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -116,6 +118,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="include/psyteachr.css" type="text/css" />
 <link rel="stylesheet" href="include/style.css" type="text/css" />
 </head>
@@ -150,8 +153,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.0.2" data-path="programming-basics.html"><a href="programming-basics.html#getting-to-know-r-studio"><i class="fa fa-check"></i><b>2.0.2</b> Getting to know R Studio</a></li>
 <li class="chapter" data-level="2.0.3" data-path="programming-basics.html"><a href="programming-basics.html#console-vs.-scripts"><i class="fa fa-check"></i><b>2.0.3</b> Console vs. scripts</a></li>
 <li class="chapter" data-level="2.0.4" data-path="programming-basics.html"><a href="programming-basics.html#functions-and-arguments"><i class="fa fa-check"></i><b>2.0.4</b> Functions and arguments</a></li>
-<li class="chapter" data-level="2.0.5" data-path="getting-to-know-the-data.html"><a href="getting-to-know-the-data.html#activity-1"><i class="fa fa-check"></i><b>2.0.5</b> Activity 1</a></li>
-<li class="chapter" data-level="2.0.6" data-path="getting-to-know-the-data.html"><a href="getting-to-know-the-data.html#activity-2"><i class="fa fa-check"></i><b>2.0.6</b> Activity 2</a></li>
+<li class="chapter" data-level="2.0.5" data-path="programming-basics.html"><a href="programming-basics.html#activity-1-first-action-in-r"><i class="fa fa-check"></i><b>2.0.5</b> Activity 1: First action in R</a></li>
+<li class="chapter" data-level="2.0.6" data-path="programming-basics.html"><a href="programming-basics.html#activity-2-try-and-change"><i class="fa fa-check"></i><b>2.0.6</b> Activity 2: Try and change</a></li>
 <li class="chapter" data-level="2.0.7" data-path="programming-basics.html"><a href="programming-basics.html#argument-names"><i class="fa fa-check"></i><b>2.0.7</b> Argument names</a></li>
 <li class="chapter" data-level="2.0.8" data-path="programming-basics.html"><a href="programming-basics.html#tab-auto-complete"><i class="fa fa-check"></i><b>2.0.8</b> Tab auto-complete</a></li>
 <li class="chapter" data-level="2.0.9" data-path="programming-basics.html"><a href="programming-basics.html#packages"><i class="fa fa-check"></i><b>2.0.9</b> Base R and packages</a></li>
@@ -164,7 +167,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.0.16" data-path="programming-basics.html"><a href="programming-basics.html#looking-after-the-environment"><i class="fa fa-check"></i><b>2.0.16</b> Looking after the environment</a></li>
 <li class="chapter" data-level="2.0.17" data-path="programming-basics.html"><a href="programming-basics.html#global-options"><i class="fa fa-check"></i><b>2.0.17</b> Global options</a></li>
 <li class="chapter" data-level="2.0.18" data-path="programming-basics.html"><a href="programming-basics.html#r-sessions"><i class="fa fa-check"></i><b>2.0.18</b> R sessions</a></li>
-<li class="chapter" data-level="2.0.19" data-path="programming-basics.html"><a href="programming-basics.html#activity-6"><i class="fa fa-check"></i><b>2.0.19</b> Activity 6</a></li>
+<li class="chapter" data-level="2.0.19" data-path="programming-basics.html"><a href="programming-basics.html#activity-6-clean-up-when-your-job-is-done"><i class="fa fa-check"></i><b>2.0.19</b> Activity 6: Clean up when your job is done</a></li>
 <li class="chapter" data-level="2.0.20" data-path="programming-basics.html"><a href="programming-basics.html#how-to-cite-r-and-rstudio"><i class="fa fa-check"></i><b>2.0.20</b> How to cite R and RStudio</a></li>
 <li class="chapter" data-level="2.0.21" data-path="programming-basics.html"><a href="programming-basics.html#help-and-additional-resources"><i class="fa fa-check"></i><b>2.0.21</b> Help and additional resources</a></li>
 <li class="chapter" data-level="2.0.22" data-path="programming-basics.html"><a href="programming-basics.html#debugging-tips"><i class="fa fa-check"></i><b>2.0.22</b> Debugging tips</a></li>
@@ -201,9 +204,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.7" data-path="loading-data.html"><a href="loading-data.html#activity-6-pull-out-variables-of-interest"><i class="fa fa-check"></i><b>4.7</b> Activity 6: Pull out variables of interest</a></li>
 <li class="chapter" data-level="4.8" data-path="loading-data.html"><a href="loading-data.html#activity-7-visualise-the-data"><i class="fa fa-check"></i><b>4.8</b> Activity 7: Visualise the data</a>
 <ul>
-<li class="chapter" data-level="4.8.1" data-path="ref1.html"><a href="ref1.html#finished"><i class="fa fa-check"></i><b>4.8.1</b> Finished!</a></li>
+<li class="chapter" data-level="4.8.1" data-path="loading-data.html"><a href="loading-data.html#finished-1"><i class="fa fa-check"></i><b>4.8.1</b> Finished!</a></li>
 </ul></li>
-<li class="chapter" data-level="4.9" data-path="programming-basics.html"><a href="programming-basics.html#debugging-tips"><i class="fa fa-check"></i><b>4.9</b> Debugging tips</a></li>
+<li class="chapter" data-level="4.9" data-path="loading-data.html"><a href="loading-data.html#debugging-tips-1"><i class="fa fa-check"></i><b>4.9</b> Debugging tips</a></li>
 <li class="chapter" data-level="4.10" data-path="loading-data.html"><a href="loading-data.html#debugging-exercises"><i class="fa fa-check"></i><b>4.10</b> Debugging exercises</a></li>
 <li class="chapter" data-level="4.11" data-path="loading-data.html"><a href="loading-data.html#test-yourself"><i class="fa fa-check"></i><b>4.11</b> Test yourself</a></li>
 </ul></li>
@@ -211,8 +214,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#tidyverse"><i class="fa fa-check"></i><b>5.1</b> Tidyverse</a></li>
 <li class="chapter" data-level="5.2" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#the-babynames-database"><i class="fa fa-check"></i><b>5.2</b> The <code>babynames</code> database</a></li>
-<li class="chapter" data-level="5.3" data-path="loading-data.html"><a href="loading-data.html#walkthrough-video"><i class="fa fa-check"></i><b>5.3</b> Walkthrough video</a></li>
-<li class="chapter" data-level="5.4" data-path="loading-data.html"><a href="loading-data.html#activity-1-set-up"><i class="fa fa-check"></i><b>5.4</b> Activity 1: Set-up</a></li>
+<li class="chapter" data-level="5.3" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#walkthrough-video-1"><i class="fa fa-check"></i><b>5.3</b> Walkthrough video</a></li>
+<li class="chapter" data-level="5.4" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-1-set-up-1"><i class="fa fa-check"></i><b>5.4</b> Activity 1: Set-up</a></li>
 <li class="chapter" data-level="5.5" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-2-look-at-the-data"><i class="fa fa-check"></i><b>5.5</b> Activity 2: Look at the data</a></li>
 <li class="chapter" data-level="5.6" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-3-data-visualisation"><i class="fa fa-check"></i><b>5.6</b> Activity 3: Data visualisation</a></li>
 <li class="chapter" data-level="5.7" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-4-selecting-variables-of-interest"><i class="fa fa-check"></i><b>5.7</b> Activity 4: Selecting variables of interest</a></li>
@@ -221,12 +224,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.10" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-7-creating-new-variables"><i class="fa fa-check"></i><b>5.10</b> Activity 7: Creating new variables</a></li>
 <li class="chapter" data-level="5.11" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-8-grouping-and-summarising"><i class="fa fa-check"></i><b>5.11</b> Activity 8: Grouping and summarising</a></li>
 <li class="chapter" data-level="5.12" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#activity-9-pipes"><i class="fa fa-check"></i><b>5.12</b> Activity 9: Pipes</a></li>
-<li class="chapter" data-level="5.13" data-path="ref1.html"><a href="ref1.html#finished"><i class="fa fa-check"></i><b>5.13</b> Finished!</a></li>
+<li class="chapter" data-level="5.13" data-path="data-wrangling-1.html"><a href="data-wrangling-1.html#finished-2"><i class="fa fa-check"></i><b>5.13</b> Finished!</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html"><i class="fa fa-check"></i><b>6</b> Data wrangling 2</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="loading-data.html"><a href="loading-data.html#walkthrough-video"><i class="fa fa-check"></i><b>6.1</b> Walkthrough video</a></li>
-<li class="chapter" data-level="6.2" data-path="loading-data.html"><a href="loading-data.html#activity-1-set-up"><i class="fa fa-check"></i><b>6.2</b> Activity 1: Set-up</a></li>
+<li class="chapter" data-level="6.1" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#walkthrough-video-2"><i class="fa fa-check"></i><b>6.1</b> Walkthrough video</a></li>
+<li class="chapter" data-level="6.2" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-1-set-up-2"><i class="fa fa-check"></i><b>6.2</b> Activity 1: Set-up</a></li>
 <li class="chapter" data-level="6.3" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-2-select"><i class="fa fa-check"></i><b>6.3</b> Activity 2: Select</a></li>
 <li class="chapter" data-level="6.4" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-3-arrange"><i class="fa fa-check"></i><b>6.4</b> Activity 3: Arrange</a></li>
 <li class="chapter" data-level="6.5" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-4-filter"><i class="fa fa-check"></i><b>6.5</b> Activity 4: Filter</a></li>
@@ -234,11 +237,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.7" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-6-group_by"><i class="fa fa-check"></i><b>6.7</b> Activity 6: Group_by</a></li>
 <li class="chapter" data-level="6.8" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-7-data-visualisation"><i class="fa fa-check"></i><b>6.8</b> Activity 7: Data visualisation</a></li>
 <li class="chapter" data-level="6.9" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-8-make-r-your-own"><i class="fa fa-check"></i><b>6.9</b> Activity 8: Make R your own</a></li>
-<li class="chapter" data-level="6.10" data-path="ref1.html"><a href="ref1.html#finished"><i class="fa fa-check"></i><b>6.10</b> Finished!</a></li>
+<li class="chapter" data-level="6.10" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#finished-3"><i class="fa fa-check"></i><b>6.10</b> Finished!</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html"><i class="fa fa-check"></i><b>7</b> Intro to Data Viz</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="loading-data.html"><a href="loading-data.html#walkthrough-video"><i class="fa fa-check"></i><b>7.1</b> Walkthrough video</a></li>
+<li class="chapter" data-level="7.1" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html#walkthrough-video-3"><i class="fa fa-check"></i><b>7.1</b> Walkthrough video</a></li>
 <li class="chapter" data-level="7.2" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html#activity-1-dplyr-recap"><i class="fa fa-check"></i><b>7.2</b> Activity 1: dplyr recap</a></li>
 <li class="chapter" data-level="7.3" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html#data-visualisation"><i class="fa fa-check"></i><b>7.3</b> Data visualisation</a></li>
 <li class="chapter" data-level="7.4" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html#activity-2-set-up"><i class="fa fa-check"></i><b>7.4</b> Activity 2: Set-up</a></li>
@@ -249,8 +252,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="scatterplots.html"><a href="scatterplots.html"><i class="fa fa-check"></i><b>8</b> Scatterplots</a>
 <ul>
-<li class="chapter" data-level="8.0.1" data-path="loading-data.html"><a href="loading-data.html#activity-1-set-up"><i class="fa fa-check"></i><b>8.0.1</b> Activity 1: Set-up</a></li>
-<li class="chapter" data-level="8.0.2" data-path="data-wrangling-2.html"><a href="data-wrangling-2.html#activity-2-select"><i class="fa fa-check"></i><b>8.0.2</b> Activity 2: Select</a></li>
+<li class="chapter" data-level="8.0.1" data-path="scatterplots.html"><a href="scatterplots.html#activity-1-set-up-3"><i class="fa fa-check"></i><b>8.0.1</b> Activity 1: Set-up</a></li>
+<li class="chapter" data-level="8.0.2" data-path="scatterplots.html"><a href="scatterplots.html#activity-2-select-1"><i class="fa fa-check"></i><b>8.0.2</b> Activity 2: Select</a></li>
 <li class="chapter" data-level="8.0.3" data-path="scatterplots.html"><a href="scatterplots.html#activity-3-simple-scatterplots"><i class="fa fa-check"></i><b>8.0.3</b> Activity 3: Simple scatterplots</a></li>
 <li class="chapter" data-level="8.0.4" data-path="scatterplots.html"><a href="scatterplots.html#activity-4-adding-a-line-of-best-fit"><i class="fa fa-check"></i><b>8.0.4</b> Activity 4: Adding a line of best fit</a></li>
 <li class="chapter" data-level="8.0.5" data-path="scatterplots.html"><a href="scatterplots.html#activity-5-setting-the-factors"><i class="fa fa-check"></i><b>8.0.5</b> Activity 5: Setting the factors</a></li>
@@ -285,7 +288,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11" data-path="pipes.html"><a href="pipes.html"><i class="fa fa-check"></i><b>11</b> Pipes</a>
 <ul>
 <li class="chapter" data-level="11.0.1" data-path="pipes.html"><a href="pipes.html#activity-1-recap"><i class="fa fa-check"></i><b>11.0.1</b> Activity 1: Recap</a></li>
-<li class="chapter" data-level="11.0.2" data-path="intro-to-data-viz.html"><a href="intro-to-data-viz.html#activity-2-set-up"><i class="fa fa-check"></i><b>11.0.2</b> Activity 2: Set-up</a></li>
+<li class="chapter" data-level="11.0.2" data-path="pipes.html"><a href="pipes.html#activity-2-set-up-1"><i class="fa fa-check"></i><b>11.0.2</b> Activity 2: Set-up</a></li>
 <li class="chapter" data-level="11.0.3" data-path="pipes.html"><a href="pipes.html#activity-3-example-pipe-1"><i class="fa fa-check"></i><b>11.0.3</b> Activity 3: Example pipe 1</a></li>
 <li class="chapter" data-level="11.0.4" data-path="pipes.html"><a href="pipes.html#activity-4-example-pipe-2"><i class="fa fa-check"></i><b>11.0.4</b> Activity 4: Example pipe 2</a></li>
 <li class="chapter" data-level="11.0.5" data-path="pipes.html"><a href="pipes.html#activity-5-example-pipe-3"><i class="fa fa-check"></i><b>11.0.5</b> Activity 5: Example pipe 3</a></li>
@@ -293,7 +296,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="12" data-path="mega-pipe.html"><a href="mega-pipe.html"><i class="fa fa-check"></i><b>12</b> Mega pipe</a>
 <ul>
-<li class="chapter" data-level="12.0.1" data-path="loading-data.html"><a href="loading-data.html#activity-1-set-up"><i class="fa fa-check"></i><b>12.0.1</b> Activity 1: Set-up</a></li>
+<li class="chapter" data-level="12.0.1" data-path="mega-pipe.html"><a href="mega-pipe.html#activity-1-set-up-4"><i class="fa fa-check"></i><b>12.0.1</b> Activity 1: Set-up</a></li>
 <li class="chapter" data-level="12.0.2" data-path="mega-pipe.html"><a href="mega-pipe.html#activity-2-mega-pipe"><i class="fa fa-check"></i><b>12.0.2</b> Activity 2: Mega pipe</a></li>
 <li class="chapter" data-level="12.0.3" data-path="mega-pipe.html"><a href="mega-pipe.html#activity-3-pipe-plot"><i class="fa fa-check"></i><b>12.0.3</b> Activity 3: Pipe plot</a></li>
 <li class="chapter" data-level="12.0.4" data-path="mega-pipe.html"><a href="mega-pipe.html#activity-4-aq-score-by-gender"><i class="fa fa-check"></i><b>12.0.4</b> Activity 4: AQ score by gender</a></li>
@@ -342,7 +345,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="15.0.9" data-path="simulation.html"><a href="simulation.html#activity-7-big-data"><i class="fa fa-check"></i><b>15.0.9</b> Activity 7: big data</a></li>
 <li class="chapter" data-level="15.0.10" data-path="simulation.html"><a href="simulation.html#activity-8-rnorm"><i class="fa fa-check"></i><b>15.0.10</b> Activity 8: <code>rnorm()</code></a></li>
 <li class="chapter" data-level="15.0.11" data-path="simulation.html"><a href="simulation.html#activity-9-simulate-a-dataset"><i class="fa fa-check"></i><b>15.0.11</b> Activity 9: Simulate a dataset</a></li>
-<li class="chapter" data-level="15.0.12" data-path="ref1.html"><a href="ref1.html#finished"><i class="fa fa-check"></i><b>15.0.12</b> Finished!</a></li>
+<li class="chapter" data-level="15.0.12" data-path="simulation.html"><a href="simulation.html#finished-6"><i class="fa fa-check"></i><b>15.0.12</b> Finished!</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="project-analysis.html"><a href="project-analysis.html"><i class="fa fa-check"></i><b>16</b> Project analysis</a>
 <ul>
@@ -431,7 +434,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>What does <code>filter()</code> do?</li>
 </ul>
-<p><select class='solveme' data-answer='["Retains or removes observations"]'> <option></option> <option>Retains or removes variables</option> <option>Retains or removes observations</option></select></p>
+<p><select class='webex-solveme' data-answer='["Retains or removes observations"]'> <option></option> <option>Retains or removes variables</option> <option>Retains or removes observations</option></select></p>
 <hr />
 <ul>
 <li>Create a new object called <code>rlong_16</code> that uses <code>filter()</code> to keep only the data from participant Id 16.</li>
@@ -489,7 +492,7 @@ Every year, the biggest problem with these exercises is typos caused by not payi
 <li>Hint 1: <code>ggplot(data, aes(x)) + geom_histogram()</code></li>
 <li>Hint 2: Add <code>binwidth = 1</code> to <code>geom_histogram()</code> to change the width of the bars.</li>
 </ul>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
 <img src="10-reshaping-data_files/figure-html/unnamed-chunk-5-1.png" alt="Histogram of total AQ scores" width="100%" />
 <p class="caption">
 Figure 5.3: Histogram of total AQ scores
@@ -498,9 +501,9 @@ Figure 5.3: Histogram of total AQ scores
 </div>
 <div id="activity-solutions---reshping-data" class="section level3" number="10.0.9">
 <h3><span class="header-section-number">10.0.9</span> Activity solutions - Reshping data</h3>
-<div id="activity-1" class="section level4" number="10.0.9.1">
+<div id="activity-1-2" class="section level4" number="10.0.9.1">
 <h4><span class="header-section-number">10.0.9.1</span> Activity 1</h4>
-<div class="solution">
+<div class="webex-solution">
 <button>
 Solution
 </button>
@@ -510,35 +513,35 @@ Solution
 <span id="cb132-4"><a href="reshaping-data.html#cb132-4" aria-hidden="true" tabindex="-1"></a>qformats <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;qformats.csv&quot;</span>)</span></code></pre></div>
 </div>
 </div>
-<div id="activity-3" class="section level4" number="10.0.9.2">
+<div id="activity-3-2" class="section level4" number="10.0.9.2">
 <h4><span class="header-section-number">10.0.9.2</span> Activity 3</h4>
-<div class='solution'>
+<div class='webex-solution'>
 <button>
 Solution
 </button>
 <div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="reshaping-data.html#cb133-1" aria-hidden="true" tabindex="-1"></a>rlong_16 <span class="ot">&lt;-</span> <span class="fu">filter</span>(rlong, Id <span class="sc">==</span> <span class="dv">16</span>)</span></code></pre></div>
 </div>
-<div id="activity-4" class="section level4" number="10.0.9.3">
+<div id="activity-4-2" class="section level4" number="10.0.9.3">
 <h4><span class="header-section-number">10.0.9.3</span> Activity 4</h4>
-<div class="solution">
+<div class="webex-solution">
 <button>
 Solution
 </button>
 <div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="reshaping-data.html#cb134-1" aria-hidden="true" tabindex="-1"></a>rlong_16_join <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(rlong_16, qformats, <span class="st">&quot;Question&quot;</span>)</span></code></pre></div>
 </div>
 </div>
-<div id="activity-5" class="section level4" number="10.0.9.4">
+<div id="activity-5-1" class="section level4" number="10.0.9.4">
 <h4><span class="header-section-number">10.0.9.4</span> Activity 5</h4>
-<div class="solution">
+<div class="webex-solution">
 <button>
 Solution
 </button>
 <div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="reshaping-data.html#cb135-1" aria-hidden="true" tabindex="-1"></a>scores_16 <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(rlong_16_join, scoring, <span class="fu">c</span>(<span class="st">&quot;QFormat&quot;</span>, <span class="st">&quot;Response&quot;</span>))</span></code></pre></div>
 </div>
 </div>
-<div id="activity-6" class="section level4" number="10.0.9.5">
+<div id="activity-6-1" class="section level4" number="10.0.9.5">
 <h4><span class="header-section-number">10.0.9.5</span> Activity 6</h4>
-<div class='solution'>
+<div class='webex-solution'>
 <button>
 Solution
 </button>
@@ -546,7 +549,7 @@ Solution
 </div>
 <div id="activity-8" class="section level4" number="10.0.9.6">
 <h4><span class="header-section-number">10.0.9.6</span> Activity 8</h4>
-<div class="solution">
+<div class="webex-solution">
 <button>
 Solution
 </button>
@@ -674,6 +677,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"],
 "google": false
 },
@@ -695,6 +699,10 @@ gitbook.start({
 "text": null
 },
 "download": {},
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

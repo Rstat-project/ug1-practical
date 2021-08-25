@@ -38,7 +38,7 @@ A few hints:
 
 <br>
 
-How would you describe the relationship between the two variables? <select class='solveme' data-answer='["As happiness score increase, depression scores decrease"]'> <option></option> <option>As happiness scores increase, depression scores increase</option> <option>As happiness score increase, depression scores decrease</option> <option>As happiness scores decrease, depression scores decrease</option></select>
+How would you describe the relationship between the two variables? <select class='webex-solveme' data-answer='["As happiness score increase, depression scores decrease"]'> <option></option> <option>As happiness scores increase, depression scores increase</option> <option>As happiness score increase, depression scores decrease</option> <option>As happiness scores decrease, depression scores decrease</option></select>
 
 ### Activity 4: Adding a line of best fit
 
@@ -79,7 +79,7 @@ str(summarydata)
 ```
 
 ```
-## tibble[,6] [992 x 6] (S3: tbl_df/tbl/data.frame)
+## tibble [992 x 6] (S3: tbl_df/tbl/data.frame)
 ##  $ ahiTotal : num [1:992] 32 34 34 35 36 37 38 38 38 38 ...
 ##  $ cesdTotal: num [1:992] 50 49 47 41 36 35 50 55 47 39 ...
 ##  $ sex      : num [1:992] 1 1 1 1 1 1 2 1 2 2 ...
@@ -139,7 +139,7 @@ So, let's be honest, there's not much going on with any of the demographic varia
 * If you've done it right, `summarydata` should contain a column named `happiness` with the value `TRUE` if `ahiTotal` is above the overall median and `FALSE` if it is below.
 
 
-<div class='solution'><button>Hint 1</button>
+<div class='webex-solution'><button>Hint 1</button>
 
 
 
@@ -152,7 +152,7 @@ mutate(data, new_variable = equal_or_more_than_median)
 
 
 
-<div class='solution'><button>Hint 2</button>
+<div class='webex-solution'><button>Hint 2</button>
 
 
 
@@ -182,10 +182,10 @@ Now, reproduce the below plot using this new variable:
 <p class="caption">(\#fig:unnamed-chunk-8)**CAPTION THIS FIGURE!!**</p>
 </div>
 
-What might you conclude from this plot? <select class='solveme' data-answer='["The relationsip between happiness and depression scores is stronger for people who have lower than average happiness scores"]'> <option></option> <option>The relationship between happiness and depression scores is stronger for people who have above average happiness scores</option> <option>The relationsip between happiness and depression scores is stronger for people who have lower than average happiness scores</option> <option>There is no difference in the relationship between depression and happiness scores between the groups</option></select>
+What might you conclude from this plot? <select class='webex-solveme' data-answer='["The relationsip between happiness and depression scores is stronger for people who have lower than average happiness scores"]'> <option></option> <option>The relationship between happiness and depression scores is stronger for people who have above average happiness scores</option> <option>The relationsip between happiness and depression scores is stronger for people who have lower than average happiness scores</option> <option>There is no difference in the relationship between depression and happiness scores between the groups</option></select>
 
 
-<div class='solution'><button>Explain this answer</button>
+<div class='webex-solution'><button>Explain this answer</button>
 
 
 The line for the "unhappy" group is much steeper than the line for the "happy" group. That is, is you're generally unhappy, then you report a much stronger link between your happiness and depression levels than if you're generally happy. 
@@ -240,7 +240,7 @@ Great job! As you may have noticed, this chapter tried to push you and test what
 #### Activity 1
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r
@@ -257,7 +257,7 @@ all_dat <- inner_join(dat, pinfo, by=c("id", "intervention")
 #### Activity 2
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 
@@ -272,7 +272,7 @@ summarydata <- select(all_dat, ahiTotal, cesdTotal, sex, age, educ, income)
 #### Activity 3
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 
@@ -296,7 +296,7 @@ ggplot(all_dat, aes(x = ahiTotal , y = cesdTotal)) +
 #### Activity 4
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 
@@ -330,7 +330,7 @@ ggplot(all_dat, aes(x = ahiTotal , y = cesdTotal)) +
 #### Activity 5
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 
@@ -348,7 +348,7 @@ summarydata <- summarydata %>%
 #### Activity 6
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 
@@ -420,7 +420,7 @@ ggplot(summarydata, aes(x = ahiTotal , y = cesdTotal,
 #### Activity 7
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 

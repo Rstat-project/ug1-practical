@@ -58,9 +58,9 @@ Remember this for your group project - rather than creating new objects for each
 
 Look at the graph and answer the following questions:
 
-* Which group has the lowest median total AQ score? <select class='solveme' data-answer='["female"]'> <option></option> <option>female</option> <option>male</option> <option>nonbinary</option></select>
-* Which group has an outlier? <select class='solveme' data-answer='["male"]'> <option></option> <option>female</option> <option>male</option> <option>nonbinary</option></select>
-* Which of the following do you think would be an accurate conclusion to draw from the plot? <select class='solveme' data-answer='["Men and nonbinary people&apos;s scores did not differ much and both had higher AQ scores than wome"]'> <option></option> <option>Women had higher AQ scores than men or nonbinary people</option> <option>Men and nonbinary people's scores did not differ much and both had higher AQ scores than wome</option> <option>Men had higher AQ scores than nonbinary people who had higher scores than women</option></select>
+* Which group has the lowest median total AQ score? <select class='webex-solveme' data-answer='["female"]'> <option></option> <option>female</option> <option>male</option> <option>nonbinary</option></select>
+* Which group has an outlier? <select class='webex-solveme' data-answer='["male"]'> <option></option> <option>female</option> <option>male</option> <option>nonbinary</option></select>
+* Which of the following do you think would be an accurate conclusion to draw from the plot? <select class='webex-solveme' data-answer='["Men and nonbinary people&apos;s scores did not differ much and both had higher AQ scores than wome"]'> <option></option> <option>Women had higher AQ scores than men or nonbinary people</option> <option>Men and nonbinary people&apos;s scores did not differ much and both had higher AQ scores than wome</option> <option>Men had higher AQ scores than nonbinary people who had higher scores than women</option></select>
 
 ### Activity 5: Bad bar plots
 
@@ -114,10 +114,10 @@ ggplot(AQ_all, aes(x = total_score, fill = gender)) +
 
 The y-axis displays density, i.e., what proportion of the data points fall at each point on the x-axis.
 
-* Approximately what percent of female participants had a total AQ of 2? <select class='solveme' data-answer='["30%"]'> <option></option> <option>.3%</option> <option>3%</option> <option>30%</option></select>
+* Approximately what percent of female participants had a total AQ of 2? <select class='webex-solveme' data-answer='["30%"]'> <option></option> <option>.3%</option> <option>3%</option> <option>30%</option></select>
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 It's important to be able to translate between proportions and percentages, it will make your understanding of statistics and p-values much easier. To translate a proportion into a percentage, you multiply by 100 or move the decimal place two places to the right so a proportion of .5 = 50%, a proportion of .03 = 3% and so on. 
@@ -175,7 +175,7 @@ ggsave("AQ_histogram.png", plot = AQ_histogram)
 #### Activity 1
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r
@@ -191,7 +191,7 @@ qformats <- read_csv("qformats.csv")
 #### Activity 2
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r
@@ -211,7 +211,7 @@ AQ_all <- pivot_longer(data = responses,
 #### Activity 3
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r
@@ -230,7 +230,7 @@ AQ_all %>%
 #### Activity 4
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r

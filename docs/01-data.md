@@ -13,23 +13,23 @@ When you get the correct answer, the answer box will turn green. Sometimes this 
 
 * What does the AHI measure? (Hint, use a single word)
 
-<input class='solveme nospaces' size='9' data-answer='["Happiness","happiness","TRUE"]'/> 
+<input class='webex-solveme nospaces' size='9' data-answer='["Happiness","happiness","TRUE"]'/> 
 
 * What does the CES-D measure? (hint, use a single word)
 
-<input class='solveme nospaces' size='10' data-answer='["Depression","depression","TRUE"]'/>
+<input class='webex-solveme nospaces' size='10' data-answer='["Depression","depression","TRUE"]'/>
 
 * How many participants were there in this study?
 
-<input class='solveme nospaces' size='3' data-answer='["295"]'/>
+<input class='webex-solveme nospaces' size='3' data-answer='["295"]'/>
 
 * How many questions (items) are there on the AHI?
 
-<input class='solveme nospaces' size='2' data-answer='["24"]'/>
+<input class='webex-solveme nospaces' size='2' data-answer='["24"]'/>
 
 * How many questions (items) are there on the CES-D?
 
-<input class='solveme nospaces' size='2' data-answer='["20"]'/>
+<input class='webex-solveme nospaces' size='2' data-answer='["20"]'/>
 
 ## Activity 2
 
@@ -49,12 +49,12 @@ Now that you've unzipped the folder, you should see that you have eight files. T
 
 * How many variables/columns data does `participant-info.csv` have?
 
-<input class='solveme nospaces' size='1' data-answer='["6"]'/>
+<input class='webex-solveme nospaces' size='1' data-answer='["6"]'/>
 
 * How many variables/columns data does `ahi-cesd.csv` have?
 
-<input class='solveme nospaces' size='2' data-answer='["50"]'/>
+<input class='webex-solveme nospaces' size='2' data-answer='["50"]'/>
 
-* What does a response of 1 for sex mean? <select class='solveme' data-answer='["female"]'> <option></option> <option>female</option> <option>male</option></select>
+* What does a response of 1 for sex mean? <select class='webex-solveme' data-answer='["female"]'> <option></option> <option>female</option> <option>male</option></select>
 
 The remaining five files are "stub files" that you will use as you work through this book, so don't worry about them just now. 

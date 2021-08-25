@@ -62,7 +62,7 @@ ahi_asc <- arrange(summarydata, by = ahiTotal)
 * How could you arrange this data in **descending** order (highest score first)?  
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r
@@ -72,9 +72,9 @@ arrange(summarydata, by = desc(ahiTotal))
 </div>
 
 
-* What is the smallest ahiTotal score? <input class='solveme nospaces' size='2' data-answer='["32"]'/>
+* What is the smallest ahiTotal score? <input class='webex-solveme nospaces' size='2' data-answer='["32"]'/>
 
-* What is the largest ahiTotal score? <input class='solveme nospaces' size='3' data-answer='["114"]'/>
+* What is the largest ahiTotal score? <input class='webex-solveme nospaces' size='3' data-answer='["114"]'/>
 
 ******
 
@@ -90,9 +90,9 @@ age_65max <- filter(ahi_asc, age < 65)
 
 * What does `filter()` do? 
 
-<select class='solveme' data-answer='["removes information that we are not interested in"]'> <option></option> <option>splits a column into multiple columns</option> <option>transforms existing columns</option> <option>takes multiple columns and collapses them together</option> <option>removes information that we are not interested in</option></select>
+<select class='webex-solveme' data-answer='["removes information that we are not interested in"]'> <option></option> <option>splits a column into multiple columns</option> <option>transforms existing columns</option> <option>takes multiple columns and collapses them together</option> <option>removes information that we are not interested in</option></select>
 
-* How many observations are left in `age_65max` after running `filter()`? <input class='solveme nospaces' size='3' data-answer='["939"]'/>
+* How many observations are left in `age_65max` after running `filter()`? <input class='webex-solveme nospaces' size='3' data-answer='["939"]'/>
 
 ******
 
@@ -106,12 +106,12 @@ data_median <- summarise(age_65max, median_score = median(ahiTotal))
 
 ******
 
-* What is the median score? <input class='solveme nospaces' size='2' data-answer='["74"]'/>
+* What is the median score? <input class='webex-solveme nospaces' size='2' data-answer='["74"]'/>
 
-* Change the above code to give you the **mean score**. What is the mean score to 2 decimal places? <input class='solveme nospaces' size='5' data-answer='["72.48"]'/>
+* Change the above code to give you the **mean score**. What is the mean score to 2 decimal places? <input class='webex-solveme nospaces' size='5' data-answer='["72.48"]'/>
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r
@@ -149,12 +149,12 @@ data_median_group <- summarise(happy_dat, median_score = median(cesdTotal))
 
 * What does `group_by()` do? 
 
-<select class='solveme' data-answer='["groups data frames based on a specific column so that all later operations are carried out on a group basis"]'> <option></option> <option>provides summary statistics of an existing dataframe</option> <option>organises information in ascending or descending order</option> <option>transforms existing columns</option> <option>groups data frames based on a specific column so that all later operations are carried out on a group basis</option></select>
+<select class='webex-solveme' data-answer='["groups data frames based on a specific column so that all later operations are carried out on a group basis"]'> <option></option> <option>provides summary statistics of an existing dataframe</option> <option>organises information in ascending or descending order</option> <option>transforms existing columns</option> <option>groups data frames based on a specific column so that all later operations are carried out on a group basis</option></select>
 
 * How would you change the code to group by education rather than `Happiness_Category`?
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r
@@ -180,22 +180,22 @@ ggplot(age_65max, aes(x = as.factor(income), y = cesdTotal, fill = as.factor(inc
   scale_y_continuous(name = "Depression Score")
 ```
 
-* Which income group has the highest median depression scores? <select class='solveme' data-answer='["Below Average"]'> <option></option> <option>Below Average</option> <option>Average</option> <option>Above Average</option></select>
+* Which income group has the highest median depression scores? <select class='webex-solveme' data-answer='["Below Average"]'> <option></option> <option>Below Average</option> <option>Average</option> <option>Above Average</option></select>
 
-* Which group has the highest density of scores at any one point? <select class='solveme' data-answer='["Above Average"]'> <option></option> <option>Below Average</option> <option>Average</option> <option>Above Average</option></select>
+* Which group has the highest density of scores at any one point? <select class='webex-solveme' data-answer='["Above Average"]'> <option></option> <option>Below Average</option> <option>Average</option> <option>Above Average</option></select>
 
 
-<div class='solution'><button>Explain This Answer</button>
+<div class='webex-solution'><button>Explain This Answer</button>
 
 Density is represented by the curvy line around the boxplot that looks a little bit like a (drunk) violin. The fatter the violin, the more data points there are at any one point. This means that in the above plot, the Above Average group has the highest density because this has the widest violin, i.e., there are lots of people in the Above Average income group with a score of about 5.
 
 </div>
 
 
-* Is income group a between-subject or within-subject variable? <select class='solveme' data-answer='["Between-subjects"]'> <option></option> <option>Between-subjects</option> <option>Within-subjects</option></select>
+* Is income group a between-subject or within-subject variable? <select class='webex-solveme' data-answer='["Between-subjects"]'> <option></option> <option>Between-subjects</option> <option>Within-subjects</option></select>
 
 
-<div class='solution'><button>Explain This Answer</button>
+<div class='webex-solution'><button>Explain This Answer</button>
 
 Between-subjects designs are where different participants are in different groups. Within-subject designs are when the same participants are in all groups. Income is an example of a between-subject variable because participants can only be in one grouping level of the independent variable
 

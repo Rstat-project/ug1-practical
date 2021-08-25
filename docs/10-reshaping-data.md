@@ -40,7 +40,7 @@ You have now created a tibble with 660 observations and 3 variables; 10 observat
 
 * What does `filter()` do? 
 
-<select class='solveme' data-answer='["Retains or removes observations"]'> <option></option> <option>Retains or removes variables</option> <option>Retains or removes observations</option></select>
+<select class='webex-solveme' data-answer='["Retains or removes observations"]'> <option></option> <option>Retains or removes variables</option> <option>Retains or removes observations</option></select>
 
 ******
 
@@ -117,7 +117,7 @@ Finally, use `ggplot()` and `geom_histogram()` to make a histogram of all the to
 #### Activity 1
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 
@@ -135,7 +135,7 @@ qformats <- read_csv("qformats.csv")
 #### Activity 3
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 
@@ -146,7 +146,7 @@ rlong_16 <- filter(rlong, Id == 16)
 #### Activity 4
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 
@@ -161,7 +161,7 @@ rlong_16_join <- inner_join(rlong_16, qformats, "Question")
 #### Activity 5
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 
@@ -176,7 +176,7 @@ scores_16 <- inner_join(rlong_16_join, scoring, c("QFormat", "Response"))
 #### Activity 6
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 
@@ -187,7 +187,7 @@ AQ_16 <- summarise(scores_16, AQ_score = sum(Score))
 #### Activity 8
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 

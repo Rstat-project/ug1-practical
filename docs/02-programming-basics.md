@@ -49,7 +49,7 @@ When you first open up R Studio you won't see a script like above, there will ju
 
 As an example, let’s look at the help documentation for the function `rnorm()` which randomly generates a set of numbers with a normal distribution. 
 
-### Activity 1
+### Activity 1: First action in R
 
 * Open up R Studio (either on the server or on your machine) and in the console, type the following code:  
 
@@ -69,7 +69,7 @@ In the arguments section, there are explanations for each of the arguments. `n` 
 
 Let's try an example and just change the required argument `n` to ask R to produce 5 random numbers. 
 
-### Activity 2
+### Activity 2: Try and change
 
 * Copy and paste the following code into the console.  
 
@@ -248,7 +248,7 @@ mean(data)
 
 ```
 ## [1] 45
-## Time difference of -223 days
+## Time difference of -236 days
 ## [1] 17.66644
 ```
 
@@ -297,7 +297,7 @@ By default, when you open R Studio it will show you what you were last working o
 
 When you open up R and start writing code, loading packages, and creating objects, you're doing so in a new **session**. In addition to clearing the workspace, it can sometimes be useful to start a new session. This will happen automatically each time you start R on your computer, although sessions can persist on the server. If you find that your code isn't working and you can't figure out why, it might be worth starting a new session. This will clear the environment and detach all loaded packages - think of it like restarting your phone.
 
-### Activity 6
+### Activity 6: Clean up when your job is done
 
 Click 'Session - Restart R'. 
 
@@ -357,7 +357,7 @@ citation("tidyverse")
 ## 
 ##   @Article{,
 ##     title = {Welcome to the {tidyverse}},
-##     author = {Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D'Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani},
+##     author = {Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D'Agostino McGowan and Romain Francois and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Muller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani},
 ##     year = {2019},
 ##     journal = {Journal of Open Source Software},
 ##     volume = {4},
@@ -409,11 +409,11 @@ A large part of coding is trying to figure why your code doesn't work and this i
 
 ### Activity 6: Test yourself
 
-**Question 1.** Why should you never include the code `install.packages()` in your analysis scripts? <select class='solveme' data-answer='["You (or someone else) may accidentally install a package update that stops your code working"]'> <option></option> <option>You should use library() instead</option> <option>Packages are already part of Base R</option> <option>You (or someone else) may accidentally install a package update that stops your code working</option> <option>You already have the latest version of the package</option></select> 
+**Question 1.** Why should you never include the code `install.packages()` in your analysis scripts? <select class='webex-solveme' data-answer='["You (or someone else) may accidentally install a package update that stops your code working"]'> <option></option> <option>You should use library() instead</option> <option>Packages are already part of Base R</option> <option>You (or someone else) may accidentally install a package update that stops your code working</option> <option>You already have the latest version of the package</option></select> 
 
 
 
-<div class='solution'><button>Explain This Answer</button>
+<div class='webex-solution'><button>Explain This Answer</button>
 
 Remember, when you run `install.packages()` it will always install the latest version of the package and it will overwrite any older versions of the package you may have installed.
 
@@ -427,10 +427,10 @@ Remember, when you run `install.packages()` it will always install the latest ve
 rnorm(6, 50, 10)
 ```
 
-<select class='solveme' data-answer='["A dataset with 6 numbers that has a mean of 50 and an SD of 10"]'> <option></option> <option>A dataset with 10 numbers that has a mean of 6 and an SD of 50</option> <option>A dataset with 6 numbers that has a mean of 50 and an SD of 10</option> <option>A dataset with 50 numbers that has a mean of 10 and an SD of 6</option> <option>A dataset with 50 numbers that has a mean of 10 and an SD of 6</option></select>  
+<select class='webex-solveme' data-answer='["A dataset with 6 numbers that has a mean of 50 and an SD of 10"]'> <option></option> <option>A dataset with 10 numbers that has a mean of 6 and an SD of 50</option> <option>A dataset with 6 numbers that has a mean of 50 and an SD of 10</option> <option>A dataset with 50 numbers that has a mean of 10 and an SD of 6</option> <option>A dataset with 50 numbers that has a mean of 10 and an SD of 6</option></select>  
 
 
-<div class='solution'><button>Explain This Answer</button>
+<div class='webex-solution'><button>Explain This Answer</button>
 
 The default form for `rnorm()` is `rnorm(n, mean, sd)`. If you need help remembering what each argument of a function does, look up the help documentation by running `?rnorm`
 
@@ -439,21 +439,21 @@ The default form for `rnorm()` is `rnorm(n, mean, sd)`. If you need help remembe
 <br>
 **Question 3.** If you have two packages that have functions with the same name and you want to specify exactly which package to use, what code would you use? 
 
-<select class='solveme' data-answer='["package::function"]'> <option></option> <option>package::function</option> <option>function::package</option> <option>library(package)</option> <option>install.packages(package)</option></select>  
+<select class='webex-solveme' data-answer='["package::function"]'> <option></option> <option>package::function</option> <option>function::package</option> <option>library(package)</option> <option>install.packages(package)</option></select>  
 
 
-<div class='solution'><button>Explain This Answer</button>
+<div class='webex-solution'><button>Explain This Answer</button>
 
 You should use the form `package::function`, for example `dplyr::select`. Remember that when you first load your packages R will warn you if any functions have the same name - remember to look out for this!
 
 </div>
   
 
-**Question 4.** Which of the following is most likely to be an argument? <select class='solveme' data-answer='["35"]'> <option></option> <option>35</option> <option>read_csv()</option> <option><-</option></select>
+**Question 4.** Which of the following is most likely to be an argument? <select class='webex-solveme' data-answer='["35"]'> <option></option> <option>35</option> <option>read_csv()</option> <option><-</option></select>
 
-**Question 5.** An easy way to spot functions is to look for <select class='solveme' data-answer='["brackets"]'> <option></option> <option>brackets</option> <option>numbers</option> <option>computers</option></select>.
+**Question 5.** An easy way to spot functions is to look for <select class='webex-solveme' data-answer='["brackets"]'> <option></option> <option>brackets</option> <option>numbers</option> <option>computers</option></select>.
 
-**Question 6.** The job of `<-` is to send the output from the function to a/an <select class='solveme' data-answer='["object"]'> <option></option> <option>argument</option> <option>assignment</option> <option>object</option></select>.
+**Question 6.** The job of `<-` is to send the output from the function to a/an <select class='webex-solveme' data-answer='["object"]'> <option></option> <option>argument</option> <option>assignment</option> <option>object</option></select>.
 
 
 

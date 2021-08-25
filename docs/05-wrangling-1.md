@@ -130,7 +130,7 @@ ggplot(data = dat,aes(x = year,y = prop, colour=name))+
 * Because in most countries assigned sex at birth is binary, there is no data on intersex, trans or non-binary names. In lieu of that, here's the [Wikipedia page about gender-neutral names and naming laws](https://en.wikipedia.org/wiki/Unisex_name) around the world which will hopefully make you question why on earth we ascribe someone's entire gender identity to a bunch of sounds and letters we use to label them. 
 
 
-<div class='solution'><button>But I want to display male AND female names!</button>
+<div class='webex-solution'><button>But I want to display male AND female names!</button>
 
 
 This is more complicated than you might first imagine so only read on if you're feeling confident. If you  remove the filter for `sex` when creating `dat` and then run the plot code again, it will make a very messy looking plot (try it). This is because for most names there will be two data points because although the numbers might be small for gendered names, there is usually always at least one baby of the non-dominant name gender that has been assigned that name.

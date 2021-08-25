@@ -53,7 +53,7 @@ final_data <- raw_data %>%
 </div>
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 Take the object `raw_data` **then** select the columns `id` and `score` **then** join it with the data in `demographic` by `id` **then** filter to only include ages of 18 or greater and save this in an object named `final_data`.
@@ -102,9 +102,9 @@ final_data <- raw_data %>%
 </ol>
 </div>
 
-Which of the following is a pipe? <select class='solveme' data-answer='["%>%"]'> <option></option> <option>%>%</option> <option>%<%</option> <option><-</option></select>
+Which of the following is a pipe? <select class='webex-solveme' data-answer='["%>%"]'> <option></option> <option>%<%</option> <option>%>%</option> <option><-</option></select>
 
-Where do pipes send the result of the function that precedes the pipe? <select class='solveme' data-answer='["To the first argument of the next function."]'> <option></option> <option>To the third argument of the 18th function.</option> <option>To the last argument of the next function.</option> <option>To the first argument of the next function.</option></select>
+Where do pipes send the result of the function that precedes the pipe? <select class='webex-solveme' data-answer='["To the first argument of the next function."]'> <option></option> <option>To the third argument of the 18th function.</option> <option>To the last argument of the next function.</option> <option>To the first argument of the next function.</option></select>
 
 ### Activity 2: Set-up
 
@@ -183,7 +183,7 @@ ggplot(question_scores, aes(x = Question, y = item_scores)) +
 #### Activity 3
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r
@@ -210,7 +210,7 @@ scores <- responses %>%
 #### Activity 4
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r
@@ -225,7 +225,7 @@ example_2 <- select(scores, -QFormat) %>%
 #### Activity 5
 
 
-<div class='solution'><button>Solution</button>
+<div class='webex-solution'><button>Solution</button>
 
 
 ```r
