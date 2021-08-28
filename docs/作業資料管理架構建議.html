@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>14 Probability continued | Level 1 Data Skills</title>
+  <title>A 作業資料管理架構建議 | Level 1 Data Skills</title>
   <meta name="description" content="ug1-practical-materials" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="14 Probability continued | Level 1 Data Skills" />
+  <meta property="og:title" content="A 作業資料管理架構建議 | Level 1 Data Skills" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="14 Probability continued | Level 1 Data Skills" />
+  <meta name="twitter:title" content="A 作業資料管理架構建議 | Level 1 Data Skills" />
   
   <meta name="twitter:description" content="ug1-practical-materials" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro-to-probability.html"/>
-<link rel="next" href="simulation.html"/>
+<link rel="prev" href="project-analysis.html"/>
+<link rel="next" href="git-and-github.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -399,268 +399,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="probability-continued" class="section level1" number="14">
-<h1><span class="header-section-number">14</span> Probability continued</h1>
-<p>First, we’re going to calculate probabilities based on the binomial distribution. In this chapter, for the first time we don’t need to load the tidyverse. All the functions we need are contained in Base R. If you want a refresher on the difference between Base R and packages, see <a href="https://psyteachr.github.io/ug1-practical/programming-basics.html#packages">Programming Basics</a>.</p>
-<ul>
-<li>Open a new R Markdown document, call it “Probability” and save it in your Data Skills folder.</li>
-</ul>
-<p>We’re going to use three Base R functions to work with the binomial distribution:</p>
-<p><code>dbinom()</code> - the density function: gives you the probability of x successes given the number of trials and the probability of success on a single trial (e.g., what’s the probability of flipping 8/10 heads with a fair coin?).</p>
-<p><code>pbinom()</code> - the probability distribution function: gives you the cumulative probability of getting a number of successes below a certain cut-off point (e.g. probability of getting 0 to 5 heads out of 10 flips), given the size and the probability. This is known as the cumulative probability distribution function or the cumulative density function.</p>
-<p><code>qbinom()</code> - the quantile function: is the opposite of <code>pbinom()</code> in that it gives you the x axis value for a given probability p, plus given the size and prob, that is if the probability of flipping a head is .5, how many heads would you expect to get with 10 flips?</p>
-<p>So let’s try these functions out to answer two questions:</p>
-<ol style="list-style-type: decimal">
-<li>What is the probability of getting exactly 5 heads on 10 flips?</li>
-<li>What is the probability of getting at most 2 heads on 10 flips?</li>
-</ol>
-<div id="activity-2-dbinom" class="section level3" number="14.0.1">
-<h3><span class="header-section-number">14.0.1</span> Activity 2: <code>dbinom()</code></h3>
-<p>Let’s start with question 1, what is the probability of getting exactly 5 heads on 10 flips?</p>
-<p>We want to predict the <strong>probability</strong> of getting 5 heads in 10 trials (coin flips) and the probability of success is 0.5 (it’ll either be heads or tails so you have a 50/50 chance which we write as 0.5). We will use <code>dbinom()</code> to work this out:</p>
-<p>The <code>dbinom()</code> (density) function has three arguments:</p>
-<ul>
-<li><p><code>x</code>: the number of ‘heads’ we want to know the probability of. Either a single one, 3 or a series 0:10. In this case it’s 5.</p></li>
-<li><p><code>size</code>: the number of trials (flips) we are simulating; in this case, 10 flips.</p></li>
-<li><p><code>prob</code>: the probability of ‘heads’ on one trial. Here chance is 50-50 which as a probability we state as 0.5 or .5</p></li>
-</ul>
-<p>Copy, paste and run the below code in a new code chunk:</p>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="probability-continued.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code></pre></div>
-<ul>
-<li>What is the probability of getting 5 heads out of 10 coin flips to 2 decimal places? <input class='webex-solveme nospaces' size='4' data-answer='["0.25",".25"]'/><br />
-</li>
-<li>What is this probability expressed in percent? <select class='webex-solveme' data-answer='["25%"]'> <option></option> <option>0.25%</option> <option>2.5%</option> <option>25%</option></select></li>
-</ul>
-</div>
-<div id="activity-3-pbinom" class="section level3" number="14.0.2">
-<h3><span class="header-section-number">14.0.2</span> Activity 3: <code>pbinom()</code></h3>
-<p>OK, question number 2. What is the probability of getting at most 2 heads on 10 flips?</p>
-<p>This time we use <code>pbinom()</code> as we want to know the <strong>cumulative probability</strong> of getting a maximum of 2 heads from 10 coin flips. so we have set a cut-off point of 2 but we still have a probability of getting a heads of 0.5.</p>
-<p><strong>Note:</strong> <code>pbinom()</code> takes the arguments <code>size</code> and <code>prob</code> argument just like <code>dbinom()</code>. However, the first input argument is <code>q</code> rather than <code>x</code>. This is because in dbinom <code>x</code> is a fixed number, whereas <code>q</code> is all the possibilities <strong>up to</strong> a given number (e.g. 0, 1, 2).</p>
-<p>Copy, paste and run the below code in a new code chunk:</p>
-<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="probability-continued.html#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> <span class="dv">2</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code></pre></div>
-<ul>
-<li>What is the probability of getting a maximum of 2 heads on 10 coin flips to 2 decimal places? <input class='webex-solveme nospaces' size='4' data-answer='["0.05",".05"]'/><br />
-</li>
-<li>What is this probability expressed in percent? <select class='webex-solveme' data-answer='["5%"]'> <option></option> <option>0.05%</option> <option>0.5%</option> <option>5%</option></select></li>
-</ul>
-</div>
-<div id="activity-4-pbinom-2" class="section level3" number="14.0.3">
-<h3><span class="header-section-number">14.0.3</span> Activity 4: <code>pbinom()</code> 2</h3>
-<p>Let’s try one more scenario with a cut-off point to make sure you have understood this. What is the probability of getting 7 or more heads on 10 flips?</p>
-<p>We can use the same function as in the previous example, however, there’s an extra argument if we want to get the correct answer. Let’s try running the code we used above but change <code>q = 2</code> to <code>q = 7</code>.</p>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="probability-continued.html#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> <span class="dv">7</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> .<span class="dv">5</span>) </span></code></pre></div>
-<pre><code>## [1] 0.9453125</code></pre>
-<p>This tells us that the probability is .95 or 95% - that doesn’t seem right does it? The default behaviour for <code>pbinom()</code> is to calculate cumulative probability for the lower tail of the curve, i.e., if you specify <code>q = 2</code> it calculates the probability of all outcomes below 2. We specified <code>q = 7</code> which means that it’s calculated the probability of getting an outcome of 0, 1, 2, 3, 4, 5, 6, and 7, the blue area in the below figure - which is obviously very high.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
-<img src="14-probability-2_files/figure-html/unnamed-chunk-1-1.png" alt="Lower and upper tails" width="100%" />
-<p class="caption">
-Figure 13.1: Lower and upper tails
-</p>
-</div>
-<p>To get the right answer, we have to add <code>lower.tail = FALSE</code> as we are interested in the upper tail of the distribution. Because we want the cumulative probability to include 7, we set <code>q = 6</code>. This will now calculate the cumulative probability of getting 7, 8, 9, or 10 heads out of 10 coin flips.</p>
-<p>Copy, paste and run the below code in a new code chunk:</p>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="probability-continued.html#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> <span class="dv">6</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> .<span class="dv">5</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>) </span></code></pre></div>
-<ul>
-<li>What is the probability of getting between 7 and 10 heads from 10 coin flips to 2 decimal places? <input class='webex-solveme nospaces' size='4' data-answer='["0.17",".17"]'/><br />
-</li>
-<li>What is this probability expressed in percent? <select class='webex-solveme' data-answer='["17%"]'> <option></option> <option>0.017%</option> <option>0.17</option> <option>17%</option></select></li>
-</ul>
-</div>
-<div id="activity-5-qbinom" class="section level3" number="14.0.4">
-<h3><span class="header-section-number">14.0.4</span> Activity 5: <code>qbinom()</code></h3>
-<p>OK, now let’s consider a scenario in which you’d use the quantile function <code>qbinom</code>. Imagine that you’ve been accosted by a street magician and they want to bet you that they can predict whether the coin will land on heads or tails. You suspect that they’ve done something to the coin so that it’s not fair and that the probability of the coin landing on a head is no longer .5 or 50/50, it’s now more likely to land on tails. Your null hypothesis is that the coin is not dodgy and that the probability should be even (P(heads)=.5).You are going to run a single experiment to test your hypothesis, with 10 trials. What is the minimum number of heads that is acceptable if p really does equal .5?</p>
-<p>You have used the argument <code>prob</code> in the previous two functions, <code>dbinom</code> and <code>pbinom</code>, and it represents the probability of success on a single trial (here it is the probability of ‘heads’ in one coin flip, .5). For <code>qbinom</code>, <code>prob</code> still represents the probability of success in one trial, whereas <code>p</code> represents the overall probability of success across all trials. When you run <code>pbinom</code>, it calculates the number of heads that would give that probability.</p>
-<p>We know from looking at the binomial distribution above that sometimes even when the coin is fair, we won’t get exactly 5/10 heads. Instead, we want to set a cut-off and in this example we will use the default cut-off for statistical significance in psychology, .05, or 5%.</p>
-<p>In other words, you ask it for the minimum number of successes (e.g. heads) to maintain an overall probability of .05, in 10 flips, when the probability of a success on any one flip is .5.</p>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="probability-continued.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qbinom</span>(<span class="at">p =</span> .<span class="dv">05</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> .<span class="dv">5</span>)</span></code></pre></div>
-<pre><code>## [1] 2</code></pre>
-<p>And it tells you the answer is 2. If the magician flipped fewer than two heads out of ten, you could conclude that there is a less than 5% probability that would happen if the coin was fair and you would reject the null hypothesis that the coin was unbiased against heads and tell the magician to do one.</p>
-<p><code>qbinom</code> also uses the lower.tail argument and it works in a similar fashion to pbinom.</p>
-<p>However, ten trials is probably far too few if you want to accuse the magician of being a bit dodge. Run the below code and then answer the following questions:</p>
-<ul>
-<li>What would your cut-off be if you ran 100 trials? <input class='webex-solveme nospaces' size='2' data-answer='["42"]'/></li>
-<li>What would your cut-off be if you ran 1000 trials? <input class='webex-solveme nospaces' size='3' data-answer='["474"]'/></li>
-<li>What would your cut-off be if you ran 10,000 trials? <input class='webex-solveme nospaces' size='4' data-answer='["4918"]'/></li>
-</ul>
-<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="probability-continued.html#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qbinom</span>(<span class="at">p =</span> .<span class="dv">05</span>, <span class="at">size =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">1000</span>, <span class="dv">10000</span>), <span class="at">prob =</span> .<span class="dv">5</span>)</span></code></pre></div>
-<p>Notice that the more trials you run, the more precise the estimates become, that is, the closer they are to the probability of success on a single flip (.5). Again this is a simplification, but think about how this relates to sample size in research studies, the more participants you have, the more precise your estimate will be.</p>
-<hr />
-<p><strong>Visualise it!</strong></p>
-<p>Have a go at playing around with different numbers of coin flips and probabilities in our <code>dbinom()</code> and <code>pbinom()</code> app!</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
-<iframe src="https://shannon-mcnee19.shinyapps.io/binomial_shiny/" width="100%" height="800px">
-</iframe>
-<p class="caption">
-Figure 12.1: Binomial distribution app
-</p>
-</div>
-<hr />
-</div>
-<div id="normal-distribution" class="section level3" number="14.0.5">
-<h3><span class="header-section-number">14.0.5</span> Normal distribution</h3>
-<p>A similar set of functions exist to help us work with other distributions, including the normal distribution and we’re going to use three of these:</p>
-<p><code>dnorm()</code>-the density function, for calculating the probability of a specific value</p>
-<p><code>pnorm()</code>-the probability or distribution function, for calculating the probability of getting at least or at most a specific value</p>
-<p><code>qnorm()</code>-the quantile function, for calculating the specific value associated with a given probability</p>
-<p>As you can probably see, these functions are very similar to the functions we’ve already come across, that are used to work with the binomial distribution.</p>
-</div>
-<div id="probability-of-heights" class="section level3" number="14.0.6">
-<h3><span class="header-section-number">14.0.6</span> Probability of heights</h3>
-<p>Data from the <a href="http://www.scotland.gov.uk/Resource/Doc/286063/0087158.pdf">Scottish Health Survey (2008)</a> shows that:</p>
-<ul>
-<li>The average height of a 16-24 year old Scottish man is 176.2 centimetres, with a standard deviation of 6.748.</li>
-<li>The average height of a 16-24 year old Scottish woman is 163.8 cm, with a standard deviation of 6.931.</li>
-<li>There are currently no data on Scottish trans and non-binary people.</li>
-</ul>
-<p>The below figure is a simulation of this data - you can see the code used to run this simulation by clicking the solution button.</p>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="probability-continued.html#cb171-1" aria-hidden="true" tabindex="-1"></a>men <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100000</span>, <span class="at">mean =</span> <span class="fl">176.2</span>, <span class="at">sd =</span> <span class="fl">6.748</span>)</span>
-<span id="cb171-2"><a href="probability-continued.html#cb171-2" aria-hidden="true" tabindex="-1"></a>women <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100000</span>, <span class="at">mean =</span> <span class="fl">163.8</span>, <span class="at">sd =</span> <span class="fl">6.931</span>)</span>
-<span id="cb171-3"><a href="probability-continued.html#cb171-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb171-4"><a href="probability-continued.html#cb171-4" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">&lt;-</span> <span class="fu">tibble</span>(men, women) <span class="sc">%&gt;%</span></span>
-<span id="cb171-5"><a href="probability-continued.html#cb171-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">names_to =</span> <span class="st">&quot;sex&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;height&quot;</span>, men<span class="sc">:</span>women)</span>
-<span id="cb171-6"><a href="probability-continued.html#cb171-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb171-7"><a href="probability-continued.html#cb171-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(heights, <span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">fill =</span> sex)) <span class="sc">+</span></span>
-<span id="cb171-8"><a href="probability-continued.html#cb171-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> .<span class="dv">6</span>) <span class="sc">+</span></span>
-<span id="cb171-9"><a href="probability-continued.html#cb171-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">&quot;E&quot;</span>) <span class="sc">+</span></span>
-<span id="cb171-10"><a href="probability-continued.html#cb171-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
-</div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="14-probability-2_files/figure-html/unnamed-chunk-4-1.png" alt="Simulation of Scottish height data" width="100%" />
-<p class="caption">
-Figure 5.2: Simulation of Scottish height data
-</p>
-</div>
-<p>In this chapter we will use this information to calculate the probability of observing at least or at most a specific height with <code>pnorm()</code>, and the heights that are associated with specific probabilities with <code>qnorm()</code>.</p>
-</div>
-<div id="activity-6pnorm" class="section level3" number="14.0.7">
-<h3><span class="header-section-number">14.0.7</span> Activity 6:<code>pnorm()</code></h3>
-<p><code>pnorm()</code> requires three arguments:</p>
-<ul>
-<li><code>q</code> is the value that you want to calculate the probability of</li>
-<li><code>mean</code> is the mean of the data</li>
-<li><code>sd</code> is the standard deviation of the data</li>
-<li><code>lower.tail</code> works as above and depends on whether you are interested in the upper or lower tail</li>
-</ul>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="probability-continued.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="cn">NULL</span>, <span class="at">mean =</span> <span class="cn">NULL</span>, <span class="at">sd =</span> <span class="cn">NULL</span>, <span class="at">lower.tail =</span> <span class="cn">NULL</span>)</span></code></pre></div>
-<p>Replace the NULLs in the above code to calculate the probability of meeting a 16-24 y.o. Scottish woman who is taller than the average 16-24 y.o. Scottish man.</p>
-<ul>
-<li>What is the probability of meeting a 16-24 y.o. Scottish woman who is taller than the average 16-24 y.o. Scottish man? <input class='webex-solveme nospaces' size='4' data-answer='["0.04",".04"]'/><br />
-</li>
-<li>What is this probability expressed in percent? <select class='webex-solveme' data-answer='["4%"]'> <option></option> <option>0.04%</option> <option>0.4%</option> <option>4%</option></select></li>
-</ul>
-</div>
-<div id="activity-7-pnorm-2" class="section level3" number="14.0.8">
-<h3><span class="header-section-number">14.0.8</span> Activity 7: <code>pnorm</code> 2</h3>
-<p>Fiona is a very tall Scottish woman (181.12cm) in the 16-24 y.o. range who will only date men who are taller than her.</p>
-<ul>
-<li>Using <code>pnorm()</code> again, what is the proportion of Scottish men Fiona would be willing to date to 2 decimal places? <input class='webex-solveme nospaces' size='4' data-answer='["0.23",".23"]'/><br />
-</li>
-<li>What is this probability expressed in percent? <select class='webex-solveme' data-answer='["23%"]'> <option></option> <option>0.23%</option> <option>2.3%</option> <option>23%</option></select></li>
-</ul>
-</div>
-<div id="activity-8-pnorm-3" class="section level3" number="14.0.9">
-<h3><span class="header-section-number">14.0.9</span> Activity 8: <code>pnorm</code> 3</h3>
-<p>On the other hand, Fiona will only date women who are shorter than her.</p>
-<ul>
-<li>What is the proportion of Scottish women would Fiona be willing to date to 2 decimal places? <input class='webex-solveme nospaces' size='4' data-answer='["0.99",".99"]'/><br />
-</li>
-<li>What is this probability expressed in percent? <select class='webex-solveme' data-answer='["99%"]'> <option></option> <option>0.99%</option> <option>9.9%</option> <option>99%</option></select></li>
-</ul>
-</div>
-<div id="activity-9-qnorm" class="section level3" number="14.0.10">
-<h3><span class="header-section-number">14.0.10</span> Activity 9: <code>qnorm()</code></h3>
-<p>In the previous examples we calculated the probability of a particular outcome. Now we want to calculate what outcome would be associated with a particular probability and we can use <code>qnorm()</code> to do this.</p>
-<p><code>qnorm()</code> is very similar to <code>pnorm()</code> with one exception, rather than specifying <code>q</code> our known observation or quantile, instead we have to specify <code>p</code>, our known probability.</p>
-<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="probability-continued.html#cb173-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="at">p =</span> <span class="cn">NULL</span>, <span class="at">mean =</span> <span class="cn">NULL</span>, <span class="at">sd =</span> <span class="cn">NULL</span>, <span class="at">lower.tail =</span> <span class="cn">NULL</span>)</span></code></pre></div>
-<p>Replace the NULLs in the above code to calculate how tall a 16-24 y.o. Scottish man would have to be in order to be in the top 5% (i.e., p = .05) of the height distribution for Scottish men in his age group.</p>
-<p><strong>Visualise it!</strong></p>
-<p>Have a go at playing around with different distributions in our <code>dnorm()</code> and <code>pnorm()</code> app - <a href="http://shiny.psy.gla.ac.uk/jackt/ShinyPsyTeachR/ug1/normal-distributions/">access it here</a></p>
-<hr />
-<p>And that’s it! The key concepts to take away from this chapter are that different types of data tend to follow known distributions, and that we can use these distributions to calculate the probability of particular outcomes. This is the foundation of many of the statistical tests that you will learn about in level 2. For example, if you want to compare whether the scores from two groups are different, that is, whether they come from different distributions, you can calculate the probability that the scores from group 2 would be in the same distribution as group 1. If this probability is less than 5% (p = .05), you might conclude that the scores were significantly different. That’s an oversimplification obviously, but if you can develop a good understanding of probability distributions it will stand you in good stead for level 2.</p>
-</div>
-<div id="activity-solutions---probability" class="section level3" number="14.0.11">
-<h3><span class="header-section-number">14.0.11</span> Activity solutions - Probability</h3>
-<div id="activity-2-3" class="section level4" number="14.0.11.1">
-<h4><span class="header-section-number">14.0.11.1</span> Activity 2</h4>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="probability-continued.html#cb174-1" aria-hidden="true" tabindex="-1"></a>.<span class="dv">25</span></span></code></pre></div>
-</div>
-</div>
-<div id="activity-3-5" class="section level4" number="14.0.11.2">
-<h4><span class="header-section-number">14.0.11.2</span> Activity 3</h4>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="probability-continued.html#cb175-1" aria-hidden="true" tabindex="-1"></a>.<span class="dv">06</span></span></code></pre></div>
-</div>
-</div>
-<div id="activity-4-5" class="section level4" number="14.0.11.3">
-<h4><span class="header-section-number">14.0.11.3</span> Activity 4</h4>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="probability-continued.html#cb176-1" aria-hidden="true" tabindex="-1"></a>.<span class="dv">17</span></span></code></pre></div>
-</div>
-</div>
-<div id="activity-5-3" class="section level4" number="14.0.11.4">
-<h4><span class="header-section-number">14.0.11.4</span> Activity 5</h4>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="probability-continued.html#cb177-1" aria-hidden="true" tabindex="-1"></a><span class="dv">42</span></span>
-<span id="cb177-2"><a href="probability-continued.html#cb177-2" aria-hidden="true" tabindex="-1"></a><span class="dv">474</span></span>
-<span id="cb177-3"><a href="probability-continued.html#cb177-3" aria-hidden="true" tabindex="-1"></a><span class="dv">4918</span></span></code></pre></div>
-</div>
-</div>
-<div id="activity-6-2" class="section level4" number="14.0.11.5">
-<h4><span class="header-section-number">14.0.11.5</span> Activity 6</h4>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="probability-continued.html#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">176.2</span>, <span class="at">mean =</span> <span class="fl">163.8</span>, <span class="at">sd =</span> <span class="fl">6.931</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-</div>
-</div>
-<div id="activity-7-1" class="section level4" number="14.0.11.6">
-<h4><span class="header-section-number">14.0.11.6</span> Activity 7</h4>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="probability-continued.html#cb179-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">181.12</span>, <span class="at">mean =</span> <span class="fl">176.2</span>, <span class="at">sd =</span> <span class="fl">6.748</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-</div>
-</div>
-<div id="activity-8-1" class="section level4" number="14.0.11.7">
-<h4><span class="header-section-number">14.0.11.7</span> Activity 8</h4>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="probability-continued.html#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">181.12</span>, <span class="at">mean =</span> <span class="fl">163.8</span>, <span class="at">sd =</span> <span class="fl">6.931</span>, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-</div>
-</div>
-<div id="activity-9" class="section level4" number="14.0.11.8">
-<h4><span class="header-section-number">14.0.11.8</span> Activity 9</h4>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="probability-continued.html#cb181-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="at">p =</span> .<span class="dv">05</span>, <span class="at">mean =</span> <span class="fl">176.2</span>, <span class="at">sd =</span> <span class="fl">6.748</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-</div>
-
-</div>
-</div>
+<div id="作業資料管理架構建議" class="section level1" number="17">
+<h1><span class="header-section-number">A</span> 作業資料管理架構建議</h1>
+<p>參考來源：<a href="https://github.com/jfiksel/github-classroom-for-students">Github classroom for students</a> by <a href="https://github.com/jfiksel">Jacob Fiksel</a></p>
+<p>假設你的電腦主要磁碟機有一個資料夾<code>Users/myname/</code>，本課程學習檔案可依此架構存放。</p>
+<pre><code>Users
+│
+│
+│
+└───myname
+    │
+    │
+    │
+    └───university-documents
+        │
+        │
+        |
+        |---rstat-project-fall-2021
+            |
+            |
+            |
+            |---assignments   ## 個人作業
+            |
+            |
+            |---lectures      ## 個人上課筆記</code></pre>
 </div>
 <div class="psyteachr_footer">
   
@@ -752,8 +514,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="intro-to-probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="simulation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="project-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="git-and-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

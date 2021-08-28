@@ -1,5 +1,6 @@
 # (APPENDIX) Appendices {-} 
 
+<!---
 # Exporting files from the server
 
 If you are using the R server, you may need to export files to share them with other people or submit them for your assignments.
@@ -8,6 +9,43 @@ If you are using the R server, you may need to export files to share them with o
 * Select the file you and to download in the files pane (bottom right) by ticking the box next to it, then click "More - Export" and save the file to your computer.
 * If you do not have R installed, DO NOT try to open it on your computer. If you do, it will open in Word, Endnote or similar, and it may corrupt your code. Only open the file if you have R and R Studio installed.
 * If you want to double check that this file is definitely the right one to submit for an assignment, you can re-upload it to the server and open it again to make sure it has the answers in it.
+--->
+
+
+# 作業資料管理架構建議 
+
+參考來源：[Github classroom for students](https://github.com/jfiksel/github-classroom-for-students) by [Jacob Fiksel](https://github.com/jfiksel)
+
+假設你的電腦主要磁碟機有一個資料夾`Users/myname/`，本課程學習檔案可依此架構存放。
+
+```
+Users
+│
+│
+│
+└───myname
+    │
+    │
+    │
+    └───university-documents
+        │
+        │
+        |
+        |---rstat-project-fall-2021
+            |
+            |
+            |
+            |---assignments   ## 個人作業
+            |
+            |
+            |---lectures      ## 個人上課筆記
+```
+
+
+# Git and Github
+
+(協同寫作)
+
 
 # Installing R 
 
@@ -56,6 +94,8 @@ install.packages("tidyverse")
 This will install the `tidyverse` package on your computer. If you have any problems installing R, please book into a GTA session as they should be able to help you with any installation problems.
 
 ## Chromebooks
+
+> 台灣有多少學生使用？
 
 Please note that you cannot currently install R on a Chromebook, please use the R Server.
 
