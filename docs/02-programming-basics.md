@@ -248,7 +248,7 @@ mean(data)
 
 ```
 ## [1] 45
-## Time difference of -239 days
+## Time difference of -240 days
 ## [1] 17.66644
 ```
 
@@ -407,7 +407,7 @@ A large part of coding is trying to figure why your code doesn't work and this i
 * Is there a package conflict? Have you tried specifying the package and function with `package::function`?
 * Is it definitely an error? Not all red text in R means an error - sometimes it is just giving you a message with information. 
 
-### Activity 6: Test yourself
+### Activity 7: Test yourself
 
 **Question 1.** Why should you never include the code `install.packages()` in your analysis scripts? <select class='webex-solveme' data-answer='["You (or someone else) may accidentally install a package update that stops your code working"]'> <option></option> <option>You should use library() instead</option> <option>Packages are already part of Base R</option> <option>You (or someone else) may accidentally install a package update that stops your code working</option> <option>You already have the latest version of the package</option></select> 
 
