@@ -82,6 +82,4 @@ P.s. mac系統可由mac桌面左上角蘋果圖示，點選：”關於這台mac
 
 ## Chromebooks
 
-> 台灣有多少學生使用？
-
 Please note that you cannot currently install R on a Chromebook, please use the R Server.

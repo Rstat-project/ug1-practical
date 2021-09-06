@@ -53,70 +53,6 @@
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 
 <link rel="stylesheet" href="include/psyteachr.css" type="text/css" />
@@ -382,7 +318,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="C" data-path="githubclassroom.html"><a href="githubclassroom.html"><i class="fa fa-check"></i><b>C</b> githubclassroom作業管理</a>
 <ul>
 <li class="chapter" data-level="C.1" data-path="githubclassroom.html"><a href="githubclassroom.html#作業資料管理資料夾設置建議"><i class="fa fa-check"></i><b>C.1</b> 作業資料管理資料夾設置建議</a></li>
-<li class="chapter" data-level="C.2" data-path="githubclassroom.html"><a href="githubclassroom.html#領取作業"><i class="fa fa-check"></i><b>C.2</b> 領取作業</a></li>
+<li class="chapter" data-level="C.2" data-path="githubclassroom.html"><a href="githubclassroom.html#領取作業複本repo"><i class="fa fa-check"></i><b>C.2</b> 領取作業複本repo</a></li>
 <li class="chapter" data-level="C.3" data-path="githubclassroom.html"><a href="githubclassroom.html#rstudio-寫作業"><i class="fa fa-check"></i><b>C.3</b> Rstudio 寫作業</a></li>
 <li class="chapter" data-level="C.4" data-path="githubclassroom.html"><a href="githubclassroom.html#rstudio-交作業"><i class="fa fa-check"></i><b>C.4</b> Rstudio 交作業</a>
 <ul>
@@ -447,26 +383,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             |
             |---lectures      ## 個人上課筆記</code></pre>
 <blockquote>
-<p>以下中文示範由助教 <a href="https://github.com/orgs/Rstat-project/people/Amychu0607">@Amychu0607</a> 提供
-以公開作業“Hello! Git and Github”示範</p>
+<p>以下中文示範由助教 <a href="https://github.com/orgs/Rstat-project/people/Amychu0607">@Amychu0607</a> 提供，經過數次測試修改。按照步驟發現任何問題，請向老師和助教反映。</p>
+</blockquote>
+<blockquote>
+<p>以下步驟以公開作業“Hello! Git and Github”示範</p>
 </blockquote>
 </div>
-<div id="領取作業" class="section level2" number="19.2">
-<h2><span class="header-section-number">C.2</span> 領取作業</h2>
+<div id="領取作業複本repo" class="section level2" number="19.2">
+<h2><span class="header-section-number">C.2</span> 領取作業複本repo</h2>
+<!---
+
+1. 請點開老師提供的[github classroom課程連結](https://classroom.github.com/classrooms/88956273-rstat-project-ncku-2021fall)
+
+2. 點"Hello! Git and Github"的連結 
+
+![](images/appendix/git/235634229_859605431345253_7782974699860340154_n.png)
+
+
+3. 點紅圈處的小圖示copy連結  → 另開一個視窗把copy的網址貼上 
+
+![](images/appendix/git/copy_link.png)
+
+--->
 <ol style="list-style-type: decimal">
-<li><p>請點開老師提供的<a href="https://classroom.github.com/classrooms/88956273-rstat-project-ncku-2021fall">github classroom課程連結</a></p></li>
-<li><p>點“Hello! Git and Github”的連結</p></li>
+<li>經由moodle訊息(?)取得作業複本連結，開啓網頁點選自已的名字。<strong>示範畫面感謝胡中凡老師友情演出</strong></li>
 </ol>
-<p><img src="images/appendix/git/235634229_859605431345253_7782974699860340154_n.png" /></p>
+<p><img src="images/appendix/git/240944466_401915754697365_6077907721655953001_n.png" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>下一個畫面點accept，成功出現以下畫面</li>
+</ol>
+<p><img src="images/appendix/git/240788731_1279421182486677_6671120634773724329_n.png" /></p>
 <ol start="3" style="list-style-type: decimal">
-<li>點紅圈處的小圖示copy連結 → 另開一個視窗把copy的網址貼上</li>
+<li>在作業儀表板確認出現自己的名字，點選Go to repo <strong>示範畫面感謝胡中凡老師友情演出</strong></li>
 </ol>
-<p><img src="images/appendix/git/copy_link.png" /></p>
+<p><img src="images/appendix/git/dashboard_homework.png" /></p>
 <ol start="4" style="list-style-type: decimal">
-<li><p>點accept →點有自己帳號的連結並選Go to repo</p></li>
-<li><p>進入自己帳號的repo之後，請再次確認是否為自己的帳號→點Code (代表複製作業檔案) → 請切換到 Rstudio頁面</p></li>
+<li>進入自己帳號的repo之後，請再次確認是否為自己的帳號→點Code (代表複製作業檔案) → 複製連結後切換到 Rstudio頁面</li>
 </ol>
+<p><strong>示範畫面感謝助教<a href="https://github.com/orgs/Rstat-project/people/Amychu0607">@Amychu0607</a>友情演出</strong></p>
 <p><img src="images/appendix/git/clone_repo.png" /></p>
+<p><strong>提示1</strong> 作業複本repo存於“Rstat-project”，並非個人的github帳號，僅有領取作業複本的學生、老師與助教有權限存取內容。</p>
+<p><strong>提示2</strong> 學期期間作業複本repo無法拷貝(fork)至個人github帳號。學期結束後寒暑假期間會開放拷貝，提供有需要留存作業的學生自行備份。</p>
 </div>
 <div id="rstudio-寫作業" class="section level2" number="19.3">
 <h2><span class="header-section-number">C.3</span> Rstudio 寫作業</h2>
@@ -689,20 +646,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

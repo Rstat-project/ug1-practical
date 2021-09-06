@@ -31,11 +31,13 @@ Users
 ```
 
 
-> 以下中文示範由助教 [\@Amychu0607](https://github.com/orgs/Rstat-project/people/Amychu0607) 提供
-> 以公開作業"Hello! Git and Github"示範
+> 以下中文示範由助教 [\@Amychu0607](https://github.com/orgs/Rstat-project/people/Amychu0607) 提供，經過數次測試修改。按照步驟發現任何問題，請向老師和助教反映。
 
-## 領取作業
+> 以下步驟以公開作業"Hello! Git and Github"示範
 
+## 領取作業複本repo
+
+<!---
 
 1. 請點開老師提供的[github classroom課程連結](https://classroom.github.com/classrooms/88956273-rstat-project-ncku-2021fall)
 
@@ -48,14 +50,29 @@ Users
 
 ![](images/appendix/git/copy_link.png)
 
-4. 點accept →點有自己帳號的連結並選Go to repo
+--->
 
+1. 經由moodle訊息(?)取得作業複本連結，開啓網頁點選自已的名字。**示範畫面感謝胡中凡老師友情演出**
 
-5. 進入自己帳號的repo之後，請再次確認是否為自己的帳號→點Code (代表複製作業檔案) → 請切換到 Rstudio頁面
+![](images/appendix/git/240944466_401915754697365_6077907721655953001_n.png)
+
+2. 下一個畫面點accept，成功出現以下畫面
+
+![](images/appendix/git/240788731_1279421182486677_6671120634773724329_n.png)
+
+3. 在作業儀表板確認出現自己的名字，點選Go to repo **示範畫面感謝胡中凡老師友情演出**
+
+![](images/appendix/git/dashboard_homework.png)
+
+4. 進入自己帳號的repo之後，請再次確認是否為自己的帳號→點Code (代表複製作業檔案) → 複製連結後切換到 Rstudio頁面 
+
+**示範畫面感謝助教[\@Amychu0607](https://github.com/orgs/Rstat-project/people/Amychu0607)友情演出**
 
 ![](images/appendix/git/clone_repo.png)
 
+**提示1** 作業複本repo存於"Rstat-project"，並非個人的github帳號，僅有領取作業複本的學生、老師與助教有權限存取內容。
 
+**提示2** 學期期間作業複本repo無法拷貝(fork)至個人github帳號。學期結束後寒暑假期間會開放拷貝，提供有需要留存作業的學生自行備份。
 
 
 ## Rstudio 寫作業

@@ -4,8 +4,8 @@
 
 
 # render a chapter or the whole book
-browseURL(bookdown::preview_chapter("01-begin.Rmd"))
 browseURL(bookdown::render_book("index.Rmd"))
+browseURL(bookdown::preview_chapter("appendix-a-installR.Rmd"))
 
 # copies dir
 #R.utils::copyDirectory(
