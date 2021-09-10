@@ -1,5 +1,8 @@
 # Programming basics
 
+> 由於本校並未購買R studio校園伺服器版本，本單元內有關R server的部分無法實際操作。沒有能安裝本機版R及Rstudio個人電腦設備的修課學生，須留意moodle課程公告的指引事項。
+
+
 In this chapter, we will cover how to use R and RStudio at the University of Glasgow as well as some basic programming concepts and terminology, common pitfalls, helpful hints, and where to get help. Those of you who have no programming experience should find this chapter particularly helpful, however, even if you've used R before there may be some helpful hints and tips so please make sure you read through this chapter before the moving on.
 
 This is a long chapter but we don't expect you to memorise all the information that is contained in it and some sections of it will not make sense until you start writing your own code - just make sure you know what help is available!
@@ -248,7 +251,7 @@ mean(data)
 
 ```
 ## [1] 45
-## Time difference of -240 days
+## Time difference of -252 days
 ## [1] 17.66644
 ```
 

@@ -1,5 +1,7 @@
 # Intro to Probability
 
+> 本單元轉換為課前觀看示範錄影，上課時間進行作業練習的模式。上課練習用的資料不同於電子書。
+
 In the Psych 1A Research Methods lectures, we talked a lot about p-values and statistical significance. P-values are the probability that you would get the observed results if the null hypothesis was true (i.e., if there really was no effect of your experiment). In psychology, the standard cut-off for statistical significance is p < .05, that is, if the probability that we would observe our results under the null hypothesis is less than 5%, we conclude that our experiment has had an effect and there is a difference between our groups. In this chapter, we're going to go into a bit more detail about exactly what we mean by probability.
 
 ### Activity 1: Prep

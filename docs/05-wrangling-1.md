@@ -1,5 +1,7 @@
 # Data wrangling 1
 
+> 由於本校並未購買R studio校園伺服器版本，`5.3 Walkthrough video`的示範與講解並不適用本單元實際上課內容。除了尚無個人電腦設備的同學，本單元起同學應能熟練在本機運用R及Rstudio學習與操作。
+
 <div class="info">
 <p>So far you have been introduced to the R environment (e.g. setting your working directory and the difference between .R and .Rmd files). You also began working with messy data by having a go at loading in datasets using <code>read_csv()</code>, joined files together using <code>inner_join()</code>, and pulled out variables of interest using <code>select()</code>.</p>
 <p>In this chapter, we’ll be moving on to becoming familiar with the Wickham Six and the functionality of the R package, <code>tidyverse</code>!</p>

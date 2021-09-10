@@ -1,5 +1,7 @@
 # Data wrangling 2
 
+> 由於本校並未購買R studio校園伺服器版本，`6.1 Walkthrough video`的示範與講解並不適用本單元實際上課內容。除了尚無個人電腦設備的同學，本單元起同學應能熟練在本機運用R及Rstudio學習與操作。
+
 ## Walkthrough video
 
 There is a [walkthrough video](https://uofglasgow.zoom.us/rec/play/Kde7hTS2bAJAvhuAufvxpYi8shgfoSH4kKeWN8YGJ9k1_lbHDFsNzHZBm9Bfu_bKVtcOxoNQbrBf8Ddt.Cy_Kex6M9v1_3v_G?startTime=1602841645000&_x_zm_rtaid=cW5f8v0JQcOlLI1cBpI84g.1628694791961.c3bcc75dbabdfb3f3ac44f8fd7884865&_x_zm_rhtaid=355) of this chapter available via Zoom.

@@ -2,6 +2,8 @@
 
 # Mega pipe
 
+> 本單元轉換為課前觀看示範錄影，上課時間進行作業練習的模式。上課練習用的資料不同於電子書。
+
 ### Activity  1: Set-up 
 
 * Open a new R markdown document, name it "Mega pipe" and save it in your Data Skills folder.

@@ -1,5 +1,7 @@
 # Probability continued
 
+> 本單元轉換為課前觀看示範錄影，上課時間進行作業練習的模式。上課練習用的資料不同於電子書。
+
 First, we're going to calculate probabilities based on the binomial distribution. In this chapter, for the first time we don't need to load the tidyverse. All the functions we need are contained in Base R. If you want a refresher on the difference between Base R and packages, see [Programming Basics](https://psyteachr.github.io/ug1-practical/programming-basics.html#packages).
 
 * Open a new R Markdown document, call it "Probability" and save it in your Data Skills folder.

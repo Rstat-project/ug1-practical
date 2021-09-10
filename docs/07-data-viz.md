@@ -1,5 +1,8 @@
 # Intro to Data Viz
 
+> 由於本校並未購買R studio校園伺服器版本，`7.1 Walkthrough video`的示範與講解並不適用本單元實際上課內容。除了尚無個人電腦設備的同學，本單元起同學應能熟練在本機運用R及Rstudio學習與操作。
+
+
 ## Walkthrough video
 
 There is a [walkthrough video](https://uofglasgow.zoom.us/rec/play/Q9BA93fhXCTrTyRF962J8cWI7YDQ1dca0u3sbPstj-ktY4e52jv_b5vtAZMgI6fAM3Cip_L0itlsym8.zF0_1My59xl1MGmG?startTime=1602848670000&_x_zm_rtaid=O3m7PQzzQaOVR8tM0-Br7w.1602858026802.e830dc177e59e2fba3d0bc04b83ddf60&_x_zm_rhtaid=842) of this chapter available via Zoom.
@@ -10,15 +13,15 @@ There is a [walkthrough video](https://uofglasgow.zoom.us/rec/play/Q9BA93fhXCTrT
 
 In Data Wrangling 1 and 2 we were introduced to the tidyverse package, `dplyr`, and its six important functions. As a recap, which function(s) would you use to approach each of the following problems?
 
-* We have a dataset of 400 adults, but we want to remove anyone with an age of 50 years or more. To do this, we could use the <select class='webex-solveme' data-answer='["filter()"]'> <option></option> <option>mutate()</option> <option>arrange()</option> <option>select()</option> <option>summarise()</option> <option>group_by()</option> <option>filter()</option></select> function.
+* We have a dataset of 400 adults, but we want to remove anyone with an age of 50 years or more. To do this, we could use the <select class='webex-solveme' data-answer='["filter()"]'> <option></option> <option>arrange()</option> <option>select()</option> <option>mutate()</option> <option>group_by()</option> <option>summarise()</option> <option>filter()</option></select> function.
 
-* We are interested in overall summary statistics for our data, such as the overall average and total number of observations. To do this, we could use the <select class='webex-solveme' data-answer='["summarise()"]'> <option></option> <option>select()</option> <option>filter()</option> <option>arrange()</option> <option>mutate()</option> <option>summarise()</option> <option>group_by()</option></select> function.
+* We are interested in overall summary statistics for our data, such as the overall average and total number of observations. To do this, we could use the <select class='webex-solveme' data-answer='["summarise()"]'> <option></option> <option>select()</option> <option>summarise()</option> <option>filter()</option> <option>arrange()</option> <option>group_by()</option> <option>mutate()</option></select> function.
 
-* Our dataset has a column with the number of cats a person has, and a column with the number of dogs. We want to calculate a new column which contains the total number of pets each participant has. To do this, we could use the <select class='webex-solveme' data-answer='["mutate()"]'> <option></option> <option>summarise()</option> <option>select()</option> <option>mutate()</option> <option>group_by()</option> <option>filter()</option> <option>arrange()</option></select> function.
+* Our dataset has a column with the number of cats a person has, and a column with the number of dogs. We want to calculate a new column which contains the total number of pets each participant has. To do this, we could use the <select class='webex-solveme' data-answer='["mutate()"]'> <option></option> <option>filter()</option> <option>arrange()</option> <option>summarise()</option> <option>mutate()</option> <option>group_by()</option> <option>select()</option></select> function.
 
 * We want to calculate the average for each participant in our dataset. To do this we could use the <select class='webex-solveme' data-answer='["group_by() and summarise()"]'> <option></option> <option>arrange() and mutate()</option> <option>group_by() and summarise()</option> <option>group_by() and arrange()</option> <option>filter() and select()</option></select> functions.
 
-* We want to order a dataframe of participants by the number of cats that they own, but want our new dataframe to only contain some of our columns. To do this we could use the <select class='webex-solveme' data-answer='["arrange() and select()","mutate() and filter()"]'> <option></option> <option>arrange() and select()</option> <option>mutate() and filter()</option> <option>group_by() and mutate()</option> <option>select() and summarise()</option></select> functions.
+* We want to order a dataframe of participants by the number of cats that they own, but want our new dataframe to only contain some of our columns. To do this we could use the <select class='webex-solveme' data-answer='["mutate() and filter()","arrange() and select()"]'> <option></option> <option>select() and summarise()</option> <option>group_by() and mutate()</option> <option>mutate() and filter()</option> <option>arrange() and select()</option></select> functions.
 
 ## Data visualisation
 

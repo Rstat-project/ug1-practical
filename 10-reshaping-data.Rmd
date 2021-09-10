@@ -1,5 +1,7 @@
 # Reshaping data
 
+> 本單元轉換為課前觀看示範錄影，上課時間進行作業練習的模式。上課練習用的資料不同於電子書。
+
 Let’s continue what we started in AQ Data and Recap by hand but now using R to calculate a score for each participant.
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}

@@ -1,6 +1,9 @@
 
 # AQ data and recap
 
+> 本單元起轉換為課前觀看示範錄影，上課時間進行作業練習的模式。上課練習用的資料不同於電子書。
+> 課程進度至本單元的前一週或後一週，將進行期末專題說明會”，務必留意moodle課程公告。
+
 Welcome back to Psych 1B! This semester we're going to build on the data skills you developed in the first semester by adding in a couple of new data wrangling functions, running probability simulations in preparation for statistics in level 2, and analysing your own data for the group project.
 
 <div class="info">

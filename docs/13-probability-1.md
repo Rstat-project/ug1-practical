@@ -1,5 +1,7 @@
 # Intro to Probability
 
+> 本單元轉換為課前觀看示範錄影，上課時間進行作業練習的模式。上課練習用的資料不同於電子書。
+
 In the Psych 1A Research Methods lectures, we talked a lot about p-values and statistical significance. P-values are the probability that you would get the observed results if the null hypothesis was true (i.e., if there really was no effect of your experiment). In psychology, the standard cut-off for statistical significance is p < .05, that is, if the probability that we would observe our results under the null hypothesis is less than 5%, we conclude that our experiment has had an effect and there is a difference between our groups. In this chapter, we're going to go into a bit more detail about exactly what we mean by probability.
 
 ### Activity 1: Prep
@@ -47,10 +49,10 @@ How you tackle probability depends on the type of data/variables you are working
 
 What types of data are the below measurements?
 
-* Time taken to run a marathon (in seconds): <select class='webex-solveme' data-answer='["ratio"]'> <option></option> <option>ratio</option> <option>categorical</option> <option>ordinal</option> <option>interval</option></select>
-* Finishing position in marathon (e.g. 1st, 2nd, 3rd): <select class='webex-solveme' data-answer='["ordinal"]'> <option></option> <option>categorical</option> <option>ordinal</option> <option>interval</option> <option>ratio</option></select>
-* Which Sesame Street character a runner was dressed as: <select class='webex-solveme' data-answer='["categorical"]'> <option></option> <option>interval</option> <option>ratio</option> <option>categorical</option> <option>ordinal</option></select>
-* Temperature of a runner dressed in a cookie monster outfit (in degrees Celsius): <select class='webex-solveme' data-answer='["interval"]'> <option></option> <option>interval</option> <option>categorical</option> <option>ratio</option> <option>ordinal</option></select>
+* Time taken to run a marathon (in seconds): <select class='webex-solveme' data-answer='["ratio"]'> <option></option> <option>ordinal</option> <option>interval</option> <option>ratio</option> <option>categorical</option></select>
+* Finishing position in marathon (e.g. 1st, 2nd, 3rd): <select class='webex-solveme' data-answer='["ordinal"]'> <option></option> <option>ratio</option> <option>categorical</option> <option>interval</option> <option>ordinal</option></select>
+* Which Sesame Street character a runner was dressed as: <select class='webex-solveme' data-answer='["categorical"]'> <option></option> <option>ratio</option> <option>interval</option> <option>ordinal</option> <option>categorical</option></select>
+* Temperature of a runner dressed in a cookie monster outfit (in degrees Celsius): <select class='webex-solveme' data-answer='["interval"]'> <option></option> <option>ordinal</option> <option>categorical</option> <option>ratio</option> <option>interval</option></select>
 
 ### Probability distributions
 
@@ -131,7 +133,7 @@ As with any probabilities, real-world data will come close to the normal distrib
 
 Complete the sentences so that they are correct.
 
-* In a normal distribution, the mean, median, and mode <select class='webex-solveme' data-answer='["are all equal"]'> <option></option> <option>are always different</option> <option>are all equal</option> <option>sum to zero</option></select>.
+* In a normal distribution, the mean, median, and mode <select class='webex-solveme' data-answer='["are all equal"]'> <option></option> <option>sum to zero</option> <option>are all equal</option> <option>are always different</option></select>.
 * In a normal distribution, the further away from the mean an observation is <select class='webex-solveme' data-answer='["the lower its probability of occuring"]'> <option></option> <option>the higher its probability of occuring</option> <option>the lower its probability of occuring</option></select>.
 * Whereas the binomial distribution is based on situations in which there are two possible outcomes, the normal distribution is based on situations in which the data <select class='webex-solveme' data-answer='["is a continuous variable"]'> <option></option> <option>is a continuous variable</option> <option>is a categorical variable</option> <option>has three possible values</option></select>.
 

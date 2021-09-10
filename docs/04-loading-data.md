@@ -1,5 +1,7 @@
 # Loading data
 
+> 由於本校並未購買R studio校園伺服器版本，`Activity 1: Set-up`有關R server的操作不適用本單元實際上課內容。
+
 Part of becoming a psychologist is asking questions and gathering data to enable you to answer these questions effectively. It is very important that you understand all aspects of the research process such as experimental design, ethics, data management and visualisation. 
 
 In this chapter, you will continue to develop reproducible scripts. This means scripts that completely and transparently perform an analysis from start to finish in a way that yields the same result for different people using the same software on different computers. And transparency is a key value of science, as embodied in the “trust but verify” motto. When you do things reproducibly, others can understand and check your work. 

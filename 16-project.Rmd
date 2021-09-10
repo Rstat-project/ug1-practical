@@ -1,5 +1,7 @@
 # Project analysis
 
+> 實際上課的期末專案使用授課教師提供的資料。期末專案的執行步驟與應達成的目標，於期中考週說明會介紹及分派專案內容。
+
 We've spent the last 6 months giving you the skills you need to be able to deal with your own data. Now's the time to show us what you've learned. In this chapter we're going to describe the steps you will need to go through when analysing your data but, aside from a few lines that will help you deal with the questionnaire data that the Experimentum platform spits out, we're not going to give you any code solutions. 
 
 Everything you need to do you've done before, so use this book to help you. Remember, you don't need to write the code from memory, you just need to find the relevant examples and then copy and paste and change what needs changing to make it work for you.
