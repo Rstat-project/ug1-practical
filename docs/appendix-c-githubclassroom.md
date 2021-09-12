@@ -77,7 +77,7 @@ Users
 
 ## Rstudio 寫作業
 
-> Windows/Mac 步驟相同
+### Windows/Mac
 
 1. 打開Rstudio → 點 File → 點New Project 
 
@@ -101,8 +101,41 @@ Users
 
 ![](images/appendix/git/239552409_438028737442574_5908976934383668372_n.png)
 
+### Rstudio cloud
+
+**Chromebook/公用電腦的同學適用**
+
+1. 確認已有github帳號
+
+2. 向授課教師取得邀請連結。
+
+3. 在瀏覽器網址列使用邀請連結，開啟註冊/登入畫面，選擇github帳號註冊/登入。
+
+4. 進入以下畫面代表登入成功。點選`Join Space`進入Rstudio Cloud。
+
+![](images/appendix/git/cloud001.png)
+
+5. 進入工作空間`NCKUPSY-undergarudate-stat-2021`，點選"Projects"，開啓專案清單。
+
+![](images/appendix/git/cloud002.png)
+
+
+6. 在github確認作業複本repo已經建立。點選`Code`，複製如以下畫面的網址。
+
+![](images/appendix/git/cloud002-A.png)
+
+7. 點選`New Project`，再點選`New Project from Git Repository`
+
+![](images/appendix/git/cloud003.png)
+
+8. 在以下畫面貼上第6步複製的網址，按OK即完成建立專案。
+
+![](images/appendix/git/cloud004.png)
+
 
 ## Rstudio 交作業
+
+**本機或Rstudio Cloud的同學都適用**
 
 1. 進入push作業的畫面 →在右方框處簡單註明作業主述 → 按commit → 按 push繳出作業
 

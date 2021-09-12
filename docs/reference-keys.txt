@@ -273,3 +273,5 @@ updating-r-rstudio-and-packages
 updating-rstudio
 updating-packages
 updating-r
+windowsmac
+rstudio-cloud
