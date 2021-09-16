@@ -275,3 +275,5 @@ updating-packages
 updating-r
 windowsmac
 rstudio-cloud
+補充windows第一次push-作業會出現的情況
+補充rstudio-cloud第一次push-作業會出現的情況

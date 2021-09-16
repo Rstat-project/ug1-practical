@@ -135,8 +135,6 @@ Users
 
 ## Rstudio 交作業
 
-**本機或Rstudio Cloud的同學都適用**
-
 1. 進入push作業的畫面 →在右方框處簡單註明作業主述 → 按commit → 按 push繳出作業
 
 ![](images/appendix/git/238271303_820107055540429_1610296621465124494_n.png)
@@ -145,10 +143,52 @@ Users
 
 ![](images/appendix/git/237265624_167937885468825_1651375198911305252_n.png)
 
+**第一次commit必做設定**
+
+- 任何平台首次安裝git之後，必須設定識別資料，才能進行commit。需要到`terminal`子視窗執行以下指令：
+
+```
+git config --global user.name "我的名字"
+git config --global user.email "我的email"
+```
+
+- 以上"我的名字"與"我的email"，換成個人github帳號與註冊github的email
+
 3. 成功push的畫面如下
 
 ![](images/appendix/git/236064953_207974704722368_303757421675799814_n.png)
 
+**各作業系統第一次push都會出現要建立SHA或token的提示，請見以下說明**
+
+### 補充：Windows第一次Push 作業會出現的情況
+
+正常會自動開啟預設瀏覽器，只要按照指示點選核可按鈕，完成認證步驟。
+
+### 補充：Rstudio Cloud第一次Push 作業會出現的情況
+
+由於Rstudio Cloud無法建立SHA，必須在個人github帳號製造一個token。步驟如下
+
+1. 從個人github帳號頁面右上角開啟選單，選擇"Settings"
+
+![](images/appendix/github-token-001.png)
+
+2. 進入後從左側選單，進入"Developer settings"。
+
+![](images/appendix/github-token-002.png)
+
+
+3. 進入後點選"Personal access tokens"，再點選"Generate new token"
+
+![](images/appendix/github-token-003.png)
+
+4. 輸入密碼之後住入設定頁面。**Note**: 為此token命名; **Expiration**: 設定token有效期限，可設至這學期結束; 必勾選項見以下截圖。設定完畢按最下方"Generate token"
+
+![](images/appendix/github-token-004.png)
+
+
+5. 生成成功，將此token儲存在某個文字檔，文字檔務必放在只有個人才能取得的磁碟機或雲端碟碟。**以下截圖是示範用，截圖後已刪除**
+
+![](images/appendix/github-token-005.png)
 
 ### 補充：Mac os 第一次Push 作業會出現的情況
 
@@ -183,6 +223,9 @@ git config --global user.name “your name”
 git config --global user.email “youremail.com”
 git config --global user.name “your name”
 ```
+
+
+
 
 
 ## 在命令列介面交作業

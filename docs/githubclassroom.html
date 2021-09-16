@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>C githubclassroom作業管理 | Level 1 Data Skills</title>
   <meta name="description" content="ug1-practical-materials" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
   <meta property="og:title" content="C githubclassroom作業管理 | Level 1 Data Skills" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,6 @@
 <link rel="next" href="updating-r-rstudio-and-packages.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,6 +40,7 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
 
 
 
@@ -326,7 +326,9 @@
 </ul></li>
 <li class="chapter" data-level="C.4" data-path="githubclassroom.html"><a href="githubclassroom.html#rstudio-交作業"><i class="fa fa-check"></i><b>C.4</b> Rstudio 交作業</a>
 <ul>
-<li class="chapter" data-level="C.4.1" data-path="githubclassroom.html"><a href="githubclassroom.html#補充mac-os-第一次push-作業會出現的情況"><i class="fa fa-check"></i><b>C.4.1</b> 補充：Mac os 第一次Push 作業會出現的情況</a></li>
+<li class="chapter" data-level="C.4.1" data-path="githubclassroom.html"><a href="githubclassroom.html#補充windows第一次push-作業會出現的情況"><i class="fa fa-check"></i><b>C.4.1</b> 補充：Windows第一次Push 作業會出現的情況</a></li>
+<li class="chapter" data-level="C.4.2" data-path="githubclassroom.html"><a href="githubclassroom.html#補充rstudio-cloud第一次push-作業會出現的情況"><i class="fa fa-check"></i><b>C.4.2</b> 補充：Rstudio Cloud第一次Push 作業會出現的情況</a></li>
+<li class="chapter" data-level="C.4.3" data-path="githubclassroom.html"><a href="githubclassroom.html#補充mac-os-第一次push-作業會出現的情況"><i class="fa fa-check"></i><b>C.4.3</b> 補充：Mac os 第一次Push 作業會出現的情況</a></li>
 </ul></li>
 <li class="chapter" data-level="C.5" data-path="githubclassroom.html"><a href="githubclassroom.html#在命令列介面交作業"><i class="fa fa-check"></i><b>C.5</b> 在命令列介面交作業</a></li>
 </ul></li>
@@ -484,7 +486,6 @@
 </div>
 <div id="rstudio-交作業" class="section level2" number="19.4">
 <h2><span class="header-section-number">C.4</span> Rstudio 交作業</h2>
-<p><strong>本機或Rstudio Cloud的同學都適用</strong></p>
 <ol style="list-style-type: decimal">
 <li>進入push作業的畫面 →在右方框處簡單註明作業主述 → 按commit → 按 push繳出作業</li>
 </ol>
@@ -493,12 +494,50 @@
 <li>成功commit的畫面如下</li>
 </ol>
 <p><img src="images/appendix/git/237265624_167937885468825_1651375198911305252_n.png" /></p>
+<p><strong>第一次commit必做設定</strong></p>
+<ul>
+<li>任何平台首次安裝git之後，必須設定識別資料，才能進行commit。需要到<code>terminal</code>子視窗執行以下指令：</li>
+</ul>
+<pre><code>git config --global user.name &quot;我的名字&quot;
+git config --global user.email &quot;我的email&quot;</code></pre>
+<ul>
+<li>以上“我的名字”與“我的email”，換成個人github帳號與註冊github的email</li>
+</ul>
 <ol start="3" style="list-style-type: decimal">
 <li>成功push的畫面如下</li>
 </ol>
 <p><img src="images/appendix/git/236064953_207974704722368_303757421675799814_n.png" /></p>
-<div id="補充mac-os-第一次push-作業會出現的情況" class="section level3" number="19.4.1">
-<h3><span class="header-section-number">C.4.1</span> 補充：Mac os 第一次Push 作業會出現的情況</h3>
+<p><strong>各作業系統第一次push都會出現要建立SHA或token的提示，請見以下說明</strong></p>
+<div id="補充windows第一次push-作業會出現的情況" class="section level3" number="19.4.1">
+<h3><span class="header-section-number">C.4.1</span> 補充：Windows第一次Push 作業會出現的情況</h3>
+<p>正常會自動開啟預設瀏覽器，只要按照指示點選核可按鈕，完成認證步驟。</p>
+</div>
+<div id="補充rstudio-cloud第一次push-作業會出現的情況" class="section level3" number="19.4.2">
+<h3><span class="header-section-number">C.4.2</span> 補充：Rstudio Cloud第一次Push 作業會出現的情況</h3>
+<p>由於Rstudio Cloud無法建立SHA，必須在個人github帳號製造一個token。步驟如下</p>
+<ol style="list-style-type: decimal">
+<li>從個人github帳號頁面右上角開啟選單，選擇“Settings”</li>
+</ol>
+<p><img src="images/appendix/github-token-001.png" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>進入後從左側選單，進入“Developer settings”。</li>
+</ol>
+<p><img src="images/appendix/github-token-002.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>進入後點選“Personal access tokens”，再點選“Generate new token”</li>
+</ol>
+<p><img src="images/appendix/github-token-003.png" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>輸入密碼之後住入設定頁面。<strong>Note</strong>: 為此token命名; <strong>Expiration</strong>: 設定token有效期限，可設至這學期結束; 必勾選項見以下截圖。設定完畢按最下方“Generate token”</li>
+</ol>
+<p><img src="images/appendix/github-token-004.png" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li>生成成功，將此token儲存在某個文字檔，文字檔務必放在只有個人才能取得的磁碟機或雲端碟碟。<strong>以下截圖是示範用，截圖後已刪除</strong></li>
+</ol>
+<p><img src="images/appendix/github-token-005.png" /></p>
+</div>
+<div id="補充mac-os-第一次push-作業會出現的情況" class="section level3" number="19.4.3">
+<h3><span class="header-section-number">C.4.3</span> 補充：Mac os 第一次Push 作業會出現的情況</h3>
 <p>當同學第一次要從Rstudio push 作業到github時，會遇到token驗證的請求（這時候會遇到，輸入Github帳號密碼還是無法push的問題，原因是Git驗證已改為輸入token驗證）。然而，Mac 與 Wins 系統不同在於，第一次進行身份驗證時，Mac不會如同Wins自動導入token輸入的頁面進行驗證，而是要從mac系統中“鑰匙圈”進行後台修改。</p>
 <p><strong>因此，mac 取得token的方式 &amp; 從“鑰匙圈”修改git token 的步驟，請參考網路資源：<a href="https://myctw.github.io/post/bd72.html" class="uri">https://myctw.github.io/post/bd72.html</a></strong></p>
 <p>修改完畢之後，再回到Rstudio ，重新commit 和push 作業，Rstudio同樣會再顯示出輸入帳號密碼的請求，這時再輸入一次github帳密進行驗證。</p>
@@ -625,6 +664,7 @@ window.onload = function() {
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -666,7 +706,7 @@ gitbook.start({
 },
 "download": {},
 "search": {
-"engine": "fuse",
+"engine": "lunr",
 "options": null
 },
 "toc": {
