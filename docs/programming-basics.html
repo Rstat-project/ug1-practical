@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Programming basics | Level 1 Data Skills</title>
   <meta name="description" content="ug1-practical-materials" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Programming basics | Level 1 Data Skills" />
   <meta property="og:type" content="book" />
@@ -33,6 +33,7 @@
 <link rel="next" href="ref1.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -40,7 +41,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -57,7 +57,6 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -383,10 +382,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="C.1" data-path="githubclassroom.html"><a href="githubclassroom.html#作業資料管理資料夾設置建議"><i class="fa fa-check"></i><b>C.1</b> 作業資料管理資料夾設置建議</a></li>
 <li class="chapter" data-level="C.2" data-path="githubclassroom.html"><a href="githubclassroom.html#領取作業複本repo"><i class="fa fa-check"></i><b>C.2</b> 領取作業複本repo</a></li>
-<li class="chapter" data-level="C.3" data-path="githubclassroom.html"><a href="githubclassroom.html#rstudio-寫作業"><i class="fa fa-check"></i><b>C.3</b> Rstudio 寫作業</a></li>
+<li class="chapter" data-level="C.3" data-path="githubclassroom.html"><a href="githubclassroom.html#rstudio-寫作業"><i class="fa fa-check"></i><b>C.3</b> Rstudio 寫作業</a>
+<ul>
+<li class="chapter" data-level="C.3.1" data-path="githubclassroom.html"><a href="githubclassroom.html#windowsmac"><i class="fa fa-check"></i><b>C.3.1</b> Windows/Mac</a></li>
+<li class="chapter" data-level="C.3.2" data-path="githubclassroom.html"><a href="githubclassroom.html#rstudio-cloud"><i class="fa fa-check"></i><b>C.3.2</b> Rstudio cloud</a></li>
+</ul></li>
 <li class="chapter" data-level="C.4" data-path="githubclassroom.html"><a href="githubclassroom.html#rstudio-交作業"><i class="fa fa-check"></i><b>C.4</b> Rstudio 交作業</a>
 <ul>
-<li class="chapter" data-level="C.4.1" data-path="githubclassroom.html"><a href="githubclassroom.html#補充mac-os-第一次push-作業會出現的情況"><i class="fa fa-check"></i><b>C.4.1</b> 補充：Mac os 第一次Push 作業會出現的情況</a></li>
+<li class="chapter" data-level="C.4.1" data-path="githubclassroom.html"><a href="githubclassroom.html#補充windows第一次push-作業會出現的情況"><i class="fa fa-check"></i><b>C.4.1</b> 補充：Windows第一次Push 作業會出現的情況</a></li>
+<li class="chapter" data-level="C.4.2" data-path="githubclassroom.html"><a href="githubclassroom.html#補充rstudio-cloud第一次push-作業會出現的情況"><i class="fa fa-check"></i><b>C.4.2</b> 補充：Rstudio Cloud第一次Push 作業會出現的情況</a></li>
+<li class="chapter" data-level="C.4.3" data-path="githubclassroom.html"><a href="githubclassroom.html#補充mac-os-第一次push-作業會出現的情況"><i class="fa fa-check"></i><b>C.4.3</b> 補充：Mac os 第一次Push 作業會出現的情況</a></li>
 </ul></li>
 <li class="chapter" data-level="C.5" data-path="githubclassroom.html"><a href="githubclassroom.html#在命令列介面交作業"><i class="fa fa-check"></i><b>C.5</b> 在命令列介面交作業</a></li>
 </ul></li>
@@ -424,6 +429,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">2</span> Programming basics</h1>
 <blockquote>
 <p>由於本校並未購買R studio校園伺服器版本，本單元內有關R server的部分無法實際操作。沒有能安裝本機版R及Rstudio個人電腦設備的修課學生，須留意moodle課程公告的指引事項。</p>
+</blockquote>
+<blockquote>
+<p>部分插圖因軟體版本差異，置換為符合多數同學正在使用的版本。異動插圖下方附上原電子書連結提供比較。</p>
 </blockquote>
 <p>In this chapter, we will cover how to use R and RStudio at the University of Glasgow as well as some basic programming concepts and terminology, common pitfalls, helpful hints, and where to get help. Those of you who have no programming experience should find this chapter particularly helpful, however, even if you’ve used R before there may be some helpful hints and tips so please make sure you read through this chapter before the moving on.</p>
 <p>This is a long chapter but we don’t expect you to memorise all the information that is contained in it and some sections of it will not make sense until you start writing your own code - just make sure you know what help is available!</p>
@@ -595,7 +603,7 @@ Figure 2.3: Objects in the environment
 <span id="cb16-2"><a href="programming-basics.html#cb16-2" aria-hidden="true" tabindex="-1"></a>new_year <span class="sc">-</span> today</span>
 <span id="cb16-3"><a href="programming-basics.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(data)</span></code></pre></div>
 <pre><code>## [1] 45
-## Time difference of -252 days
+## Time difference of -263 days
 ## [1] 17.66644</code></pre>
 <p>Finally, you can store the result of these operations in a new object:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="programming-basics.html#cb18-1" aria-hidden="true" tabindex="-1"></a>decade <span class="ot">&lt;-</span> age <span class="sc">+</span> <span class="dv">10</span></span></code></pre></div>
@@ -635,6 +643,7 @@ Figure 2.4: Clearing the workspace
 Figure 2.5: Global options
 </p>
 </div>
+<p>按<a href="https://psyteachr.github.io/data-skills-v1/programming-basics.html#global-options">這裡</a>看原圖。</p>
 </div>
 <div id="r-sessions" class="section level3" number="2.0.18">
 <h3><span class="header-section-number">2.0.18</span> R sessions</h3>
@@ -862,7 +871,6 @@ window.onload = function() {
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -904,7 +912,7 @@ gitbook.start({
 },
 "download": {},
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -915,20 +923,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

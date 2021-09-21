@@ -2,6 +2,7 @@
 
 > 由於本校並未購買R studio校園伺服器版本，本單元內有關R server的部分無法實際操作。沒有能安裝本機版R及Rstudio個人電腦設備的修課學生，須留意moodle課程公告的指引事項。
 
+> 部分插圖因軟體版本差異，置換為符合多數同學正在使用的版本。異動插圖下方附上原電子書連結提供比較。
 
 In this chapter, we will cover how to use R and RStudio at the University of Glasgow as well as some basic programming concepts and terminology, common pitfalls, helpful hints, and where to get help. Those of you who have no programming experience should find this chapter particularly helpful, however, even if you've used R before there may be some helpful hints and tips so please make sure you read through this chapter before the moving on.
 
@@ -280,6 +281,7 @@ knitr::include_graphics("images/global_options.jpg")
 
 ```
 
+按[這裡](https://psyteachr.github.io/data-skills-v1/programming-basics.html#global-options)看原圖。
 
 ### R sessions
 
