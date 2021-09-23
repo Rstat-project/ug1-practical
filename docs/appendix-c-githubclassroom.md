@@ -81,6 +81,8 @@ Users
 
 1. 打開Rstudio → 點 File → 點New Project 
 
+**clone作業前，建議先關閉運作中的project project**
+
 ![](images/appendix/git/Rstudio_open.png)
 
 
@@ -94,6 +96,8 @@ Users
 ![](images/appendix/git/Project_wizard02.png)
 
 4. 在第一行處貼上Code複製的連結(綠色按鈕點的) → 第二行建立作業的名稱 → 第三行點選Browse ( 作業儲存的資料夾，請以英文命名資料夾名稱) → 按 Create Project
+
+**新專案的儲存路徑不得與其他專案重覆！**
 
 ![](images/appendix/git/240764864_1268332456951302_5151596800574671367_n.png)
 
