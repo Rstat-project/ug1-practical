@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Data wrangling 2 | Level 1 Data Skills</title>
+  <title>E R環境設定 | Level 1 Data Skills</title>
   <meta name="description" content="ug1-practical-materials" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Data wrangling 2 | Level 1 Data Skills" />
+  <meta property="og:title" content="E R環境設定 | Level 1 Data Skills" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Data wrangling 2 | Level 1 Data Skills" />
+  <meta name="twitter:title" content="E R環境設定 | Level 1 Data Skills" />
   
   <meta name="twitter:description" content="ug1-practical-materials" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-wrangling-1.html"/>
-<link rel="next" href="intro-to-data-viz.html"/>
+<link rel="prev" href="updating-r-rstudio-and-packages.html"/>
+
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -454,172 +454,78 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-wrangling-2" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Data wrangling 2</h1>
+<div id="r環境設定" class="section level1" number="21">
+<h1><span class="header-section-number">E</span> R環境設定</h1>
+<p>每個使用者安裝習慣不同，如果無法掌握主要程式與套件的安裝位置，會造成無法安裝或安裝後無法執行的問題。在此提供檢測安裝位置設定的方法，以及調節安裝位置的方式。</p>
 <blockquote>
-<p>由於本校並未購買R studio校園伺服器版本，<code>6.1 Walkthrough video</code>的示範與講解並不適用本單元實際上課內容。除了尚無個人電腦設備的同學，本單元起同學應能熟練在本機運用R及Rstudio學習與操作。</p>
+<p>以可重製統計的要求，我所撰寫的程式碼，能在任何人的設備重製相同的執行結果，環境設定應該越簡單越好。另一方面，如果有必要使用特殊環境設定才能執行的套件，公開程式碼必須包裝環境設定參數或可回溯的映像檔。</p>
 </blockquote>
-<div id="walkthrough-video-2" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Walkthrough video</h2>
-<p>There is a <a href="https://uofglasgow.zoom.us/rec/play/Kde7hTS2bAJAvhuAufvxpYi8shgfoSH4kKeWN8YGJ9k1_lbHDFsNzHZBm9Bfu_bKVtcOxoNQbrBf8Ddt.Cy_Kex6M9v1_3v_G?startTime=1602841645000&amp;_x_zm_rtaid=cW5f8v0JQcOlLI1cBpI84g.1628694791961.c3bcc75dbabdfb3f3ac44f8fd7884865&amp;_x_zm_rhtaid=355">walkthrough video</a> of this chapter available via Zoom.</p>
+<p>本節介紹的方法取用自 <span class="citation"><a href="#ref-gillespieEfficientProgramming2021" role="doc-biblioref">Gillespie and Lovelace</a> (<a href="#ref-gillespieEfficientProgramming2021" role="doc-biblioref">2021</a>)</span> ，如果有興趣了解更進一步的設定方法，請參考這本電子書。</p>
+<div id="檢測r環境參數" class="section level2" number="21.1">
+<h2><span class="header-section-number">E.1</span> 檢測R環境參數</h2>
+<p>在console執行以下指令，能獲得的檢測資訊。</p>
+<pre><code>R.home()</code></pre>
+<p>R主程式的儲存路徑，通常只能有一個。</p>
+<pre><code>.libPaths()</code></pre>
+<p>R套件的預設儲存路徑</p>
+<pre><code>Sys.getenv(&quot;HOME&quot;)</code></pre>
+<p>不啟動專案時，R的預設工作目錄。</p>
+<pre><code>Sys.getenv(&quot;R_LIBS_USER&quot;)</code></pre>
+<p>執行<code>install.packages()</code>預設安裝套件的路徑</p>
+</div>
+<div id="rprofile設定" class="section level2" number="21.2">
+<h2><span class="header-section-number">E.2</span> .Rprofile設定</h2>
+<p>“.Rprofile”設定console的提示介面；調整預設下載套件的伺服器。編輯完成要重新啓動R，設定才會生效。</p>
+<pre><code>file.exists(&quot;~/.Rprofile&quot;)</code></pre>
+<p>檢查R主程式安裝路徑有沒有存在“.Rprofile”</p>
+<pre><code>file.edit(&quot;~/.Rprofile&quot;)</code></pre>
+<p>創建或編輯“.Rprofile”</p>
 <ul>
-<li>Video notes: this video was recorded in 2020 when we recommended using the server above installing R on your computer. With more experience of the server, we now strongly encourage you to install R on your computer if you can. There are no other differences between the video and this book chapter.</li>
+<li>設定console提示介面的例子</li>
 </ul>
-</div>
-<div id="activity-1-set-up-2" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Activity 1: Set-up</h2>
+<pre><code># 自訂歡迎訊息
+message(&quot;Hi Tony, welcome to R&quot;)
+# 自訂console提示輸入的前置符號
+# (&quot; &quot; 不會出現任何符號)
+options(prompt = &quot;Javis&gt; &quot;)
+# 輸入指令不完整時的前置符號
+options(continue = &quot;+ &quot;)</code></pre>
 <ul>
-<li>Open R Studio and ensure the environment is clear.<br />
-</li>
-<li>Open the <code>stub-wrangling-2.Rmd</code> file and ensure that the working directory is set to your Data Skills folder and that the two .csv data files (<code>participant-info.csv</code> and <code>ahi-cesd.csv</code>) are in your working directory (you should see them in the file pane).<br />
-</li>
-<li>If you’re on the server, avoid a number of issues by restarting the session - click <code>Session</code> - <code>Restart R</code><br />
-</li>
-<li>Type and run the below code to load the <code>tidyverse</code> package and to load in the data files.</li>
+<li>設定下載套件的伺服器</li>
 </ul>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="data-wrangling-2.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) </span>
-<span id="cb76-2"><a href="data-wrangling-2.html#cb76-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb76-3"><a href="data-wrangling-2.html#cb76-3" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&#39;ahi-cesd.csv&#39;</span>)</span>
-<span id="cb76-4"><a href="data-wrangling-2.html#cb76-4" aria-hidden="true" tabindex="-1"></a>pinfo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&#39;participant-info.csv&#39;</span>)</span>
-<span id="cb76-5"><a href="data-wrangling-2.html#cb76-5" aria-hidden="true" tabindex="-1"></a>all_dat <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(dat, pinfo, <span class="at">by=</span> <span class="fu">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;intervention&quot;</span>))</span></code></pre></div>
-<p>Now let’s start working with our <code>tidyverse</code> verb functions…</p>
+<pre><code># `local` creates a new, empty environment
+# This avoids polluting .GlobalEnv with the object r
+local({
+  r = getOption(&quot;repos&quot;)           
+  r[&quot;CRAN&quot;] = &quot;https://cran.csie.ntu.edu.tw/&quot;
+  options(repos = r)
+})</code></pre>
 </div>
-<div id="activity-2-select" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Activity 2: Select</h2>
-<p>Select the columns all_dat, ahiTotal, cesdTotal, sex, age, educ, income, occasion, elapsed.days from the data and create a variable called <code>summarydata</code>.</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="data-wrangling-2.html#cb77-1" aria-hidden="true" tabindex="-1"></a>summarydata <span class="ot">&lt;-</span> <span class="fu">select</span>(all_dat, ahiTotal, cesdTotal, sex, age, educ, income, occasion, elapsed.days)</span></code></pre></div>
-<div class="danger">
-<p>
-If you get an error message when using select that says <code>unused argument</code> it means that it is trying to use the wrong version of the select function. There are two solutions to this, first, save you work and then restart the R session (click session -restart R) and then run all your code above again from the start, or replace <code>select</code> with <code>dplyr::select</code> which tells R exactly which version of the select function to use. We’d recommend restarting the session because this will get you in the habit and it’s a useful thing to try for a range of problems
-</p>
-</div>
-<hr />
-<p><strong>Pause here and interpret the above code and output</strong></p>
+<div id="renviron設定" class="section level2" number="21.3">
+<h2><span class="header-section-number">E.3</span> .Renviron設定</h2>
+<p>“.Renviorn”設定套件安裝路徑</p>
+<pre><code>file.edit(&quot;~/.Renviron&quot;)</code></pre>
+<p>創建或編輯“.Renviron”</p>
 <ul>
-<li>How you would translate this code into English</li>
-<li>What columns have been removed from the data?</li>
+<li>編輯範例：設定套件安裝路徑</li>
 </ul>
-<hr />
-</div>
-<div id="activity-3-arrange" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Activity 3: Arrange</h2>
-<p>Arrange the data in the variable created above (<code>summarydata</code>) by ahiTotal with lowest score first.</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="data-wrangling-2.html#cb78-1" aria-hidden="true" tabindex="-1"></a>ahi_asc <span class="ot">&lt;-</span> <span class="fu">arrange</span>(summarydata, <span class="at">by =</span> ahiTotal)</span></code></pre></div>
-<hr />
-<ul>
-<li>How could you arrange this data in <strong>descending</strong> order (highest score first)?</li>
-</ul>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="data-wrangling-2.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(summarydata, <span class="at">by =</span> <span class="fu">desc</span>(ahiTotal))</span></code></pre></div>
-</div>
-<ul>
-<li><p>What is the smallest ahiTotal score? <input class='webex-solveme nospaces' size='2' data-answer='["32"]'/></p></li>
-<li><p>What is the largest ahiTotal score? <input class='webex-solveme nospaces' size='3' data-answer='["114"]'/></p></li>
-</ul>
-<hr />
-</div>
-<div id="activity-4-filter" class="section level2" number="6.5">
-<h2><span class="header-section-number">6.5</span> Activity 4: Filter</h2>
-<p>Filter the data <code>ahi_asc</code> by taking out those who are over 65 years of age.</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="data-wrangling-2.html#cb80-1" aria-hidden="true" tabindex="-1"></a>age_65max <span class="ot">&lt;-</span> <span class="fu">filter</span>(ahi_asc, age <span class="sc">&lt;</span> <span class="dv">65</span>)</span></code></pre></div>
-<hr />
-<ul>
-<li>What does <code>filter()</code> do?</li>
-</ul>
-<p><select class='webex-solveme' data-answer='["removes information that we are not interested in"]'> <option></option> <option>splits a column into multiple columns</option> <option>transforms existing columns</option> <option>takes multiple columns and collapses them together</option> <option>removes information that we are not interested in</option></select></p>
-<ul>
-<li>How many observations are left in <code>age_65max</code> after running <code>filter()</code>? <input class='webex-solveme nospaces' size='3' data-answer='["939"]'/></li>
-</ul>
-<hr />
-</div>
-<div id="activity-5-summarise" class="section level2" number="6.6">
-<h2><span class="header-section-number">6.6</span> Activity 5: Summarise</h2>
-<p>Then, use summarise to create a new variable <code>data_median</code>, which calculates the median ahiTotal score in this grouped data and assign it a table head called <code>median_score</code>.</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="data-wrangling-2.html#cb81-1" aria-hidden="true" tabindex="-1"></a>data_median <span class="ot">&lt;-</span> <span class="fu">summarise</span>(age_65max, <span class="at">median_score =</span> <span class="fu">median</span>(ahiTotal))</span></code></pre></div>
-<hr />
-<ul>
-<li><p>What is the median score? <input class='webex-solveme nospaces' size='2' data-answer='["74"]'/></p></li>
-<li><p>Change the above code to give you the <strong>mean score</strong>. What is the mean score to 2 decimal places? <input class='webex-solveme nospaces' size='5' data-answer='["72.48"]'/></p></li>
-</ul>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="data-wrangling-2.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(age_65max, <span class="at">mean_score =</span> <span class="fu">mean</span>(ahiTotal))</span></code></pre></div>
-</div>
-<hr />
-</div>
-<div id="activity-6-group_by" class="section level2" number="6.7">
-<h2><span class="header-section-number">6.7</span> Activity 6: Group_by</h2>
-<p>Use mutate to create a new column called <code>Happiness_Category</code> in <code>age_65max</code> which categorises participants based on whether they score above the median <code>ahiTotal</code> score for all participants.</p>
-<p>Then, group the data stored in <code>age_65max</code> by <code>Happiness_Category</code>, and store it in an object named <code>happy_dat</code>.</p>
-<p>Finally, use summarise to calculate the median <code>cesdTotal</code> score for participants who scored above and below the median <code>ahiTotal</code> score and save it in a new object named <code>data_median_group</code>.</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="data-wrangling-2.html#cb83-1" aria-hidden="true" tabindex="-1"></a>age_65max <span class="ot">&lt;-</span> <span class="fu">mutate</span>(age_65max, <span class="at">Happiness_Category =</span> (ahiTotal <span class="sc">&gt;</span> <span class="dv">74</span>))</span>
-<span id="cb83-2"><a href="data-wrangling-2.html#cb83-2" aria-hidden="true" tabindex="-1"></a>happy_dat <span class="ot">&lt;-</span> <span class="fu">group_by</span>(age_65max, Happiness_Category)</span>
-<span id="cb83-3"><a href="data-wrangling-2.html#cb83-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb83-4"><a href="data-wrangling-2.html#cb83-4" aria-hidden="true" tabindex="-1"></a>data_median_group <span class="ot">&lt;-</span> <span class="fu">summarise</span>(happy_dat, <span class="at">median_score =</span> <span class="fu">median</span>(cesdTotal))</span></code></pre></div>
-<div class="info">
-<p>
-If you get what looks like an error that says <code>summarise() ungrouping output (override with .groups argument)</code>don’t worry, this isn’t an error it’s just R telling you what it’s done. This message was included in a very recent update to the <code>tidyverse</code> which is why it doesn’t appear on some of the walkthrough vidoes.
-</p>
-</div>
-<hr />
-<p><strong>Pause here and interpret the above code and output</strong></p>
-<ul>
-<li>What does <code>group_by()</code> do?</li>
-</ul>
-<p><select class='webex-solveme' data-answer='["groups data frames based on a specific column so that all later operations are carried out on a group basis"]'> <option></option> <option>provides summary statistics of an existing dataframe</option> <option>organises information in ascending or descending order</option> <option>transforms existing columns</option> <option>groups data frames based on a specific column so that all later operations are carried out on a group basis</option></select></p>
-<ul>
-<li>How would you change the code to group by education rather than <code>Happiness_Category</code>?</li>
-</ul>
-<div class="webex-solution">
-<button>
-Solution
-</button>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="data-wrangling-2.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(age_65max, educ)</span></code></pre></div>
-</div>
-<hr />
-</div>
-<div id="activity-7-data-visualisation" class="section level2" number="6.8">
-<h2><span class="header-section-number">6.8</span> Activity 7: Data visualisation</h2>
-<p>Copy, paste and run the below code into a new code chunk to create a plot of depression scores grouped by income level using the <code>age_65max</code> data.</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="data-wrangling-2.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(age_65max, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(income), <span class="at">y =</span> cesdTotal, <span class="at">fill =</span> <span class="fu">as.factor</span>(income))) <span class="sc">+</span></span>
-<span id="cb85-2"><a href="data-wrangling-2.html#cb85-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">trim =</span> <span class="cn">FALSE</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>, <span class="at">alpha =</span> .<span class="dv">6</span>) <span class="sc">+</span></span>
-<span id="cb85-3"><a href="data-wrangling-2.html#cb85-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width =</span> .<span class="dv">2</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb85-4"><a href="data-wrangling-2.html#cb85-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">&quot;D&quot;</span>) <span class="sc">+</span></span>
-<span id="cb85-5"><a href="data-wrangling-2.html#cb85-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">name =</span> <span class="st">&quot;Income Level&quot;</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Below Average&quot;</span>, <span class="st">&quot;Average&quot;</span>, <span class="st">&quot;Above Average&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb85-6"><a href="data-wrangling-2.html#cb85-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;Depression Score&quot;</span>)</span></code></pre></div>
-<ul>
-<li><p>Which income group has the highest median depression scores? <select class='webex-solveme' data-answer='["Below Average"]'> <option></option> <option>Below Average</option> <option>Average</option> <option>Above Average</option></select></p></li>
-<li><p>Which group has the highest density of scores at any one point? <select class='webex-solveme' data-answer='["Above Average"]'> <option></option> <option>Below Average</option> <option>Average</option> <option>Above Average</option></select></p></li>
-</ul>
-<div class="webex-solution">
-<button>
-Explain This Answer
-</button>
-<p>Density is represented by the curvy line around the boxplot that looks a little bit like a (drunk) violin. The fatter the violin, the more data points there are at any one point. This means that in the above plot, the Above Average group has the highest density because this has the widest violin, i.e., there are lots of people in the Above Average income group with a score of about 5.</p>
-</div>
-<ul>
-<li>Is income group a between-subject or within-subject variable? <select class='webex-solveme' data-answer='["Between-subjects"]'> <option></option> <option>Between-subjects</option> <option>Within-subjects</option></select></li>
-</ul>
-<div class="webex-solution">
-<button>
-Explain This Answer
-</button>
-<p>Between-subjects designs are where different participants are in different groups. Within-subject designs are when the same participants are in all groups. Income is an example of a between-subject variable because participants can only be in one grouping level of the independent variable</p>
-</div>
-</div>
-<div id="activity-8-make-r-your-own" class="section level2" number="6.9">
-<h2><span class="header-section-number">6.9</span> Activity 8: Make R your own</h2>
-<p>Finally, you can customise how R Studio looks to make it feel more like your own personal version. Click <code>Tools</code> - <code>Global Options</code> - <code>Apperance</code>. You can change the default font, font size, and general appearance of R Studio, including using dark mode. Play around with the settings and see which one you prefer - you’re going to spend a lot of time with R, it might as well look nice!</p>
-</div>
-<div id="finished-3" class="section level2" number="6.10">
-<h2><span class="header-section-number">6.10</span> Finished!</h2>
-<p>Well done! As a final step, try knitting the file to HTML. Remember to save your Markdown in your Data Skills folder and make a note of any mistakes you made and how you fixed them.</p>
+<pre><code># Linux
+R_LIBS=~/R/library
 
+# Windows
+R_LIBS=C:/R/library</code></pre>
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+Gillespie, Colin, and Robin Lovelace. 2021. <em>Efficient <span>R</span> Programming</em>. <a href="https://csgillespie.github.io/efficientR/">https://csgillespie.github.io/efficientR/</a>.
+</div>
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-gillespieEfficientProgramming2021" class="csl-entry">
+Gillespie, Colin, and Robin Lovelace. 2021. <em>Efficient <span>R</span> Programming</em>. <a href="https://csgillespie.github.io/efficientR/">https://csgillespie.github.io/efficientR/</a>.
 </div>
 </div>
 <div class="psyteachr_footer">
@@ -712,8 +618,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="data-wrangling-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro-to-data-viz.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="updating-r-rstudio-and-packages.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

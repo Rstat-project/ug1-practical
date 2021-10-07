@@ -4,7 +4,7 @@ date: 2019-2020
 authors: "Heather Cleland-Woods and Emily Nordmann (emily.nordmann@glasgow.ac.uk)"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [book.bib, packages.bib, extended.bib]
 biblio-style: apalike
 link-citations: yes
 description: "ug1-practical-materials"

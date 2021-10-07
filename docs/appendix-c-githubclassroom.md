@@ -81,7 +81,7 @@ Users
 
 1. 打開Rstudio → 點 File → 點New Project 
 
-**clone作業前，建議先關閉運作中的project project**
+**clone作業前，建議先關閉運作中的project**
 
 ![](images/appendix/git/Rstudio_open.png)
 
