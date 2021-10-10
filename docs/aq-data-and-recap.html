@@ -280,7 +280,6 @@ div.csl-indent {
 <li class="chapter" data-level="8.0.5" data-path="scatterplots.html"><a href="scatterplots.html#activity-5-setting-the-factors"><i class="fa fa-check"></i><b>8.0.5</b> Activity 5: Setting the factors</a></li>
 <li class="chapter" data-level="8.0.6" data-path="scatterplots.html"><a href="scatterplots.html#activity-6-grouped-scatterplots"><i class="fa fa-check"></i><b>8.0.6</b> Activity 6: Grouped scatterplots</a></li>
 <li class="chapter" data-level="8.0.7" data-path="scatterplots.html"><a href="scatterplots.html#activity-7-group-by-a-new-variable"><i class="fa fa-check"></i><b>8.0.7</b> Activity 7: Group by a new variable</a></li>
-<li class="chapter" data-level="8.0.8" data-path="scatterplots.html"><a href="scatterplots.html#activity-solutions---scatterplots"><i class="fa fa-check"></i><b>8.0.8</b> Activity solutions - Scatterplots</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="aq-data-and-recap.html"><a href="aq-data-and-recap.html"><i class="fa fa-check"></i><b>9</b> AQ data and recap</a>
 <ul>
@@ -907,24 +906,24 @@ The solutions are at the bottom if you need them. However, as you’ll discover 
 <h3><span class="header-section-number">9.0.8</span> Activity 5: Recap</h3>
 <p>Finally, let’s refresh your memory of some of the important tidyverse functions before we delve into anything new.</p>
 <ul>
-<li>What function would you use to keep just the columns Q1 and Q2 in <code>responses</code>? <select class='webex-solveme' data-answer='["select"]'> <option></option> <option>filter</option> <option>select</option> <option>object</option> <option>Q1:Q2</option></select></li>
-<li>What function would you use to keep just the data from participant 16 in <code>reponses</code>? <select class='webex-solveme' data-answer='["filter"]'> <option></option> <option>filter</option> <option>select</option> <option>summarise</option> <option>observation</option></select></li>
-<li>What function would you use to add up the total score for participant 16? <select class='webex-solveme' data-answer='["summarise"]'> <option></option> <option>filter</option> <option>inner_join</option> <option>summarise</option> <option>score</option></select></li>
-<li>What function would you use to join together <code>qformats</code> and <code>scoring</code>? <select class='webex-solveme' data-answer='["inner_join"]'> <option></option> <option>inner_join</option> <option>join</option> <option>join_inner</option> <option>object_join</option></select></li>
+<li>What function would you use to keep just the columns Q1 and Q2 in <code>responses</code>? <select class='webex-select'><option value='blank'></option><option value=''>filter</option><option value='answer'>select</option><option value=''>object</option><option value=''>Q1:Q2</option></select></li>
+<li>What function would you use to keep just the data from participant 16 in <code>reponses</code>? <select class='webex-select'><option value='blank'></option><option value='answer'>filter</option><option value=''>select</option><option value=''>summarise</option><option value=''>observation</option></select></li>
+<li>What function would you use to add up the total score for participant 16? <select class='webex-select'><option value='blank'></option><option value=''>filter</option><option value=''>inner_join</option><option value='answer'>summarise</option><option value=''>score</option></select></li>
+<li>What function would you use to join together <code>qformats</code> and <code>scoring</code>? <select class='webex-select'><option value='blank'></option><option value='answer'>inner_join</option><option value=''>join</option><option value=''>join_inner</option><option value=''>object_join</option></select></li>
 </ul>
 </div>
 <div id="activity-solutions---aq-data-and-recap" class="section level3" number="9.0.9">
 <h3><span class="header-section-number">9.0.9</span> Activity solutions - AQ data and recap</h3>
-<div id="activity-4-1" class="section level4" number="9.0.9.1">
+<div id="activity-4" class="section level4" number="9.0.9.1">
 <h4><span class="header-section-number">9.0.9.1</span> Activity 4</h4>
 <div class="webex-solution">
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="aq-data-and-recap.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb128-2"><a href="aq-data-and-recap.html#cb128-2" aria-hidden="true" tabindex="-1"></a>scoring <span class="ot">&lt;-</span> <span class="fu">read_csv</span> (<span class="st">&quot;scoring.csv&quot;</span>)</span>
-<span id="cb128-3"><a href="aq-data-and-recap.html#cb128-3" aria-hidden="true" tabindex="-1"></a>responses <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;responses.csv&quot;</span>)</span>
-<span id="cb128-4"><a href="aq-data-and-recap.html#cb128-4" aria-hidden="true" tabindex="-1"></a>qformats <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;qformats.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="aq-data-and-recap.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb109-2"><a href="aq-data-and-recap.html#cb109-2" aria-hidden="true" tabindex="-1"></a>scoring <span class="ot">&lt;-</span> <span class="fu">read_csv</span> (<span class="st">&quot;scoring.csv&quot;</span>)</span>
+<span id="cb109-3"><a href="aq-data-and-recap.html#cb109-3" aria-hidden="true" tabindex="-1"></a>responses <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;responses.csv&quot;</span>)</span>
+<span id="cb109-4"><a href="aq-data-and-recap.html#cb109-4" aria-hidden="true" tabindex="-1"></a>qformats <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;qformats.csv&quot;</span>)</span></code></pre></div>
 </div>
 
 </div>

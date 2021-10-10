@@ -280,7 +280,6 @@ div.csl-indent {
 <li class="chapter" data-level="8.0.5" data-path="scatterplots.html"><a href="scatterplots.html#activity-5-setting-the-factors"><i class="fa fa-check"></i><b>8.0.5</b> Activity 5: Setting the factors</a></li>
 <li class="chapter" data-level="8.0.6" data-path="scatterplots.html"><a href="scatterplots.html#activity-6-grouped-scatterplots"><i class="fa fa-check"></i><b>8.0.6</b> Activity 6: Grouped scatterplots</a></li>
 <li class="chapter" data-level="8.0.7" data-path="scatterplots.html"><a href="scatterplots.html#activity-7-group-by-a-new-variable"><i class="fa fa-check"></i><b>8.0.7</b> Activity 7: Group by a new variable</a></li>
-<li class="chapter" data-level="8.0.8" data-path="scatterplots.html"><a href="scatterplots.html#activity-solutions---scatterplots"><i class="fa fa-check"></i><b>8.0.8</b> Activity solutions - Scatterplots</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="aq-data-and-recap.html"><a href="aq-data-and-recap.html"><i class="fa fa-check"></i><b>9</b> AQ data and recap</a>
 <ul>
@@ -568,7 +567,7 @@ If you get an error message when using select that says <code>unused argument</c
 <span id="cb31-4"><a href="loading-data.html#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">&quot;E&quot;</span>) <span class="sc">+</span></span>
 <span id="cb31-5"><a href="loading-data.html#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;Number of participants&quot;</span>)<span class="sc">+</span></span>
 <span id="cb31-6"><a href="loading-data.html#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<p>Are there more male or more female participants (you will need to check the codebook to find out what 1 and 2 mean to answer this)? <select class='webex-solveme' data-answer='["More female participants"]'> <option></option> <option>More female participants</option> <option>More male participants</option></select></p>
+<p>Are there more male or more female participants (you will need to check the codebook to find out what 1 and 2 mean to answer this)? <select class='webex-select'><option value='blank'></option><option value='answer'>More female participants</option><option value=''>More male participants</option></select></p>
 <p>Copy, paste, and run the below code to create violin-boxplots of happiness scores for each income group.</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="loading-data.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(summarydata, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(income), <span class="at">y =</span> ahiTotal, <span class="at">fill =</span> <span class="fu">as.factor</span>(income))) <span class="sc">+</span></span>
 <span id="cb32-2"><a href="loading-data.html#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">trim =</span> <span class="cn">FALSE</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>, <span class="at">alpha =</span> .<span class="dv">4</span>) <span class="sc">+</span></span>
@@ -583,8 +582,8 @@ If you get an error message when using select that says <code>unused argument</c
 <li>The other lines on the boxplot show the interquartile range. There is a really good explanation of <a href="https://medium.com/dayem-siddiqui/understanding-and-interpreting-box-plots-d07aab9d1b6c">how to read a boxplot here</a>.</li>
 <li>The black dots are outliers, i.e., extreme values.</li>
 </ul>
-<p>Which income group has the highest median happiness score? <select class='webex-solveme' data-answer='["Above average"]'> <option></option> <option>Below average</option> <option>Average</option> <option>Above average</option></select></p>
-<p>Which income group has the lowest median happiness score? <select class='webex-solveme' data-answer='["Below average"]'> <option></option> <option>Below average</option> <option>Average</option></select></p>
+<p>Which income group has the highest median happiness score? <select class='webex-select'><option value='blank'></option><option value=''>Below average</option><option value=''>Average</option><option value='answer'>Above average</option></select></p>
+<p>Which income group has the lowest median happiness score? <select class='webex-select'><option value='blank'></option><option value='answer'>Below average</option><option value=''>Average</option></select></p>
 <p>How many outliers does the Average income group have? <input class='webex-solveme nospaces' size='1' data-answer='["2"]'/></p>
 <p>Finally, try knitting the file to HTML. And that’s it, well done! Remember to save your Markdown in your Data Skills folder and make a note of any mistakes you made and how you fixed them.</p>
 <div id="finished-1" class="section level3" number="4.8.1">
@@ -653,7 +652,7 @@ Solution
 <ol style="list-style-type: decimal">
 <li>When loading in a .csv file, which function should you use?</li>
 </ol>
-<p><select class='webex-solveme' data-answer='["read_csv()"]'> <option></option> <option>read_csv()</option> <option>read.csv()</option></select></p>
+<p><select class='webex-select'><option value='blank'></option><option value='answer'>read_csv()</option><option value=''>read.csv()</option></select></p>
 <div class="webex-solution">
 <button>
 Explain this answer
@@ -664,11 +663,11 @@ Explain this answer
 <ol start="2" style="list-style-type: decimal">
 <li>The function <code>inner_join()</code> takes the arguments <code>x</code>, <code>y</code>, <code>by</code>. What does <code>by</code> do?</li>
 </ol>
-<p><select class='webex-solveme' data-answer='["Specifies the column to join by that both tables have in common"]'> <option></option> <option>Specifies the first table to join</option> <option>Specifies the second table to join</option> <option>Specifies the column to join by that both tables have in common</option></select></p>
+<p><select class='webex-select'><option value='blank'></option><option value=''>Specifies the first table to join</option><option value=''>Specifies the second table to join</option><option value='answer'>Specifies the column to join by that both tables have in common</option></select></p>
 <ol start="3" style="list-style-type: decimal">
 <li>What does the function <code>select()</code> do?
 <br>
-<select class='webex-solveme' data-answer='["Keeps only the variables you specify"]'> <option></option> <option>Keeps only the observations you specify</option> <option>Keeps only the variables you specify</option> <option>Keeps only the objects you specify</option></select></li>
+<select class='webex-select'><option value='blank'></option><option value=''>Keeps only the observations you specify</option><option value='answer'>Keeps only the variables you specify</option><option value=''>Keeps only the objects you specify</option></select></li>
 </ol>
 <hr />
 

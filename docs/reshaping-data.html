@@ -280,7 +280,6 @@ div.csl-indent {
 <li class="chapter" data-level="8.0.5" data-path="scatterplots.html"><a href="scatterplots.html#activity-5-setting-the-factors"><i class="fa fa-check"></i><b>8.0.5</b> Activity 5: Setting the factors</a></li>
 <li class="chapter" data-level="8.0.6" data-path="scatterplots.html"><a href="scatterplots.html#activity-6-grouped-scatterplots"><i class="fa fa-check"></i><b>8.0.6</b> Activity 6: Grouped scatterplots</a></li>
 <li class="chapter" data-level="8.0.7" data-path="scatterplots.html"><a href="scatterplots.html#activity-7-group-by-a-new-variable"><i class="fa fa-check"></i><b>8.0.7</b> Activity 7: Group by a new variable</a></li>
-<li class="chapter" data-level="8.0.8" data-path="scatterplots.html"><a href="scatterplots.html#activity-solutions---scatterplots"><i class="fa fa-check"></i><b>8.0.8</b> Activity solutions - Scatterplots</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="aq-data-and-recap.html"><a href="aq-data-and-recap.html"><i class="fa fa-check"></i><b>9</b> AQ data and recap</a>
 <ul>
@@ -479,10 +478,10 @@ div.csl-indent {
 <li><code>cols</code> are the original columns you want to collapse.</li>
 </ul>
 <p>These functions can seem a bit abstract and it is better to show than tell. Run the below code in a new code chunk and then compare how <code>rlong</code> looks compared to <code>responses</code> and see if you can figure out what effect each argument had.</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="reshaping-data.html#cb129-1" aria-hidden="true" tabindex="-1"></a>rlong <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(<span class="at">data =</span> responses, </span>
-<span id="cb129-2"><a href="reshaping-data.html#cb129-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">names_to =</span> <span class="st">&quot;Question&quot;</span>,  </span>
-<span id="cb129-3"><a href="reshaping-data.html#cb129-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">values_to =</span> <span class="st">&quot;Response&quot;</span>,</span>
-<span id="cb129-4"><a href="reshaping-data.html#cb129-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">cols =</span> Q1<span class="sc">:</span>Q10)</span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="reshaping-data.html#cb110-1" aria-hidden="true" tabindex="-1"></a>rlong <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(<span class="at">data =</span> responses, </span>
+<span id="cb110-2"><a href="reshaping-data.html#cb110-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">names_to =</span> <span class="st">&quot;Question&quot;</span>,  </span>
+<span id="cb110-3"><a href="reshaping-data.html#cb110-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">values_to =</span> <span class="st">&quot;Response&quot;</span>,</span>
+<span id="cb110-4"><a href="reshaping-data.html#cb110-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">cols =</span> Q1<span class="sc">:</span>Q10)</span></code></pre></div>
 <p>You have now created a tibble with 660 observations and 3 variables; 10 observations per 66 participants and 3 variables. Let’s recreate the example from the AQ Data and Recap and only use <strong>one participant</strong>. We can do that by using <code>filter()</code> (which you used last semester) to create a new object called <code>rlong_16.</code></p>
 </div>
 <div id="activity-3-filter" class="section level3" number="10.0.3">
@@ -492,7 +491,7 @@ div.csl-indent {
 <ul>
 <li>What does <code>filter()</code> do?</li>
 </ul>
-<p><select class='webex-solveme' data-answer='["Retains or removes observations"]'> <option></option> <option>Retains or removes variables</option> <option>Retains or removes observations</option></select></p>
+<p><select class='webex-select'><option value='blank'></option><option value=''>Retains or removes variables</option><option value='answer'>Retains or removes observations</option></select></p>
 <hr />
 <ul>
 <li>Create a new object called <code>rlong_16</code> that uses <code>filter()</code> to keep only the data from participant Id 16.</li>
@@ -537,11 +536,11 @@ Every year, the biggest problem with these exercises is typos caused by not payi
 <ul>
 <li>Run the below code in a new code chunk.</li>
 </ul>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="reshaping-data.html#cb130-1" aria-hidden="true" tabindex="-1"></a>rlong_join <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(rlong, qformats, <span class="st">&quot;Question&quot;</span>)</span>
-<span id="cb130-2"><a href="reshaping-data.html#cb130-2" aria-hidden="true" tabindex="-1"></a>scores <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(rlong_join, scoring, <span class="fu">c</span>(<span class="st">&quot;QFormat&quot;</span>, <span class="st">&quot;Response&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="reshaping-data.html#cb111-1" aria-hidden="true" tabindex="-1"></a>rlong_join <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(rlong, qformats, <span class="st">&quot;Question&quot;</span>)</span>
+<span id="cb111-2"><a href="reshaping-data.html#cb111-2" aria-hidden="true" tabindex="-1"></a>scores <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(rlong_join, scoring, <span class="fu">c</span>(<span class="st">&quot;QFormat&quot;</span>, <span class="st">&quot;Response&quot;</span>))</span></code></pre></div>
 <p>The final part of calculating the scores requires an extra step because now we don’t just want to calculate one score, we want to calculate a score <strong>for each participant</strong> which means that we need to use <code>group_by()</code> to group by <code>Id</code>. We’re not going to use it in this chapter but we also want our object to show us the participant’s gender so we will also add <code>gender</code> to the grouping. If you want to refresh your memory about how <code>group_by()</code> works, revise Data Wrangling 1.</p>
-<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="reshaping-data.html#cb131-1" aria-hidden="true" tabindex="-1"></a>scores_grouped <span class="ot">&lt;-</span> <span class="fu">group_by</span>(scores, Id, gender)</span>
-<span id="cb131-2"><a href="reshaping-data.html#cb131-2" aria-hidden="true" tabindex="-1"></a>AQ_all <span class="ot">&lt;-</span> <span class="fu">summarise</span>(scores_grouped, <span class="at">total_score =</span> <span class="fu">sum</span>(Score))</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="reshaping-data.html#cb112-1" aria-hidden="true" tabindex="-1"></a>scores_grouped <span class="ot">&lt;-</span> <span class="fu">group_by</span>(scores, Id, gender)</span>
+<span id="cb112-2"><a href="reshaping-data.html#cb112-2" aria-hidden="true" tabindex="-1"></a>AQ_all <span class="ot">&lt;-</span> <span class="fu">summarise</span>(scores_grouped, <span class="at">total_score =</span> <span class="fu">sum</span>(Score))</span></code></pre></div>
 </div>
 <div id="activity-8-visualisation" class="section level3" number="10.0.8">
 <h3><span class="header-section-number">10.0.8</span> Activity 8: Visualisation</h3>
@@ -559,51 +558,51 @@ Figure 5.3: Histogram of total AQ scores
 </div>
 <div id="activity-solutions---reshping-data" class="section level3" number="10.0.9">
 <h3><span class="header-section-number">10.0.9</span> Activity solutions - Reshping data</h3>
-<div id="activity-1-2" class="section level4" number="10.0.9.1">
+<div id="activity-1-1" class="section level4" number="10.0.9.1">
 <h4><span class="header-section-number">10.0.9.1</span> Activity 1</h4>
 <div class="webex-solution">
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="reshaping-data.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb132-2"><a href="reshaping-data.html#cb132-2" aria-hidden="true" tabindex="-1"></a>scoring <span class="ot">&lt;-</span> <span class="fu">read_csv</span> (<span class="st">&quot;scoring.csv&quot;</span>)</span>
-<span id="cb132-3"><a href="reshaping-data.html#cb132-3" aria-hidden="true" tabindex="-1"></a>responses <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;responses.csv&quot;</span>)</span>
-<span id="cb132-4"><a href="reshaping-data.html#cb132-4" aria-hidden="true" tabindex="-1"></a>qformats <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;qformats.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="reshaping-data.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb113-2"><a href="reshaping-data.html#cb113-2" aria-hidden="true" tabindex="-1"></a>scoring <span class="ot">&lt;-</span> <span class="fu">read_csv</span> (<span class="st">&quot;scoring.csv&quot;</span>)</span>
+<span id="cb113-3"><a href="reshaping-data.html#cb113-3" aria-hidden="true" tabindex="-1"></a>responses <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;responses.csv&quot;</span>)</span>
+<span id="cb113-4"><a href="reshaping-data.html#cb113-4" aria-hidden="true" tabindex="-1"></a>qformats <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;qformats.csv&quot;</span>)</span></code></pre></div>
 </div>
 </div>
-<div id="activity-3-2" class="section level4" number="10.0.9.2">
+<div id="activity-3-1" class="section level4" number="10.0.9.2">
 <h4><span class="header-section-number">10.0.9.2</span> Activity 3</h4>
 <div class='webex-solution'>
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="reshaping-data.html#cb133-1" aria-hidden="true" tabindex="-1"></a>rlong_16 <span class="ot">&lt;-</span> <span class="fu">filter</span>(rlong, Id <span class="sc">==</span> <span class="dv">16</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="reshaping-data.html#cb114-1" aria-hidden="true" tabindex="-1"></a>rlong_16 <span class="ot">&lt;-</span> <span class="fu">filter</span>(rlong, Id <span class="sc">==</span> <span class="dv">16</span>)</span></code></pre></div>
 </div>
-<div id="activity-4-2" class="section level4" number="10.0.9.3">
+<div id="activity-4-1" class="section level4" number="10.0.9.3">
 <h4><span class="header-section-number">10.0.9.3</span> Activity 4</h4>
 <div class="webex-solution">
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="reshaping-data.html#cb134-1" aria-hidden="true" tabindex="-1"></a>rlong_16_join <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(rlong_16, qformats, <span class="st">&quot;Question&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="reshaping-data.html#cb115-1" aria-hidden="true" tabindex="-1"></a>rlong_16_join <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(rlong_16, qformats, <span class="st">&quot;Question&quot;</span>)</span></code></pre></div>
 </div>
 </div>
-<div id="activity-5-1" class="section level4" number="10.0.9.4">
+<div id="activity-5" class="section level4" number="10.0.9.4">
 <h4><span class="header-section-number">10.0.9.4</span> Activity 5</h4>
 <div class="webex-solution">
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="reshaping-data.html#cb135-1" aria-hidden="true" tabindex="-1"></a>scores_16 <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(rlong_16_join, scoring, <span class="fu">c</span>(<span class="st">&quot;QFormat&quot;</span>, <span class="st">&quot;Response&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="reshaping-data.html#cb116-1" aria-hidden="true" tabindex="-1"></a>scores_16 <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(rlong_16_join, scoring, <span class="fu">c</span>(<span class="st">&quot;QFormat&quot;</span>, <span class="st">&quot;Response&quot;</span>))</span></code></pre></div>
 </div>
 </div>
-<div id="activity-6-1" class="section level4" number="10.0.9.5">
+<div id="activity-6" class="section level4" number="10.0.9.5">
 <h4><span class="header-section-number">10.0.9.5</span> Activity 6</h4>
 <div class='webex-solution'>
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="reshaping-data.html#cb136-1" aria-hidden="true" tabindex="-1"></a>AQ_16 <span class="ot">&lt;-</span> <span class="fu">summarise</span>(scores_16, <span class="at">AQ_score =</span> <span class="fu">sum</span>(Score))</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="reshaping-data.html#cb117-1" aria-hidden="true" tabindex="-1"></a>AQ_16 <span class="ot">&lt;-</span> <span class="fu">summarise</span>(scores_16, <span class="at">AQ_score =</span> <span class="fu">sum</span>(Score))</span></code></pre></div>
 </div>
 <div id="activity-8" class="section level4" number="10.0.9.6">
 <h4><span class="header-section-number">10.0.9.6</span> Activity 8</h4>
@@ -611,11 +610,11 @@ Solution
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="reshaping-data.html#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(AQ_all, <span class="fu">aes</span>(<span class="at">x =</span> total_score)) <span class="sc">+</span></span>
-<span id="cb137-2"><a href="reshaping-data.html#cb137-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;grey&quot;</span>) <span class="sc">+</span></span>
-<span id="cb137-3"><a href="reshaping-data.html#cb137-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
-<span id="cb137-4"><a href="reshaping-data.html#cb137-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">name =</span> <span class="st">&quot;Total AQ Score&quot;</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>)) <span class="sc">+</span></span>
-<span id="cb137-5"><a href="reshaping-data.html#cb137-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;Count&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="reshaping-data.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(AQ_all, <span class="fu">aes</span>(<span class="at">x =</span> total_score)) <span class="sc">+</span></span>
+<span id="cb118-2"><a href="reshaping-data.html#cb118-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;grey&quot;</span>) <span class="sc">+</span></span>
+<span id="cb118-3"><a href="reshaping-data.html#cb118-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb118-4"><a href="reshaping-data.html#cb118-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">name =</span> <span class="st">&quot;Total AQ Score&quot;</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb118-5"><a href="reshaping-data.html#cb118-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;Count&quot;</span>)</span></code></pre></div>
 </div>
 
 </div>

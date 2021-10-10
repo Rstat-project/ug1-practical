@@ -280,7 +280,6 @@ div.csl-indent {
 <li class="chapter" data-level="8.0.5" data-path="scatterplots.html"><a href="scatterplots.html#activity-5-setting-the-factors"><i class="fa fa-check"></i><b>8.0.5</b> Activity 5: Setting the factors</a></li>
 <li class="chapter" data-level="8.0.6" data-path="scatterplots.html"><a href="scatterplots.html#activity-6-grouped-scatterplots"><i class="fa fa-check"></i><b>8.0.6</b> Activity 6: Grouped scatterplots</a></li>
 <li class="chapter" data-level="8.0.7" data-path="scatterplots.html"><a href="scatterplots.html#activity-7-group-by-a-new-variable"><i class="fa fa-check"></i><b>8.0.7</b> Activity 7: Group by a new variable</a></li>
-<li class="chapter" data-level="8.0.8" data-path="scatterplots.html"><a href="scatterplots.html#activity-solutions---scatterplots"><i class="fa fa-check"></i><b>8.0.8</b> Activity solutions - Scatterplots</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="aq-data-and-recap.html"><a href="aq-data-and-recap.html"><i class="fa fa-check"></i><b>9</b> AQ data and recap</a>
 <ul>
@@ -468,32 +467,32 @@ div.csl-indent {
 <p>Don’t change ANY of the code from step 1. Just copy and paste it into R EXACTLY as it is below.</p>
 <p>This code will clean up the Experimentum data a little bit to help you on your way. You will get a message saying <code>NAs introduced by coercion</code>. Ignore this message, it’s a result of converting the employment hours to a numeric variable.</p>
 <p>It’s also worth noting that this is a MUCH larger dataset than any you’ve worked with so far and you might find that R takes a little longer to complete each task - this is perfectly normal.</p>
-<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="project-analysis.html#cb209-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb209-2"><a href="project-analysis.html#cb209-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb209-3"><a href="project-analysis.html#cb209-3" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;final_data.csv&quot;</span>, </span>
-<span id="cb209-4"><a href="project-analysis.html#cb209-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">col_types =</span> <span class="fu">cols</span>(<span class="at">team =</span> <span class="fu">col_factor</span>(), </span>
-<span id="cb209-5"><a href="project-analysis.html#cb209-5" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">dv =</span> <span class="fu">col_character</span>()))</span>
-<span id="cb209-6"><a href="project-analysis.html#cb209-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb209-7"><a href="project-analysis.html#cb209-7" aria-hidden="true" tabindex="-1"></a>demo <span class="ot">&lt;-</span>  dat <span class="sc">%&gt;%</span></span>
-<span id="cb209-8"><a href="project-analysis.html#cb209-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quest_id <span class="sc">==</span> <span class="st">&quot;1448&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb209-9"><a href="project-analysis.html#cb209-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(user_id, user_sex, user_age, q_name, dv, covid) <span class="sc">%&gt;%</span></span>
-<span id="cb209-10"><a href="project-analysis.html#cb209-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> <span class="st">&quot;q_name&quot;</span>, <span class="at">values_from =</span> <span class="st">&quot;dv&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb209-11"><a href="project-analysis.html#cb209-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">&quot;NA&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb209-12"><a href="project-analysis.html#cb209-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">employment =</span> <span class="fu">as.numeric</span>(employment))</span>
-<span id="cb209-13"><a href="project-analysis.html#cb209-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb209-14"><a href="project-analysis.html#cb209-14" aria-hidden="true" tabindex="-1"></a>teams <span class="ot">&lt;-</span>  dat <span class="sc">%&gt;%</span></span>
-<span id="cb209-15"><a href="project-analysis.html#cb209-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(q_name <span class="sc">==</span> <span class="st">&quot;team_name&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb209-16"><a href="project-analysis.html#cb209-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(user_id, team)</span>
-<span id="cb209-17"><a href="project-analysis.html#cb209-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb209-18"><a href="project-analysis.html#cb209-18" aria-hidden="true" tabindex="-1"></a>mslq <span class="ot">&lt;-</span>  dat <span class="sc">%&gt;%</span></span>
-<span id="cb209-19"><a href="project-analysis.html#cb209-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quest_id <span class="sc">==</span> <span class="st">&quot;1449&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb209-20"><a href="project-analysis.html#cb209-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(user_id, q_name, dv) <span class="sc">%&gt;%</span></span>
-<span id="cb209-21"><a href="project-analysis.html#cb209-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dv =</span> <span class="fu">as.numeric</span>(dv)) <span class="sc">%&gt;%</span></span>
-<span id="cb209-22"><a href="project-analysis.html#cb209-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(q_name) <span class="sc">%&gt;%</span></span>
-<span id="cb209-23"><a href="project-analysis.html#cb209-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> <span class="st">&quot;q_name&quot;</span>, <span class="at">values_from =</span> <span class="st">&quot;dv&quot;</span>)</span>
-<span id="cb209-24"><a href="project-analysis.html#cb209-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb209-25"><a href="project-analysis.html#cb209-25" aria-hidden="true" tabindex="-1"></a>final_dat <span class="ot">&lt;-</span> <span class="fu">left_join</span>(demo, teams) <span class="sc">%&gt;%</span></span>
-<span id="cb209-26"><a href="project-analysis.html#cb209-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(mslq)</span></code></pre></div>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="project-analysis.html#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb190-2"><a href="project-analysis.html#cb190-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb190-3"><a href="project-analysis.html#cb190-3" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;final_data.csv&quot;</span>, </span>
+<span id="cb190-4"><a href="project-analysis.html#cb190-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">col_types =</span> <span class="fu">cols</span>(<span class="at">team =</span> <span class="fu">col_factor</span>(), </span>
+<span id="cb190-5"><a href="project-analysis.html#cb190-5" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">dv =</span> <span class="fu">col_character</span>()))</span>
+<span id="cb190-6"><a href="project-analysis.html#cb190-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb190-7"><a href="project-analysis.html#cb190-7" aria-hidden="true" tabindex="-1"></a>demo <span class="ot">&lt;-</span>  dat <span class="sc">%&gt;%</span></span>
+<span id="cb190-8"><a href="project-analysis.html#cb190-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quest_id <span class="sc">==</span> <span class="st">&quot;1448&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb190-9"><a href="project-analysis.html#cb190-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(user_id, user_sex, user_age, q_name, dv, covid) <span class="sc">%&gt;%</span></span>
+<span id="cb190-10"><a href="project-analysis.html#cb190-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> <span class="st">&quot;q_name&quot;</span>, <span class="at">values_from =</span> <span class="st">&quot;dv&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb190-11"><a href="project-analysis.html#cb190-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">&quot;NA&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb190-12"><a href="project-analysis.html#cb190-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">employment =</span> <span class="fu">as.numeric</span>(employment))</span>
+<span id="cb190-13"><a href="project-analysis.html#cb190-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb190-14"><a href="project-analysis.html#cb190-14" aria-hidden="true" tabindex="-1"></a>teams <span class="ot">&lt;-</span>  dat <span class="sc">%&gt;%</span></span>
+<span id="cb190-15"><a href="project-analysis.html#cb190-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(q_name <span class="sc">==</span> <span class="st">&quot;team_name&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb190-16"><a href="project-analysis.html#cb190-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(user_id, team)</span>
+<span id="cb190-17"><a href="project-analysis.html#cb190-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb190-18"><a href="project-analysis.html#cb190-18" aria-hidden="true" tabindex="-1"></a>mslq <span class="ot">&lt;-</span>  dat <span class="sc">%&gt;%</span></span>
+<span id="cb190-19"><a href="project-analysis.html#cb190-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quest_id <span class="sc">==</span> <span class="st">&quot;1449&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb190-20"><a href="project-analysis.html#cb190-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(user_id, q_name, dv) <span class="sc">%&gt;%</span></span>
+<span id="cb190-21"><a href="project-analysis.html#cb190-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dv =</span> <span class="fu">as.numeric</span>(dv)) <span class="sc">%&gt;%</span></span>
+<span id="cb190-22"><a href="project-analysis.html#cb190-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(q_name) <span class="sc">%&gt;%</span></span>
+<span id="cb190-23"><a href="project-analysis.html#cb190-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> <span class="st">&quot;q_name&quot;</span>, <span class="at">values_from =</span> <span class="st">&quot;dv&quot;</span>)</span>
+<span id="cb190-24"><a href="project-analysis.html#cb190-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb190-25"><a href="project-analysis.html#cb190-25" aria-hidden="true" tabindex="-1"></a>final_dat <span class="ot">&lt;-</span> <span class="fu">left_join</span>(demo, teams) <span class="sc">%&gt;%</span></span>
+<span id="cb190-26"><a href="project-analysis.html#cb190-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(mslq)</span></code></pre></div>
 <p>Right. Your turn. You may find it helpful to use the search function in this book to find examples of the code you need.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="images/searching.gif" alt="Searching for functions" width="75%" height="75%" />
@@ -519,11 +518,11 @@ Figure 12.1: Searching for functions
 <p>If necessary, use <code>filter()</code> to retain only the observations you need, for example, you might need to delete participants above a certain age, or only use mature students or undergraduate students (and make sure you kept all these columns in step 3). Do not filter the data for your team yet. You will find the code book you downloaded with the data files from Moodle helpful for this task.</p>
 <p>If your grouping variable is whether students undertake paid employment, you will need to create a new variable using mutate that categorises participants into employed (&gt; 0 hours worked per week) and not employed (0 hours per week) categories.</p>
 <p>An additional bit of syntax you might find useful for this is the <code>%in%</code> notation which allows you to filter by multiple values. For example, the following code will retain all rows where <code>user_sex</code> equals male OR female and nothing else (i.e., it would get rid of non-binary participants, prefer not to says, and missing values).</p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="project-analysis.html#cb210-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
-<span id="cb210-2"><a href="project-analysis.html#cb210-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(user_sex <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;male&quot;</span>, <span class="st">&quot;female&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="project-analysis.html#cb191-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb191-2"><a href="project-analysis.html#cb191-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(user_sex <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;male&quot;</span>, <span class="st">&quot;female&quot;</span>))</span></code></pre></div>
 <p>You can also do it by exclusion with <code>!</code>. The below code would retain everything where <code>user_sex</code> DOESN’T equal male or female.</p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="project-analysis.html#cb211-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
-<span id="cb211-2"><a href="project-analysis.html#cb211-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>user_sex <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;male&quot;</span>, <span class="st">&quot;female&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="project-analysis.html#cb192-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb192-2"><a href="project-analysis.html#cb192-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>user_sex <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;male&quot;</span>, <span class="st">&quot;female&quot;</span>))</span></code></pre></div>
 <p>If you were feeling really fancy you could do steps 2 - 5 in a single pipeline of code.</p>
 </div>
 <div id="step-6-sub-scale-scores" class="section level3" number="16.0.6">
@@ -537,14 +536,14 @@ Figure 12.1: Searching for functions
 <li>Change NOTHING else</li>
 </ul>
 <p>You may get the message <code>summarise() regrouping output by....</code> this is fine.</p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="project-analysis.html#cb212-1" aria-hidden="true" tabindex="-1"></a>dat_means <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
-<span id="cb212-2"><a href="project-analysis.html#cb212-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">names_to =</span> <span class="st">&quot;var&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;val&quot;</span>, question_1<span class="sc">:</span>question_5) <span class="sc">%&gt;%</span> </span>
-<span id="cb212-3"><a href="project-analysis.html#cb212-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by_at</span>(<span class="fu">vars</span>(<span class="sc">-</span>val, <span class="sc">-</span>var)) <span class="sc">%&gt;%</span> </span>
-<span id="cb212-4"><a href="project-analysis.html#cb212-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">scale_mean =</span> <span class="fu">mean</span>(val, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb212-5"><a href="project-analysis.html#cb212-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() </span></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="project-analysis.html#cb193-1" aria-hidden="true" tabindex="-1"></a>dat_means <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
+<span id="cb193-2"><a href="project-analysis.html#cb193-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">names_to =</span> <span class="st">&quot;var&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;val&quot;</span>, question_1<span class="sc">:</span>question_5) <span class="sc">%&gt;%</span> </span>
+<span id="cb193-3"><a href="project-analysis.html#cb193-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by_at</span>(<span class="fu">vars</span>(<span class="sc">-</span>val, <span class="sc">-</span>var)) <span class="sc">%&gt;%</span> </span>
+<span id="cb193-4"><a href="project-analysis.html#cb193-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">scale_mean =</span> <span class="fu">mean</span>(val, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb193-5"><a href="project-analysis.html#cb193-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() </span></code></pre></div>
 <p>Optional: If you want a dataset that just has complete cases, then you can run the below code. This will remove any participants who have an <code>NA</code> for scale-score due to missing data.</p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="project-analysis.html#cb213-1" aria-hidden="true" tabindex="-1"></a>dat_means_complete <span class="ot">&lt;-</span> dat_means <span class="sc">%&gt;%</span></span>
-<span id="cb213-2"><a href="project-analysis.html#cb213-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(scale_mean)</span></code></pre></div>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="project-analysis.html#cb194-1" aria-hidden="true" tabindex="-1"></a>dat_means_complete <span class="ot">&lt;-</span> dat_means <span class="sc">%&gt;%</span></span>
+<span id="cb194-2"><a href="project-analysis.html#cb194-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(scale_mean)</span></code></pre></div>
 </div>
 <div id="step-7-split-the-dataset" class="section level3" number="16.0.7">
 <h3><span class="header-section-number">16.0.7</span> Step 7: Split the dataset</h3>
@@ -556,25 +555,25 @@ Figure 12.1: Searching for functions
 <p>First, calculate the demographic information you need: number of participants, gender split, grouping variable split (if you’re using a variable that’s not gender), mean age and SD.</p>
 <p>You can calculate mean age and SD using <code>summarise()</code> like you’ve done before. There’s several different ways that you can count the number of participants in each group, we haven’t explicitly shown you how to do this yet so we’ll give you example code for this below. The code is fairly simple, you just need to plug in the variables you need.</p>
 <p>Do this separately for the full dataset and your team dataset.</p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="project-analysis.html#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="co"># count the total number of participants in the dataset</span></span>
-<span id="cb214-2"><a href="project-analysis.html#cb214-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb214-3"><a href="project-analysis.html#cb214-3" aria-hidden="true" tabindex="-1"></a>dat_means <span class="sc">%&gt;%</span></span>
-<span id="cb214-4"><a href="project-analysis.html#cb214-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>()</span>
-<span id="cb214-5"><a href="project-analysis.html#cb214-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb214-6"><a href="project-analysis.html#cb214-6" aria-hidden="true" tabindex="-1"></a><span class="co"># count the number of responses to each level of user_sex (for gender)</span></span>
-<span id="cb214-7"><a href="project-analysis.html#cb214-7" aria-hidden="true" tabindex="-1"></a>dat_means <span class="sc">%&gt;%</span></span>
-<span id="cb214-8"><a href="project-analysis.html#cb214-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(user_sex) <span class="sc">%&gt;%</span></span>
-<span id="cb214-9"><a href="project-analysis.html#cb214-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>()</span>
-<span id="cb214-10"><a href="project-analysis.html#cb214-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb214-11"><a href="project-analysis.html#cb214-11" aria-hidden="true" tabindex="-1"></a><span class="co"># count the number of responses to each level of covid status (change this variable to the one you&#39;re using if necessary)</span></span>
-<span id="cb214-12"><a href="project-analysis.html#cb214-12" aria-hidden="true" tabindex="-1"></a>dat_means <span class="sc">%&gt;%</span></span>
-<span id="cb214-13"><a href="project-analysis.html#cb214-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(covid) <span class="sc">%&gt;%</span></span>
-<span id="cb214-14"><a href="project-analysis.html#cb214-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>()</span>
-<span id="cb214-15"><a href="project-analysis.html#cb214-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb214-16"><a href="project-analysis.html#cb214-16" aria-hidden="true" tabindex="-1"></a><span class="co"># count the number of responses across two categories (you might not need or want to do this)</span></span>
-<span id="cb214-17"><a href="project-analysis.html#cb214-17" aria-hidden="true" tabindex="-1"></a>dat_means <span class="sc">%&gt;%</span></span>
-<span id="cb214-18"><a href="project-analysis.html#cb214-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(user_sex,covid) <span class="sc">%&gt;%</span></span>
-<span id="cb214-19"><a href="project-analysis.html#cb214-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="project-analysis.html#cb195-1" aria-hidden="true" tabindex="-1"></a><span class="co"># count the total number of participants in the dataset</span></span>
+<span id="cb195-2"><a href="project-analysis.html#cb195-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb195-3"><a href="project-analysis.html#cb195-3" aria-hidden="true" tabindex="-1"></a>dat_means <span class="sc">%&gt;%</span></span>
+<span id="cb195-4"><a href="project-analysis.html#cb195-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>()</span>
+<span id="cb195-5"><a href="project-analysis.html#cb195-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb195-6"><a href="project-analysis.html#cb195-6" aria-hidden="true" tabindex="-1"></a><span class="co"># count the number of responses to each level of user_sex (for gender)</span></span>
+<span id="cb195-7"><a href="project-analysis.html#cb195-7" aria-hidden="true" tabindex="-1"></a>dat_means <span class="sc">%&gt;%</span></span>
+<span id="cb195-8"><a href="project-analysis.html#cb195-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(user_sex) <span class="sc">%&gt;%</span></span>
+<span id="cb195-9"><a href="project-analysis.html#cb195-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>()</span>
+<span id="cb195-10"><a href="project-analysis.html#cb195-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb195-11"><a href="project-analysis.html#cb195-11" aria-hidden="true" tabindex="-1"></a><span class="co"># count the number of responses to each level of covid status (change this variable to the one you&#39;re using if necessary)</span></span>
+<span id="cb195-12"><a href="project-analysis.html#cb195-12" aria-hidden="true" tabindex="-1"></a>dat_means <span class="sc">%&gt;%</span></span>
+<span id="cb195-13"><a href="project-analysis.html#cb195-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(covid) <span class="sc">%&gt;%</span></span>
+<span id="cb195-14"><a href="project-analysis.html#cb195-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>()</span>
+<span id="cb195-15"><a href="project-analysis.html#cb195-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb195-16"><a href="project-analysis.html#cb195-16" aria-hidden="true" tabindex="-1"></a><span class="co"># count the number of responses across two categories (you might not need or want to do this)</span></span>
+<span id="cb195-17"><a href="project-analysis.html#cb195-17" aria-hidden="true" tabindex="-1"></a>dat_means <span class="sc">%&gt;%</span></span>
+<span id="cb195-18"><a href="project-analysis.html#cb195-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(user_sex,covid) <span class="sc">%&gt;%</span></span>
+<span id="cb195-19"><a href="project-analysis.html#cb195-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>()</span></code></pre></div>
 <p>Once you’ve done this you might realise that you have participants in the dataset that shouldn’t be there. For example, you might have people who have answered “Not applicable” to the mature student question, or you might have some NAs (missing data from when people didn’t respond).</p>
 <p>You need to think about whether you need to get rid of any observations from your dataset. For example, if you’re looking at gender differences, then you can’t have people who are missing gender information. You may have said in your pre-reg that you would only include non-binary people if they made up a certain proportion of the data. If you’re looking at mature student status, you can’t have people who didn’t answer the question or who said not applicable (i.e., postgrad students). You need to decide whether any of this is a problem, and potentially go back and add in an extra filter to step 6.</p>
 </div>

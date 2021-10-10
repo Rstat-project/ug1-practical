@@ -280,7 +280,6 @@ div.csl-indent {
 <li class="chapter" data-level="8.0.5" data-path="scatterplots.html"><a href="scatterplots.html#activity-5-setting-the-factors"><i class="fa fa-check"></i><b>8.0.5</b> Activity 5: Setting the factors</a></li>
 <li class="chapter" data-level="8.0.6" data-path="scatterplots.html"><a href="scatterplots.html#activity-6-grouped-scatterplots"><i class="fa fa-check"></i><b>8.0.6</b> Activity 6: Grouped scatterplots</a></li>
 <li class="chapter" data-level="8.0.7" data-path="scatterplots.html"><a href="scatterplots.html#activity-7-group-by-a-new-variable"><i class="fa fa-check"></i><b>8.0.7</b> Activity 7: Group by a new variable</a></li>
-<li class="chapter" data-level="8.0.8" data-path="scatterplots.html"><a href="scatterplots.html#activity-solutions---scatterplots"><i class="fa fa-check"></i><b>8.0.8</b> Activity solutions - Scatterplots</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="aq-data-and-recap.html"><a href="aq-data-and-recap.html"><i class="fa fa-check"></i><b>9</b> AQ data and recap</a>
 <ul>
@@ -632,7 +631,7 @@ Figure 2.3: Objects in the environment
 <span id="cb16-2"><a href="programming-basics.html#cb16-2" aria-hidden="true" tabindex="-1"></a>new_year <span class="sc">-</span> today</span>
 <span id="cb16-3"><a href="programming-basics.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(data)</span></code></pre></div>
 <pre><code>## [1] 45
-## Time difference of -279 days
+## Time difference of -282 days
 ## [1] 17.66644</code></pre>
 <p>Finally, you can store the result of these operations in a new object:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="programming-basics.html#cb18-1" aria-hidden="true" tabindex="-1"></a>decade <span class="ot">&lt;-</span> age <span class="sc">+</span> <span class="dv">10</span></span></code></pre></div>
@@ -773,7 +772,7 @@ Figure 2.7: The truth about programming
 </div>
 <div id="activity-7-test-yourself" class="section level3" number="2.0.23">
 <h3><span class="header-section-number">2.0.23</span> Activity 7: Test yourself</h3>
-<p><strong>Question 1.</strong> Why should you never include the code <code>install.packages()</code> in your analysis scripts? <select class='webex-solveme' data-answer='["You (or someone else) may accidentally install a package update that stops your code working"]'> <option></option> <option>You should use library() instead</option> <option>Packages are already part of Base R</option> <option>You (or someone else) may accidentally install a package update that stops your code working</option> <option>You already have the latest version of the package</option></select></p>
+<p><strong>Question 1.</strong> Why should you never include the code <code>install.packages()</code> in your analysis scripts? <select class='webex-select'><option value='blank'></option><option value=''>You should use library() instead</option><option value=''>Packages are already part of Base R</option><option value='answer'>You (or someone else) may accidentally install a package update that stops your code working</option><option value=''>You already have the latest version of the package</option></select></p>
 <div class="webex-solution">
 <button>
 Explain This Answer
@@ -783,7 +782,7 @@ Explain This Answer
 <p><br>
 <strong>Question 2.</strong>What will the following code produce?</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="programming-basics.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">6</span>, <span class="dv">50</span>, <span class="dv">10</span>)</span></code></pre></div>
-<p><select class='webex-solveme' data-answer='["A dataset with 6 numbers that has a mean of 50 and an SD of 10"]'> <option></option> <option>A dataset with 10 numbers that has a mean of 6 and an SD of 50</option> <option>A dataset with 6 numbers that has a mean of 50 and an SD of 10</option> <option>A dataset with 50 numbers that has a mean of 10 and an SD of 6</option> <option>A dataset with 50 numbers that has a mean of 10 and an SD of 6</option></select></p>
+<p><select class='webex-select'><option value='blank'></option><option value=''>A dataset with 10 numbers that has a mean of 6 and an SD of 50</option><option value='answer'>A dataset with 6 numbers that has a mean of 50 and an SD of 10</option><option value=''>A dataset with 50 numbers that has a mean of 10 and an SD of 6</option><option value=''>A dataset with 50 numbers that has a mean of 10 and an SD of 6</option></select></p>
 <div class="webex-solution">
 <button>
 Explain This Answer
@@ -792,16 +791,16 @@ Explain This Answer
 </div>
 <p><br>
 <strong>Question 3.</strong> If you have two packages that have functions with the same name and you want to specify exactly which package to use, what code would you use?</p>
-<p><select class='webex-solveme' data-answer='["package::function"]'> <option></option> <option>package::function</option> <option>function::package</option> <option>library(package)</option> <option>install.packages(package)</option></select></p>
+<p><select class='webex-select'><option value='blank'></option><option value='answer'>package::function</option><option value=''>function::package</option><option value=''>library(package)</option><option value=''>install.packages(package)</option></select></p>
 <div class="webex-solution">
 <button>
 Explain This Answer
 </button>
 <p>You should use the form <code>package::function</code>, for example <code>dplyr::select</code>. Remember that when you first load your packages R will warn you if any functions have the same name - remember to look out for this!</p>
 </div>
-<p><strong>Question 4.</strong> Which of the following is most likely to be an argument? <select class='webex-solveme' data-answer='["35"]'> <option></option> <option>35</option> <option>read_csv()</option> <option>&lt;-</option></select></p>
-<p><strong>Question 5.</strong> An easy way to spot functions is to look for <select class='webex-solveme' data-answer='["brackets"]'> <option></option> <option>brackets</option> <option>numbers</option> <option>computers</option></select>.</p>
-<p><strong>Question 6.</strong> The job of <code>&lt;-</code> is to send the output from the function to a/an <select class='webex-solveme' data-answer='["object"]'> <option></option> <option>argument</option> <option>assignment</option> <option>object</option></select>.</p>
+<p><strong>Question 4.</strong> Which of the following is most likely to be an argument? <select class='webex-select'><option value='blank'></option><option value='answer'>35</option><option value=''>read_csv()</option><option value=''>&lt;-</option></select></p>
+<p><strong>Question 5.</strong> An easy way to spot functions is to look for <select class='webex-select'><option value='blank'></option><option value='answer'>brackets</option><option value=''>numbers</option><option value=''>computers</option></select>.</p>
+<p><strong>Question 6.</strong> The job of <code>&lt;-</code> is to send the output from the function to a/an <select class='webex-select'><option value='blank'></option><option value=''>argument</option><option value=''>assignment</option><option value='answer'>object</option></select>.</p>
 
 </div>
 </div>

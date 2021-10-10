@@ -280,7 +280,6 @@ div.csl-indent {
 <li class="chapter" data-level="8.0.5" data-path="scatterplots.html"><a href="scatterplots.html#activity-5-setting-the-factors"><i class="fa fa-check"></i><b>8.0.5</b> Activity 5: Setting the factors</a></li>
 <li class="chapter" data-level="8.0.6" data-path="scatterplots.html"><a href="scatterplots.html#activity-6-grouped-scatterplots"><i class="fa fa-check"></i><b>8.0.6</b> Activity 6: Grouped scatterplots</a></li>
 <li class="chapter" data-level="8.0.7" data-path="scatterplots.html"><a href="scatterplots.html#activity-7-group-by-a-new-variable"><i class="fa fa-check"></i><b>8.0.7</b> Activity 7: Group by a new variable</a></li>
-<li class="chapter" data-level="8.0.8" data-path="scatterplots.html"><a href="scatterplots.html#activity-solutions---scatterplots"><i class="fa fa-check"></i><b>8.0.8</b> Activity solutions - Scatterplots</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="aq-data-and-recap.html"><a href="aq-data-and-recap.html"><i class="fa fa-check"></i><b>9</b> AQ data and recap</a>
 <ul>
@@ -529,7 +528,7 @@ Solution
 <ul>
 <li>What does <code>filter()</code> do?</li>
 </ul>
-<p><select class='webex-solveme' data-answer='["removes information that we are not interested in"]'> <option></option> <option>splits a column into multiple columns</option> <option>transforms existing columns</option> <option>takes multiple columns and collapses them together</option> <option>removes information that we are not interested in</option></select></p>
+<p><select class='webex-select'><option value='blank'></option><option value=''>splits a column into multiple columns</option><option value=''>transforms existing columns</option><option value=''>takes multiple columns and collapses them together</option><option value='answer'>removes information that we are not interested in</option></select></p>
 <ul>
 <li>How many observations are left in <code>age_65max</code> after running <code>filter()</code>? <input class='webex-solveme nospaces' size='3' data-answer='["939"]'/></li>
 </ul>
@@ -571,7 +570,7 @@ If you get what looks like an error that says <code>summarise() ungrouping outpu
 <ul>
 <li>What does <code>group_by()</code> do?</li>
 </ul>
-<p><select class='webex-solveme' data-answer='["groups data frames based on a specific column so that all later operations are carried out on a group basis"]'> <option></option> <option>provides summary statistics of an existing dataframe</option> <option>organises information in ascending or descending order</option> <option>transforms existing columns</option> <option>groups data frames based on a specific column so that all later operations are carried out on a group basis</option></select></p>
+<p><select class='webex-select'><option value='blank'></option><option value=''>provides summary statistics of an existing dataframe</option><option value=''>organises information in ascending or descending order</option><option value=''>transforms existing columns</option><option value='answer'>groups data frames based on a specific column so that all later operations are carried out on a group basis</option></select></p>
 <ul>
 <li>How would you change the code to group by education rather than <code>Happiness_Category</code>?</li>
 </ul>
@@ -593,8 +592,8 @@ Solution
 <span id="cb85-5"><a href="data-wrangling-2.html#cb85-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">name =</span> <span class="st">&quot;Income Level&quot;</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Below Average&quot;</span>, <span class="st">&quot;Average&quot;</span>, <span class="st">&quot;Above Average&quot;</span>)) <span class="sc">+</span></span>
 <span id="cb85-6"><a href="data-wrangling-2.html#cb85-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;Depression Score&quot;</span>)</span></code></pre></div>
 <ul>
-<li><p>Which income group has the highest median depression scores? <select class='webex-solveme' data-answer='["Below Average"]'> <option></option> <option>Below Average</option> <option>Average</option> <option>Above Average</option></select></p></li>
-<li><p>Which group has the highest density of scores at any one point? <select class='webex-solveme' data-answer='["Above Average"]'> <option></option> <option>Below Average</option> <option>Average</option> <option>Above Average</option></select></p></li>
+<li><p>Which income group has the highest median depression scores? <select class='webex-select'><option value='blank'></option><option value='answer'>Below Average</option><option value=''>Average</option><option value=''>Above Average</option></select></p></li>
+<li><p>Which group has the highest density of scores at any one point? <select class='webex-select'><option value='blank'></option><option value=''>Below Average</option><option value=''>Average</option><option value='answer'>Above Average</option></select></p></li>
 </ul>
 <div class="webex-solution">
 <button>
@@ -603,7 +602,7 @@ Explain This Answer
 <p>Density is represented by the curvy line around the boxplot that looks a little bit like a (drunk) violin. The fatter the violin, the more data points there are at any one point. This means that in the above plot, the Above Average group has the highest density because this has the widest violin, i.e., there are lots of people in the Above Average income group with a score of about 5.</p>
 </div>
 <ul>
-<li>Is income group a between-subject or within-subject variable? <select class='webex-solveme' data-answer='["Between-subjects"]'> <option></option> <option>Between-subjects</option> <option>Within-subjects</option></select></li>
+<li>Is income group a between-subject or within-subject variable? <select class='webex-select'><option value='blank'></option><option value='answer'>Between-subjects</option><option value=''>Within-subjects</option></select></li>
 </ul>
 <div class="webex-solution">
 <button>
